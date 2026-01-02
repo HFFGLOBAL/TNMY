@@ -68,7 +68,7 @@ export default function Home() {
     {
       title: "Outstation Taxi",
       desc: "Coorg, Ooty, Wayanad, Bangalore and more with transparent pricing.",
-      meta: "Starting from ₹11/km",
+      meta: "Starting from ₹13/km",
       href: ROUTES.OUTSTATION_TAXI,
     },
     {
@@ -80,7 +80,7 @@ export default function Home() {
     {
       title: "Airport Transfer",
       desc: "On-time pickup and drop to major airports with clear coordination.",
-      meta: "Starting from ₹2,800",
+      meta: "Starting from ₹1,800",
       href: ROUTES.AIRPORT_TRANSFER,
     },
     {
@@ -224,7 +224,7 @@ export default function Home() {
                         </div>
 
                         <div className="mt-5 inline-flex items-center gap-2 rounded-xl bg-white/90 px-4 py-2 text-sm font-semibold ring-1 ring-slate-900/10">
-                          <span className="text-blue-700">₹11/km</span>
+                          <span className="text-blue-700">₹13/km</span>
                           <span className="text-slate-700">starting outstation pricing</span>
                         </div>
 

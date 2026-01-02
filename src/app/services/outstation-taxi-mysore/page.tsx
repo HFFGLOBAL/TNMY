@@ -5,9 +5,9 @@ import { BUSINESS_INFO } from "@/lib/constants/business-info";
 import { ROUTES } from "@/lib/constants/routes";
 
 export const metadata: Metadata = {
-  title: "Outstation Taxi from Mysore | Coorg, Ooty, Wayanad, Bangalore | ₹11/km",
+  title: "Outstation Taxi from Mysore | Coorg, Ooty, Wayanad, Bangalore | ₹13/km",
   description:
-    "Book outstation taxi from Mysore to Coorg, Ooty, Wayanad, Bangalore at ₹11/km. Best outstation cab service in Mysore with transparent pricing, clean AC cars and professional drivers. 24/7 booking available.",
+    "Book outstation taxi from Mysore to Coorg, Ooty, Wayanad, Bangalore at ₹13/km. Best outstation cab service in Mysore with transparent pricing, clean AC cars and professional drivers. 24/7 booking available.",
   keywords: [
     "outstation taxi mysore",
     "outstation cab from mysore",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/services/outstation-taxi-mysore" },
   openGraph: {
-    title: "Outstation Taxi from Mysore - Best Rates ₹11/km",
+    title: "Outstation Taxi from Mysore - Best Rates ₹13/km",
     description: "Book outstation cabs from Mysore to Coorg, Ooty, Wayanad, Bangalore. Professional drivers, transparent pricing.",
     type: "website",
   }
@@ -35,7 +35,7 @@ export default function OutstationTaxiMysorePage() {
   ];
 
   const features = [
-    { icon: "✓", title: "Transparent Pricing", desc: "₹11/km with no hidden charges" },
+    { icon: "✓", title: "Transparent Pricing", desc: "₹13/km with no hidden charges" },
     { icon: "✓", title: "Professional Drivers", desc: "Verified drivers with local expertise" },
     { icon: "✓", title: "AC Vehicles", desc: "Well-maintained and sanitized cars" },
     { icon: "✓", title: "24/7 Availability", desc: "Book anytime for your convenience" },
@@ -89,21 +89,21 @@ export default function OutstationTaxiMysorePage() {
       {/* Pricing Section */}
       <div className="mt-12 rounded-2xl bg-slate-50 p-8 border border-slate-200">
         <h2 className="text-3xl font-bold text-slate-900">Simple Transparent Pricing</h2>
-        <p className="mt-2 text-slate-600">₹11/km for outstation travel with zero hidden charges</p>
+        <p className="mt-2 text-slate-600">₹13/km for outstation travel with zero hidden charges</p>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="rounded-xl bg-white p-6 ring-1 ring-slate-900/10">
             <div className="text-sm font-semibold text-slate-600">Starting Price</div>
-            <div className="mt-2 text-3xl font-bold text-blue-600">₹700</div>
+            <div className="mt-2 text-3xl font-bold text-blue-600">₹910</div>
             <div className="mt-1 text-sm text-slate-600">Minimum for 70 km</div>
           </div>
           <div className="rounded-xl bg-white p-6 ring-1 ring-slate-900/10">
             <div className="text-sm font-semibold text-slate-600">Per Kilometer</div>
-            <div className="mt-2 text-3xl font-bold text-blue-600">₹11</div>
+            <div className="mt-2 text-3xl font-bold text-blue-600">₹13</div>
             <div className="mt-1 text-sm text-slate-600">Flat rate for all routes</div>
           </div>
           <div className="rounded-xl bg-white p-6 ring-1 ring-slate-900/10">
             <div className="text-sm font-semibold text-slate-600">Night Surcharge</div>
-            <div className="mt-2 text-3xl font-bold text-blue-600">₹100</div>
+            <div className="mt-2 text-3xl font-bold text-blue-600">₹150</div>
             <div className="mt-1 text-sm text-slate-600">10 PM - 6 AM travel</div>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function OutstationTaxiMysorePage() {
         <div className="mt-6 space-y-4">
           <div className="rounded-xl border border-slate-200 bg-white p-6">
             <h3 className="font-semibold text-slate-900">What is included in the outstation fare?</h3>
-            <p className="mt-2 text-slate-600">Our outstation fare includes AC vehicle, professional driver, fuel, and tolls. The price is fixed at ₹11/km with no hidden charges.</p>
+            <p className="mt-2 text-slate-600">Our outstation fare includes AC vehicle, professional driver, fuel, and tolls. The price is fixed at ₹13/km with no hidden charges.</p>
           </div>
           <div className="rounded-xl border border-slate-200 bg-white p-6">
             <h3 className="font-semibold text-slate-900">Can I book for a round trip?</h3>

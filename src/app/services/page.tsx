@@ -32,28 +32,28 @@ export default function ServicesPage() {
       title: "Outstation Taxi",
       desc: "Comfortable intercity travel to Ooty, Coorg, Bangalore, Wayanad, and beyond. Well-maintained AC vehicles.",
       features: ["One-way & Round trip", "Transparent pricing", "Experienced drivers", "24/7 available"],
-      price: "Starting from ₹11/km",
+      price: "Starting from ₹13/km",
       link: ROUTES.OUTSTATION_TAXI
     },
     {
       title: "Local Sightseeing",
       desc: "Explore Mysore's palaces, temples, gardens at your own pace. Customizable itineraries available.",
       features: ["Full day packages", "Half day options", "Knowledgeable drivers", "All major attractions"],
-      price: "₹1,500 - ₹2,500 per day",
+      price: "Starting from ₹2,000/day",
       link: ROUTES.SIGHTSEEING_TAXI
     },
     {
       title: "Airport Transfer",
       desc: "Hassle-free pickup & drop for Bangalore, Mysore airports. On-time service guaranteed.",
       features: ["Real-time tracking", "Flight monitoring", "Meet & greet service", "24/7 availability"],
-      price: "Starting from ₹2,800",
+      price: "Starting from ₹1,800",
       link: ROUTES.AIRPORT_TRANSFER
     },
     {
       title: "Tempo Traveller",
       desc: "Spacious 12-17 seater vehicles for group travel, family tours, corporate outings.",
       features: ["Push-back seats", "AC facility", "Music system", "Large luggage space"],
-      price: "₹18 - ₹22 per km",
+      price: "₹20 - ₹24 per km",
       link: "/fleet/tempo-traveller/"
     },
     {
