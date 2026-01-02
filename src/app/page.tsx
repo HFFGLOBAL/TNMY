@@ -183,7 +183,7 @@ export default function Home() {
 
             return (
               <>
-                <section className="relative overflow-hidden bg-slate-900 border-b border-slate-700 -mt-[72px] pt-[72px]">
+                <section className="relative overflow-hidden bg-slate-900 border-b border-slate-700">
                   <HeroImageSlider />
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 relative">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-items-center">

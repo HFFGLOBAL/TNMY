@@ -8,9 +8,6 @@ import { ROUTES } from "@/lib/constants/routes";
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === "/" || pathname === "";
-  const [isScrolled, setIsScrolled] = useState(false);
-  const isHomeTop = isHome && !isScrolled;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDesktopMenu, setOpenDesktopMenu] = useState<null | "tour" | "destinations" | "services">(null);
   const tourMenuRef = useRef<HTMLDivElement | null>(null);
@@ -20,18 +17,6 @@ export function Header() {
   useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [pathname]);
-
-  useEffect(() => {
-    if (!isHome) {
-      setIsScrolled(false);
-      return;
-    }
-
-    const onScroll = () => setIsScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [isHome]);
 
   const navLinks = useMemo(
     () => [
@@ -111,11 +96,7 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
-        isHomeTop
-          ? "bg-transparent border-transparent"
-          : "bg-white/95 backdrop-blur-md border-slate-200 shadow-sm"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 border-b bg-white/95 backdrop-blur-md border-slate-200 shadow-sm transition-all duration-300`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Navigation */}
@@ -123,9 +104,7 @@ export function Header() {
           <div className="flex items-center justify-between gap-4">
             <Link
               href={ROUTES.HOME}
-              className={`text-lg sm:text-xl font-bold tracking-tight shrink-0 ${
-                isHomeTop ? "text-white drop-shadow-lg" : "text-slate-900"
-              }`}
+              className={`text-lg sm:text-xl font-bold tracking-tight shrink-0 text-slate-900`}
             >
               Travels in Mysore
             </Link>
@@ -138,12 +117,8 @@ export function Header() {
                   href={link.href}
                   className={`px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname === link.href
-                      ? isHomeTop
-                        ? "text-white bg-white/30 shadow-md"
-                        : "text-blue-700 bg-blue-50"
-                      : isHomeTop
-                        ? "text-white hover:text-white hover:bg-white/20 drop-shadow"
-                        : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-blue-700 bg-blue-50"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
                   {link.label}
@@ -166,12 +141,8 @@ export function Header() {
                   href={ROUTES.SERVICES}
                   className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname?.startsWith(ROUTES.SERVICES)
-                      ? isHomeTop
-                        ? "text-white bg-white/30 shadow-md"
-                        : "text-blue-700 bg-blue-50"
-                      : isHomeTop
-                        ? "text-white hover:text-white hover:bg-white/20 drop-shadow"
-                        : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-blue-700 bg-blue-50"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                   aria-haspopup="menu"
                   aria-expanded={openDesktopMenu === "services"}
@@ -250,12 +221,8 @@ export function Header() {
                   href={ROUTES.TOUR_PACKAGES}
                   className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname?.startsWith(ROUTES.TOUR_PACKAGES)
-                      ? isHomeTop
-                        ? "text-white bg-white/30 shadow-md"
-                        : "text-blue-700 bg-blue-50"
-                      : isHomeTop
-                        ? "text-white hover:text-white hover:bg-white/20 drop-shadow"
-                        : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-blue-700 bg-blue-50"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                   aria-haspopup="menu"
                   aria-expanded={openDesktopMenu === "tour"}
@@ -343,12 +310,8 @@ export function Header() {
                   href={ROUTES.DESTINATIONS}
                   className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname?.startsWith(ROUTES.DESTINATIONS)
-                      ? isHomeTop
-                        ? "text-white bg-white/30 shadow-md"
-                        : "text-blue-700 bg-blue-50"
-                      : isHomeTop
-                        ? "text-white hover:text-white hover:bg-white/20 drop-shadow"
-                        : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-blue-700 bg-blue-50"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                   aria-haspopup="menu"
                   aria-expanded={openDesktopMenu === "destinations"}
@@ -410,12 +373,8 @@ export function Header() {
                   href={contactNavLink.href}
                   className={`px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname === contactNavLink.href
-                      ? isHomeTop
-                        ? "text-white bg-white/30 shadow-md"
-                        : "text-blue-700 bg-blue-50"
-                      : isHomeTop
-                        ? "text-white hover:text-white hover:bg-white/20 drop-shadow"
-                        : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                      ? "text-blue-700 bg-blue-50"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
                   {contactNavLink.label}
@@ -433,11 +392,7 @@ export function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen((v) => !v)}
-              className={`lg:hidden inline-flex items-center justify-center rounded-lg border p-2 transition-colors shrink-0 ${
-                isHomeTop
-                  ? "border-white/60 bg-white/20 text-white hover:bg-white/30 shadow-md"
-                  : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
-              }`}
+              className={`lg:hidden inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white p-2 transition-colors shrink-0 text-slate-700 hover:bg-slate-50`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? (
