@@ -104,12 +104,12 @@ export default function Home() {
   ];
 
   const fleet = [
-    { id: "sedan-dzire", name: "Sedan", href: ROUTES.FLEET_SEDAN, desc: "Comfortable 4 seater", image: "/images/vehicles/Dzire.png" },
-    { id: "suv-ertiga", name: "SUV", href: ROUTES.FLEET_SUV, desc: "Family trips and luggage", image: "/images/vehicles/Ertiga.png" },
-    { id: "suv-innova", name: "Innova", href: ROUTES.FLEET_SUV, desc: "7-seater premium comfort", image: "/images/vehicles/Innova.png" },
-    { id: "sedan-etios", name: "Etios", href: ROUTES.FLEET_SEDAN, desc: "Budget-friendly sedan", image: "/images/vehicles/Etios.png" },
+    { id: "sedan-dzire", name: "Dzire Sedan", href: ROUTES.FLEET_SEDAN, desc: "Comfortable 4 seater", image: "/images/vehicles/Dzire.png" },
+    { id: "suv-ertiga", name: "Ertiga SUV", href: ROUTES.FLEET_SUV, desc: "Family trips and luggage", image: "/images/vehicles/Ertiga.png" },
+    { id: "suv-innova", name: "Innova Crysta", href: ROUTES.FLEET_SUV, desc: "7-seater premium comfort", image: "/images/vehicles/Innova.png" },
+    { id: "sedan-etios", name: "Etios Sedan", href: ROUTES.FLEET_SEDAN, desc: "Budget-friendly sedan", image: "/images/vehicles/Etios.png" },
     { id: "tempo", name: "Tempo Traveller", href: ROUTES.FLEET_TEMPO, desc: "Group travel 13-17 seater", image: "/images/vehicles/Tempo-Traveller.png" },
-    { id: "bus", name: "Bus", href: ROUTES.FLEET_BUS, desc: "Large groups 30+ seater", image: "/images/vehicles/Crysta.webp" },
+    { id: "bus", name: "Tourist Bus", href: ROUTES.FLEET_BUS, desc: "Large groups 30+ seater", image: "/images/vehicles/Crysta.webp" },
   ];
 
   const featuredPackages = [
@@ -437,6 +437,74 @@ export default function Home() {
                           </div>
                         </div>
                       ))}
+                    </div>
+                  </div>
+                </section>
+
+                <section className="bg-white">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div className="text-center">
+                      <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Leading Travels in Mysore for All Your Transportation Needs</h2>
+                      <p className="mt-4 text-lg text-slate-600 max-w-4xl mx-auto">
+                        MM Mysore Travels is your trusted travel agency in Mysore, offering comprehensive taxi services for local sightseeing, outstation trips, airport transfers, and tour packages. With over 15 years of experience, we have established ourselves as one of the best travels in Mysore, serving thousands of satisfied customers with our professional drivers and well-maintained fleet.
+                      </p>
+                    </div>
+
+                    <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+                        <h3 className="text-2xl font-bold text-slate-900">Complete Taxi Services in Mysore</h3>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          As a full-service travel agency in Mysore, we provide taxi services for every occasion. Whether you need a quick airport transfer, a comfortable outstation cab to Coorg or Ooty, or a multi-day tour package exploring South India's hill stations, our travels in Mysore service has you covered. We operate 24/7 with transparent pricing starting at just ₹13/km for outstation trips and ₹1,800 for local packages.
+                        </p>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          Our Mysore taxi service includes sedans for couples, SUVs for families, tempo travellers for groups, and buses for large gatherings. All vehicles come with experienced drivers who know the routes inside out, ensuring safe and timely travel. Book your travels in Mysore with us for a hassle-free experience.
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+                        <h3 className="text-2xl font-bold text-slate-900">Why Choose MM Mysore Travels</h3>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          What sets us apart as the premier travel agency in Mysore is our commitment to customer satisfaction. Our 4.9-star rating with 349+ reviews speaks volumes about our taxi services in Mysore. We offer Karnataka Tourism approved travel services with verified drivers, GPS-enabled vehicles, and comprehensive insurance coverage for your safety.
+                        </p>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          Our outstation taxi service from Mysore covers popular destinations like Coorg (120km), Ooty (125km), Wayanad (140km), Bangalore (145km), and Kodaikanal (370km). For local travel, we provide customized sightseeing packages covering Mysore Palace, Chamundi Hills, Brindavan Gardens, and other attractions. Corporate clients trust our taxi services in Mysore for reliable business travel with monthly billing options.
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+                        <h3 className="text-2xl font-bold text-slate-900">Popular Tour Packages from Mysore</h3>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          Our travel agency in Mysore specializes in curated tour packages that showcase the best of South India. The Mysore to Coorg tour package takes you through coffee plantations and waterfalls, while the Mysore to Ooty package lets you experience the Queen of Hill Stations with its tea gardens and scenic railways. Multi-day packages like Mysore-Ooty-Coorg combine multiple destinations for a comprehensive travel experience.
+                        </p>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          For those seeking spiritual journeys, we offer Tirupati packages from Mysore. Adventure enthusiasts can book our Goa trips from Mysore covering beaches and nightlife. All tour packages include comfortable accommodation recommendations, driver allowances, and flexible itineraries tailored to your preferences through our travels in Mysore service.
+                        </p>
+                      </div>
+
+                      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+                        <h3 className="text-2xl font-bold text-slate-900">Airport Transfer & Corporate Services</h3>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          Our airport taxi service from Mysore to Bangalore Kempegowda International Airport ensures punctual pickups with flight tracking technology. We understand the importance of timing for airport transfers and maintain a spotless record for on-time service. Early morning and late-night airport transfers are our specialty, with fixed pricing and no surge charges.
+                        </p>
+                        <p className="mt-4 text-slate-700 leading-relaxed">
+                          Corporate clients benefit from our dedicated taxi services in Mysore with priority booking, GST invoices, monthly billing cycles, and volume discounts. Our professional drivers maintain confidentiality and punctuality for business meetings, conferences, and client pickups. Wedding car rentals in Mysore are also available with decorated vehicles for your special occasions.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="mt-12 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 p-10 text-white text-center">
+                      <h3 className="text-3xl font-bold">Book the Best Travels in Mysore Today</h3>
+                      <p className="mt-4 text-lg text-white/90 max-w-3xl mx-auto">
+                        Experience the difference with Karnataka's most trusted travel agency. Our taxi services in Mysore combine reliability, comfort, and affordability. Whether it's a local trip or an outstation adventure, MM Mysore Travels is your perfect travel partner.
+                      </p>
+                      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link href={ROUTES.BOOK_TAXI} className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-white text-blue-700 font-bold text-lg hover:bg-slate-100 transition-colors shadow-lg">
+                          Book Taxi Now
+                        </Link>
+                        <Link href={ROUTES.TOUR_PACKAGES} className="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-white text-white font-bold text-lg hover:bg-white/10 transition-colors">
+                          View Tour Packages
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </section>
