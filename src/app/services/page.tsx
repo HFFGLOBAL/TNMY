@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   title: "Taxi Services in Mysore | Travel Agency Mysore | MM Mysore Travels",
   description: "Leading taxi services in Mysore - Outstation cabs, local sightseeing, airport transfers, tour packages, corporate transport. Karnataka Tourism approved. 4.9★ rated travel agency. Book 24/7.",
   keywords: [
+    "top travels in mysore",
+    "best travel agency mysore",
     "taxi services in mysore",
+    "cabs in mysore",
+    "travel agency in mysore",
     "travel agency mysore",
     "cab services mysore",
     "mysore taxi agency",
@@ -78,15 +82,15 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <Breadcrumbs items={[{ label: "Services", href: ROUTES.SERVICES }]} />
         
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mb-10 text-center text-white">
+        <div className="bg-linear-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mb-10 text-center text-white">
           <div className="inline-flex items-center rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur-sm mb-4">
-            Karnataka Tourism Approved • 15+ Years • 4.9★ Rated
+            Top Travels in Mysore • Karnataka Tourism Approved • 15+ Years • 4.9★ Rated
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Leading Taxi Services in Mysore
           </h1>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto">
-            MM Mysore Travels - Your trusted <strong className="text-white">travel agency in Mysore</strong> offering comprehensive <strong className="text-white">taxi services in Mysore</strong> for all your travel needs. Book outstation cabs, local tours, airport transfers, and more with 24/7 availability.
+            MM Mysore Travels - Your trusted <strong className="text-white">travel agency in Mysore</strong> offering comprehensive <strong className="text-white">taxi services in Mysore</strong> and clean AC <strong className="text-white">cabs in Mysore</strong> for all your travel needs. Book outstation cabs, local tours, airport transfers, and more with 24/7 availability.
           </p>
         </div>
 

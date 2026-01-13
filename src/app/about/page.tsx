@@ -8,9 +8,13 @@ export const metadata: Metadata = {
   title: "About MM Mysore Travels | Leading Travel Agency & Taxi Service in Mysore Since 2009",
   description: "Discover why MM Mysore Travels is the most trusted travel agency and taxi service in Mysore. 15+ years experience, 4.9★ rating, 10,000+ happy customers. Karnataka Tourism approved. Book travels in Mysore today!",
   keywords: [
+    "top travels in mysore",
+    "best travel agency mysore",
     "travels in mysore",
+    "travel agency in mysore",
     "travel agency mysore",
     "taxi services in mysore",
+    "cabs in mysore",
     "mysore travels",
     "taxi service mysore",
     "mysore taxi agency",
@@ -35,7 +39,7 @@ export default function AboutPage() {
           <Breadcrumbs items={[{ label: "About Us", href: ROUTES.ABOUT }]} />
           
           {/* Hero Section */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mb-8 text-center text-white">
+          <div className="bg-linear-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mb-8 text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Premier Travel Agency & Taxi Services in Mysore
             </h1>
@@ -69,6 +73,9 @@ export default function AboutPage() {
               </p>
               <p className="mb-4">
                 Our commitment to quality has made us one of the <strong>best travels in Mysore</strong>, earning a remarkable <strong>★{BUSINESS_INFO.rating.value} out of 5 rating</strong> from over <strong>{BUSINESS_INFO.rating.count} satisfied customers</strong>. When you search for &quot;<strong>travels in Mysore</strong>&quot; or &quot;<strong>taxi service Mysore</strong>&quot;, you&apos;re looking for the reliability, safety, and professionalism that MM Mysore Travels delivers every single day.
+              </p>
+              <p className="mb-4">
+                Many customers discover us while searching for &quot;<strong>best travel agency Mysore</strong>&quot;, &quot;<strong>top travels in Mysore</strong>&quot; or reliable &quot;<strong>cabs in Mysore</strong>&quot; for airport, local, and outstation trips.
               </p>
             </div>
           </div>
@@ -221,7 +228,7 @@ export default function AboutPage() {
           </div>
 
           {/* Our Commitment */}
-          <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 mb-8 text-white">
+          <div className="bg-linear-to-r from-slate-900 to-slate-800 rounded-2xl p-8 mb-8 text-white">
             <h2 className="text-3xl font-bold mb-6 text-center">Our Commitment to You</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">

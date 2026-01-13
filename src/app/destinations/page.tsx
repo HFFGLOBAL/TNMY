@@ -5,7 +5,18 @@ import { ROUTES } from "@/lib/constants/routes";
 
 export const metadata: Metadata = {
   title: "Destinations from Mysore | Coorg, Ooty, Wayanad, Bangalore",
-  description: "Explore destinations served from Mysore with route info, travel time, and booking options.",
+  description: "Explore destinations served from Mysore with route info, travel time, and booking options. Book taxi services in Mysore and cabs in Mysore for these routes.",
+  keywords: [
+    "travels in mysore",
+    "top travels in mysore",
+    "taxi services in mysore",
+    "cabs in mysore",
+    "mysore outstation taxi",
+    "mysore to coorg taxi",
+    "mysore to ooty cab",
+    "mysore to wayanad taxi",
+    "mysore to bangalore taxi"
+  ],
   alternates: { canonical: "/destinations/" },
 };
 
@@ -26,7 +37,7 @@ export default function DestinationsHubPage() {
       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Destinations</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
-          Explore popular routes and trip ideas from Mysore.
+          Explore popular routes and trip ideas from Mysore with trusted taxi services and cabs in Mysore.
         </p>
       </div>
 

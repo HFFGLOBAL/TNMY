@@ -8,7 +8,17 @@ import { BookingForm } from "@/components/forms/BookingForm";
 export const metadata: Metadata = {
   title: "Book Taxi in Mysore | Online Cab Booking | Best Rates Guaranteed",
   description: "Book your Mysore taxi online. Instant confirmation, transparent pricing, 24/7 service. Outstation cabs, local tours, airport transfers available.",
-  keywords: ["book taxi mysore", "cab booking mysore", "online taxi booking", "mysore cab service"],
+  keywords: [
+    "book taxi mysore",
+    "cab booking mysore",
+    "online taxi booking",
+    "mysore cab service",
+    "cabs in mysore",
+    "taxi services in mysore",
+    "travels in mysore",
+    "travel agency in mysore",
+    "best travel agency mysore"
+  ],
   alternates: { canonical: "/book-taxi/" },
 };
 
@@ -24,7 +34,7 @@ export default function BookTaxiPage() {
             Book Your Taxi in Mysore
           </h1>
           <p className="text-lg text-slate-700 max-w-3xl mx-auto">
-            Instant confirmation • Best rates • 24/7 service • Professional drivers
+            Instant confirmation • Best rates • 24/7 service • Professional drivers — fast booking for cabs in Mysore
           </p>
         </div>
 
@@ -64,7 +74,7 @@ export default function BookTaxiPage() {
                   { step: "4", title: "Enjoy Your Ride", desc: "Driver will arrive on time for a comfortable journey" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
+                    <div className="shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">
                       {item.step}
                     </div>
                     <div>

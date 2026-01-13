@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   description:
     "Read 349+ customer reviews for MM Mysore Travels. Rated 4.9/5 stars by travelers for taxi services in Mysore, outstation trips to Coorg, Ooty, Wayanad. Verified testimonials from satisfied customers. Professional drivers, clean vehicles, transparent pricing. Book with confidence. Trusted travel agency in Mysore since 2009.",
   keywords: [
+    "top travels in mysore",
+    "best travel agency mysore",
+    "cabs in mysore",
     "mysore taxi reviews",
     "mysore travels testimonials",
     "taxi service mysore customer feedback",

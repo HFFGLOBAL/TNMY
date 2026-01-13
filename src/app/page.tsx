@@ -48,7 +48,7 @@ function HeroImageSlider() {
         >
           <Image
             src={src}
-            alt={`Mysore travel destination ${index + 1}`}
+            alt={`Travels in Mysore - taxi services in Mysore hero image ${index + 1}`}
             fill
             priority={index === 0}
             className="object-cover"
@@ -239,11 +239,11 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center justify-items-center">
                       <div className="pt-2 text-center">
                         <div className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-slate-700 ring-1 ring-slate-900/10">
-                          Rated {BUSINESS_INFO.rating.value}/{BUSINESS_INFO.rating.max} • {BUSINESS_INFO.rating.count}+ reviews
+                          Travels in Mysore • Rated {BUSINESS_INFO.rating.value}/{BUSINESS_INFO.rating.max} • {BUSINESS_INFO.rating.count}+ reviews
                         </div>
-                        <h1 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-lg">Book a Mysore Taxi in Minutes</h1>
+                        <h1 className="mt-6 text-4xl md:text-5xl font-bold tracking-tight text-white drop-shadow-lg">Travels in Mysore — Taxi Services in Mysore</h1>
                         <p className="mt-4 text-lg text-white/90 leading-relaxed max-w-xl drop-shadow mx-auto">
-                          Outstation cabs from Mysore (Coorg, Ooty, Wayanad, Bangalore), Bangalore airport taxi, and Mysore local sightseeing packages with clean vehicles, verified drivers, and transparent pricing.
+                          Book Taxi Services in Mysore for outstation trips (Coorg, Ooty, Wayanad, Bangalore), Bangalore airport transfers, and Mysore local sightseeing packages with clean vehicles, verified drivers, and transparent pricing.
                         </p>
 
                         <div className="mt-6 space-y-3 max-w-xl mx-auto">
@@ -426,7 +426,7 @@ export default function Home() {
                       </div>
                       <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Popular Taxi Routes from Mysore</h2>
                       <p className="mt-3 text-center text-slate-600 max-w-3xl mx-auto">
-                        Quick enquiries for the most-booked Mysore taxi routes. Tap WhatsApp to get a rate, vehicle options, and availability in minutes.
+                        Quick enquiries for the most-booked Mysore taxi routes from Travels in Mysore. Tap WhatsApp to get a rate, vehicle options, and availability in minutes.
                       </p>
                     </div>
 
@@ -569,7 +569,7 @@ export default function Home() {
                     <div className="text-center">
                       <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Leading Travels in Mysore for All Your Transportation Needs</h2>
                       <p className="mt-4 text-lg text-slate-600 max-w-4xl mx-auto">
-                        MM Mysore Travels is your trusted travel agency in Mysore, offering comprehensive taxi services for local sightseeing, outstation trips, airport transfers, and tour packages. With over 15 years of experience, we have established ourselves as one of the best travels in Mysore, serving thousands of satisfied customers with our professional drivers and well-maintained fleet.
+                        MM Mysore Travels is your trusted travel agency in Mysore, offering comprehensive taxi services for local sightseeing, outstation trips, airport transfers, and tour packages. With over 15 years of experience, we have established ourselves as one of the top travels in Mysore — often searched as &quot;best travel agency Mysore&quot; — serving thousands of satisfied customers with professional drivers and well-maintained cabs in Mysore.
                       </p>
                     </div>
 
@@ -580,7 +580,7 @@ export default function Home() {
                           As a full-service travel agency in Mysore, we provide taxi services for every occasion. Whether you need a quick airport transfer, a comfortable outstation cab to Coorg or Ooty, or a multi-day tour package exploring South India&apos;s hill stations, our travels in Mysore service has you covered. We operate 24/7 with transparent pricing starting at just ₹13/km for outstation trips and ₹1,800 for local packages.
                         </p>
                         <p className="mt-4 text-slate-700 leading-relaxed">
-                          Our Mysore taxi service includes sedans for couples, SUVs for families, tempo travellers for groups, and buses for large gatherings. All vehicles come with experienced drivers who know the routes inside out, ensuring safe and timely travel. Book your travels in Mysore with us for a hassle-free experience.
+                          Our Mysore taxi service includes sedans for couples, SUVs for families, tempo travellers for groups, and buses for large gatherings. If you&apos;re comparing cabs in Mysore for comfort and reliability, our fleet is maintained for clean interiors, AC performance, and safe long-distance driving. All vehicles come with experienced drivers who know the routes inside out, ensuring safe and timely travel.
                         </p>
                       </div>
 

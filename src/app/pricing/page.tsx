@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   description:
     "View transparent taxi pricing in Mysore for outstation trips to Coorg, Ooty, Wayanad, Bangalore. Sedan, SUV, Tempo Traveller rates. Local sightseeing packages 4/8/12 hours. Airport transfer pricing. No hidden charges. Get instant quote on WhatsApp. Starting ₹13/km for outstation, ₹1,800 for local packages.",
   keywords: [
+    "cabs in mysore",
+    "taxi services in mysore",
+    "travel agency in mysore",
+    "best travel agency mysore",
     "taxi pricing mysore",
     "mysore taxi rates",
     "outstation taxi fare mysore",
@@ -31,7 +35,7 @@ export default function PricingPage() {
       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Pricing</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
-          Transparent pricing with no hidden charges. Share your pickup, destination and date for an exact quote.
+          Transparent pricing with no hidden charges. Share your pickup, destination and date for an exact quote on cabs in Mysore.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <a

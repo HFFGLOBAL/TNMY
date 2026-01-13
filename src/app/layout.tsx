@@ -31,11 +31,15 @@ export const metadata: Metadata = {
     default: "Travels in Mysore | Travel Agency Mysore | Taxi Services Mysore | MM Mysore Travels",
     template: "%s | MM Mysore Travels",
   },
-  description: "Leading travels in Mysore \u2605 4.9/5 rated travel agency with 349+ reviews \u2605 Book taxi services in Mysore, outstation cabs, tour packages to Coorg, Ooty, Wayanad \u2605 Karnataka Tourism approved \u2605 15+ years experience \u2605 24/7 service \u2605 Call +91 96113 53434",
+  description: "Leading travels in Mysore ★ 4.9/5 rated travel agency with 349+ reviews ★ Book taxi services in Mysore & cabs in Mysore, outstation cabs, tour packages to Coorg, Ooty, Wayanad ★ Karnataka Tourism approved ★ 15+ years experience ★ 24/7 service ★ Call +91 96113 53434",
   keywords: [
+    "top travels in mysore",
+    "best travel agency mysore",
     "travels in mysore",
+    "travel agency in mysore",
     "travel agency mysore",
     "taxi services in mysore",
+    "cabs in mysore",
     "mysore travels",
     "taxi service mysore",
     "mysore tour packages",
@@ -108,7 +112,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans antialiased bg-white text-slate-900 overflow-x-hidden">
         <Header />
-        <main className="min-h-screen pb-20 lg:pb-0 pt-[72px]">{children}</main>
+        <main className="min-h-screen pb-20 lg:pb-0 pt-18">{children}</main>
         <Footer />
         <MobileBottomBar />
         <ScrollToTop />

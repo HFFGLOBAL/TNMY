@@ -4,8 +4,18 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ROUTES } from "@/lib/constants/routes";
 
 export const metadata: Metadata = {
-  title: "Fleet | Sedan, SUV & Bus",
-  description: "Browse our fleet options for taxi bookings in Mysore: Sedan, SUV and Bus.",
+  title: "Cabs in Mysore | Sedan, SUV, Tempo Traveller & Bus Fleet",
+  description: "Browse our fleet options for cabs in Mysore: Sedan, SUV, Tempo Traveller and Bus for local, outstation and airport trips.",
+  keywords: [
+    "cabs in mysore",
+    "taxi services in mysore",
+    "travels in mysore",
+    "travel agency in mysore",
+    "sedan taxi mysore",
+    "suv taxi mysore",
+    "tempo traveller mysore",
+    "bus booking mysore"
+  ],
   alternates: { canonical: "/fleet/" },
 };
 
@@ -22,7 +32,7 @@ export default function FleetHubPage() {
 
       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Fleet</h1>
-        <p className="mt-4 text-lg text-slate-700 max-w-3xl">Choose a vehicle based on passenger count and trip type.</p>
+        <p className="mt-4 text-lg text-slate-700 max-w-3xl">Choose from our cabs in Mysore based on passenger count and trip type.</p>
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

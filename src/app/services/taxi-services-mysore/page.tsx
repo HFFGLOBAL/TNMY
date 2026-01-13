@@ -7,7 +7,17 @@ import { ROUTES } from "@/lib/constants/routes";
 export const metadata: Metadata = {
   title: "Taxi Services in Mysore | Outstation, Local & Airport Transfers",
   description:
-    "Professional taxi services in Mysore for local sightseeing, outstation trips and airport transfers. Clean vehicles, experienced drivers and transparent pricing.",
+    "Professional taxi services in Mysore for local sightseeing, outstation trips and airport transfers. Clean vehicles, experienced drivers and transparent pricing. Book cabs in Mysore in minutes.",
+  keywords: [
+    "taxi services in mysore",
+    "cabs in mysore",
+    "travels in mysore",
+    "travel agency in mysore",
+    "travel agency mysore",
+    "outstation taxi mysore",
+    "airport taxi mysore",
+    "mysore sightseeing taxi"
+  ],
   alternates: { canonical: "/services/taxi-services-mysore/" },
 };
 
@@ -19,7 +29,7 @@ export default function TaxiServicesMysorePage() {
       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Taxi Services in Mysore</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
-          Local trips, outstation rides, tours and airport transfers — get a quick quote on WhatsApp.
+          Local trips, outstation rides, tours and airport transfers — get a quick quote on WhatsApp. Need cabs in Mysore today? We respond fast.
         </p>
         <div className="mt-6 flex flex-col sm:flex-row gap-3">
           <a
