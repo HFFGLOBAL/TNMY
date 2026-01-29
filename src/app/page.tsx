@@ -23,7 +23,8 @@ function HeroImageSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const images = [
-    "/images/hero/mysore-palace.jpg",
+    "/images/hero/mysore-palace.jpg"
+    , "/images/hero/hero-bg2.jpeg",
   ];  
 
   useEffect(() => {
