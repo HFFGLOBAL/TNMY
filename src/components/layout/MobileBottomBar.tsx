@@ -35,7 +35,7 @@ export function MobileBottomBar() {
         {/* Book Button */}
         <Link
           href={ROUTES.BOOK_TAXI}
-          className="flex items-center justify-center gap-2 py-3 px-4 bg-orange-500 text-white rounded-lg font-semibold text-sm shadow-sm hover:bg-orange-600 active:scale-95 transition-all"
+          className="flex items-center justify-center gap-2 py-3 px-4 bg-[#FF7444] text-white rounded-lg font-semibold text-sm shadow-sm hover:bg-[#e85c2d] active:scale-95 transition-all"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />

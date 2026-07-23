@@ -7,10 +7,10 @@ import { ROUTES } from "@/lib/constants/routes";
 import { createTourPackageSchema, createFAQSchema } from "@/lib/constants/schema-templates";
 
 export const metadata: Metadata = {
-  title: "Mysore Ooty Kodaikanal Tour Package | Starting from ₹22,000 | 4-6 Days",
-  description: "Book Mysore Ooty Kodaikanal tour package starting from ₹22,000 for 4-6 days. Explore Nilgiris and Palani hills, tea estates, lakes, waterfalls. Premium hill station circuit.",
+  title: "Mysore Ooty Kodaikanal Tour Package | Starting from ₹19,500 | 4-6 Days",
+  description: "Book Mysore Ooty Kodaikanal tour package starting from ₹19,500 for 4-6 days. Explore Nilgiris and Palani hills, tea estates, lakes, waterfalls. Premium hill station circuit.",
   keywords: ["mysore ooty kodaikanal package", "tamil nadu hill stations tour", "nilgiris tour", "5 day hill station tour"],
-  alternates: { canonical: "/mysore-ooty-kodaikanal/" },
+  alternates: { canonical: "/tour-packages/mysore-ooty-kodaikanal/"},
 };
 
 const tourPackage = createTourPackageSchema({
@@ -34,7 +34,7 @@ const tourPackage = createTourPackageSchema({
 const faqs = createFAQSchema([
   {
     question: "How much does Mysore Ooty Kodaikanal tour package cost?",
-    answer: "Mysore Ooty Kodaikanal tour package starting from ₹22,000 for 4-6 days including vehicle, driver, and fuel. Accommodation and food are extra. This is an extended tour covering over 600 km."
+    answer: "Mysore Ooty Kodaikanal tour package starting from ₹19,500 for 4-6 days including vehicle, driver, and fuel. Accommodation and food are extra. This is an extended tour covering over 600 km."
   },
   {
     question: "What is the distance between Ooty and Kodaikanal?",
@@ -110,7 +110,7 @@ export default function MysoreOotyKodaikanalPage() {
         ]} />
         
         {/* Header */}
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-purple-50 to-blue-50 p-8 mb-8">
+        <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
             Mysore Ooty Kodaikanal Tour Package
           </h1>
@@ -127,7 +127,7 @@ export default function MysoreOotyKodaikanalPage() {
               <div className="text-sm font-semibold text-slate-600">Circuit Distance</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">Starting from ₹22,000</div>
+              <div className="text-2xl font-bold text-slate-900">Starting from ₹19,500*</div>
               <div className="text-sm font-semibold text-slate-600">Package Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -177,9 +177,9 @@ export default function MysoreOotyKodaikanalPage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Suggested 5-Day Itinerary</h2>
               <div className="space-y-6">
                 {highlights.map((day, idx) => (
-                  <div key={idx} className="relative pl-8 pb-6 border-l-2 border-purple-200 last:border-transparent last:pb-0">
-                    <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-purple-600"></div>
-                    <div className="inline-block px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-sm font-semibold mb-2">{day.day}</div>
+                  <div key={idx} className="relative pl-8 pb-6 border-l-2 border-orange-200 last:border-transparent last:pb-0">
+                    <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                    <div className="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-2">{day.day}</div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2">{day.title}</h3>
                     <p className="text-slate-700">{day.desc}</p>
                   </div>
@@ -196,15 +196,15 @@ export default function MysoreOotyKodaikanalPage() {
               <p className="text-slate-600 mb-6">Vehicle options for 4-day tour (prices include vehicle, driver, fuel, tolls for 600+ km)</p>
               <div className="space-y-4">
                 {vehiclePricing.map((vehicle, idx) => (
-                  <div key={idx} className="rounded-xl border-2 border-slate-200 p-6 hover:border-purple-300 transition-colors">
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:ring-orange-400 hover:shadow-md transition-all">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.models}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-xs text-slate-500">Total Package</p>
-                        <p className="text-3xl font-bold text-purple-600">{vehicle.price}</p>
+                        <p className="text-xs text-slate-500">Total Package*</p>
+                        <p className="text-3xl font-bold text-orange-600">{vehicle.price}</p>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.perDay}</p>
                       </div>
                     </div>
@@ -213,6 +213,9 @@ export default function MysoreOotyKodaikanalPage() {
               </div>
               <p className="mt-4 text-sm text-slate-500">
                 * Extended tour pricing. Add ₹5,500-10,500 per extra day. Accommodation ₹2,000-5,000 per night in hill stations.
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
               </p>
             </div>
 
@@ -255,7 +258,7 @@ export default function MysoreOotyKodaikanalPage() {
               <div className="space-y-4">
                 <div className="border-b border-slate-200 pb-4">
                   <h3 className="font-bold text-slate-900 mb-2">How much does Mysore Ooty Kodaikanal tour package cost?</h3>
-                  <p className="text-slate-700">Mysore Ooty Kodaikanal tour package starting from ₹22,000 for 4-6 days including vehicle, driver, and fuel. Accommodation and food are extra. This is an extended tour covering over 600 km.</p>
+                  <p className="text-slate-700">Mysore Ooty Kodaikanal tour package starting from ₹19,500 for 4-6 days including vehicle, driver, and fuel. Accommodation and food are extra. This is an extended tour covering over 600 km.</p>
                 </div>
                 <div className="border-b border-slate-200 pb-4">
                   <h3 className="font-bold text-slate-900 mb-2">What is the distance between Ooty and Kodaikanal?</h3>
@@ -275,7 +278,7 @@ export default function MysoreOotyKodaikanalPage() {
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="rounded-2xl bg-gradient-to-br from-purple-600 to-purple-700 p-6 text-white sticky top-4">
+            <div className="rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-6 text-white sticky top-24">
               <h3 className="text-xl font-bold mb-4">Book Extended Tour</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2">
@@ -301,13 +304,13 @@ export default function MysoreOotyKodaikanalPage() {
                 href={BUSINESS_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-purple-700 hover:bg-purple-50 transition-colors"
+                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-orange-700 hover:bg-orange-50 transition-colors"
               >
                 WhatsApp: {BUSINESS_INFO.phone}
               </a>
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-purple-800 transition-colors"
+                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
               >
                 Book Online
               </Link>
@@ -317,15 +320,15 @@ export default function MysoreOotyKodaikanalPage() {
             <div className="mt-6 rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h3 className="text-lg font-bold text-slate-900 mb-4">Related Tours</h3>
               <div className="space-y-2">
-                <Link href={ROUTES.MYSORE_TO_OOTY} className="block p-3 rounded-lg hover:bg-purple-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_OOTY} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Ooty</div>
-                  <div className="text-sm text-slate-600">1-2 Days • Starting from ₹4,800</div>
+                  <div className="text-sm text-slate-600">1-2 Days • Starting from ₹5,500*</div>
                 </Link>
-                <Link href={ROUTES.MYSORE_OOTY_COORG} className="block p-3 rounded-lg hover:bg-purple-50 transition-colors">
+                <Link href={ROUTES.MYSORE_OOTY_COORG} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore Ooty Coorg</div>
-                  <div className="text-sm text-slate-600">3-5 Days • Starting from ₹18,000</div>
+                  <div className="text-sm text-slate-600">3-5 Days • Starting from ₹18,000*</div>
                 </Link>
-                <Link href={ROUTES.CUSTOM_PACKAGES} className="block p-3 rounded-lg hover:bg-purple-50 transition-colors">
+                <Link href={ROUTES.CUSTOM_PACKAGES} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Custom Packages</div>
                   <div className="text-sm text-slate-600">Design Your Own Tour</div>
                 </Link>

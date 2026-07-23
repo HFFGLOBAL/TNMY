@@ -182,20 +182,20 @@ export function TourPackagesClient() {
         <Breadcrumbs items={[{ label: "Tour Packages", href: ROUTES.TOUR_PACKAGES }]} />
 
         {/* Hero Section */}
-        <section className="mt-6 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <section className="mt-6 overflow-hidden rounded-2xl bg-linear-to-r from-orange-600 to-[#e85c2d] text-white">
           <div className="p-8 md:p-12">
             <div className="inline-flex items-center rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur-sm">
               15+ Curated Tours • Private Cabs • Expert Drivers
             </div>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">Tour Packages from Mysore</h1>
-            <p className="mt-4 max-w-3xl text-lg text-blue-100">
+            <p className="mt-4 max-w-3xl text-lg text-orange-100">
               Explore Karnataka and beyond with our carefully crafted tour packages. From one-day getaways to multi-day adventures, we
               offer the perfect travel experience with comfortable vehicles and knowledgeable drivers.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="inline-flex items-center justify-center rounded-xl bg-white text-blue-600 px-6 py-3 text-base font-bold hover:bg-blue-50 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center rounded-xl bg-white text-orange-600 px-6 py-3 text-base font-bold hover:bg-orange-50 transition-colors shadow-lg"
               >
                 Book Your Tour Now
               </Link>
@@ -211,7 +211,7 @@ export function TourPackagesClient() {
 
         {/* Filters */}
         <section className="mt-8">
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-6">
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-6">
             <h2 className="text-lg font-bold text-slate-900 mb-4">Filter Tours</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Duration Filter */}
@@ -229,7 +229,7 @@ export function TourPackagesClient() {
                       onClick={() => setSelectedCategory(cat.value)}
                       className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                         selectedCategory === cat.value
-                          ? "bg-blue-600 text-white shadow-md"
+                          ? "bg-orange-600 text-white shadow-md"
                           : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                       }`}
                     >
@@ -258,7 +258,7 @@ export function TourPackagesClient() {
                       onClick={() => setSelectedDestination(dest.value)}
                       className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
                         selectedDestination === dest.value
-                          ? "bg-emerald-600 text-white shadow-md"
+                          ? "bg-orange-600 text-white shadow-md"
                           : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                       }`}
                     >
@@ -286,12 +286,12 @@ export function TourPackagesClient() {
               <Link
                 key={tour.href}
                 href={tour.href}
-                className="group bg-white rounded-2xl ring-1 ring-slate-900/5 hover:ring-blue-400 hover:shadow-xl transition-all overflow-hidden"
+                className="group bg-white rounded-2xl ring-1 ring-slate-900/10 hover:ring-orange-400 hover:shadow-lg transition-all overflow-hidden"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{tour.name}</h3>
-                    <span className="shrink-0 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 ring-1 ring-blue-600/20">
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">{tour.name}</h3>
+                    <span className="shrink-0 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold text-orange-700 ring-1 ring-orange-600/20">
                       {tour.duration}
                     </span>
                   </div>
@@ -335,7 +335,7 @@ export function TourPackagesClient() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-orange-600 font-semibold text-sm group-hover:gap-3 transition-all">
                     View Details & Book
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path
@@ -367,7 +367,7 @@ export function TourPackagesClient() {
                   setSelectedCategory("all");
                   setSelectedDestination("all");
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-orange-600 text-white font-bold hover:bg-[#e85c2d] transition-colors"
               >
                 Reset Filters
               </button>
@@ -377,7 +377,7 @@ export function TourPackagesClient() {
 
         {/* Why Choose Us */}
         <section className="mt-12">
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
+          <div className="bg-slate-900 rounded-2xl p-8 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Why Book Tour Packages with MM Mysore Travels?</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
@@ -427,7 +427,7 @@ export function TourPackagesClient() {
                 },
               ].map((feature) => (
                 <div key={feature.title} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/20 text-blue-400 mb-3">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 mb-3">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold mb-2">{feature.title}</h3>
@@ -440,7 +440,7 @@ export function TourPackagesClient() {
 
         {/* CTA Section */}
         <section className="mt-12 text-center">
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-8">
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Can't Find Your Perfect Tour?</h2>
             <p className="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
               Let us create a custom itinerary just for you. Tell us your preferences, and we'll plan the perfect trip.
@@ -448,7 +448,7 @@ export function TourPackagesClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={ROUTES.CUSTOM_PACKAGES}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-orange-600 text-white font-bold text-lg hover:bg-[#e85c2d] transition-colors shadow-lg"
               >
                 Create Custom Package
               </Link>

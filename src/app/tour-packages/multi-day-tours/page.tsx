@@ -39,7 +39,7 @@ export default function MultiDayToursHubPage() {
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
               href={ROUTES.BOOK_TAXI}
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-6 py-3 text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
             >
               Get quote for multi-day tour
             </Link>
@@ -62,11 +62,11 @@ export default function MultiDayToursHubPage() {
             <Link
               key={p.href}
               href={p.href}
-              className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow"
+              className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg hover:ring-orange-400 transition-all"
             >
               <h3 className="text-lg font-bold text-slate-900">{p.label}</h3>
               <p className="mt-2 text-slate-600">View itinerary and request pricing.</p>
-              <div className="mt-4 text-sm font-semibold text-blue-700">Explore →</div>
+              <div className="mt-4 text-sm font-semibold text-orange-700">Explore →</div>
             </Link>
           ))}
         </div>

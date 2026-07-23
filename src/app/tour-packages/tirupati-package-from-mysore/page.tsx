@@ -7,10 +7,10 @@ import { ROUTES } from "@/lib/constants/routes";
 import { createTourPackageSchema, createFAQSchema } from "@/lib/constants/schema-templates";
 
 export const metadata: Metadata = {
-  title: "Tirupati Package from Mysore | Starting from ₹15,000 | 1-2 Days Temple Tour",
-  description: "Book Tirupati package from Mysore starting from ₹15,000 for 1-2 days. Lord Venkateswara Temple darshan, professional drivers, AC vehicles, flexible timing. VIP darshan arrangements available.",
+  title: "Tirupati Package from Mysore | Starting from ₹12,500 | 1-2 Days Temple Tour",
+  description: "Book Tirupati package from Mysore starting from ₹12,500 for 1-2 days. Lord Venkateswara Temple darshan, professional drivers, AC vehicles, flexible timing. VIP darshan arrangements available.",
   keywords: ["tirupati package from mysore", "mysore to tirupati", "tirupati darshan", "balaji temple tour", "tirumala package"],
-  alternates: { canonical: "/tirupati-package-from-mysore/" },
+  alternates: { canonical: "/tour-packages/tirupati-package-from-mysore/"},
 };
 
 const tourPackage = createTourPackageSchema({
@@ -34,7 +34,7 @@ const tourPackage = createTourPackageSchema({
 const faqs = createFAQSchema([
   {
     question: "How much does Tirupati package from Mysore cost?",
-    answer: "Tirupati package from Mysore starting from ₹15,000 for 1-2 days including vehicle, driver, and fuel. Accommodation not included. Distance is 450 km one way, approximately 8-9 hours drive."
+    answer: "Tirupati package from Mysore starting from ₹12,500 for 1-2 days including vehicle, driver, and fuel. Accommodation not included. Distance is 450 km one way, approximately 8-9 hours drive."
   },
   {
     question: "What is the best time for Tirupati darshan?",
@@ -114,7 +114,7 @@ export default function TirupatiPackageFromMysorePage() {
         ]} />
         
         {/* Header */}
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-red-50 to-orange-50 p-8 mb-8">
+        <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
             Tirupati Package from Mysore
           </h1>
@@ -131,7 +131,7 @@ export default function TirupatiPackageFromMysorePage() {
               <div className="text-sm font-semibold text-slate-600">One Way Distance</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">Starting from ₹15,000</div>
+              <div className="text-2xl font-bold text-slate-900">Starting from ₹12,500*</div>
               <div className="text-sm font-semibold text-slate-600">Package Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -181,14 +181,14 @@ export default function TirupatiPackageFromMysorePage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Darshan Options & Wait Times</h2>
               <div className="space-y-4">
                 {darshanOptions.map((option, idx) => (
-                  <div key={idx} className="rounded-xl border-2 border-slate-200 p-4 hover:border-red-200 transition-colors">
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4 hover:ring-orange-400 hover:shadow-md transition-all">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
                       <div>
                         <h3 className="text-lg font-bold text-slate-900">{option.type}</h3>
                         <p className="text-sm text-slate-600 mt-1">{option.desc}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-2xl font-bold text-red-600">{option.cost}</p>
+                        <p className="text-2xl font-bold text-orange-600">{option.cost}</p>
                         <p className="text-sm text-slate-600">{option.time}</p>
                       </div>
                     </div>
@@ -205,9 +205,9 @@ export default function TirupatiPackageFromMysorePage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Suggested 2-Day Itinerary</h2>
               <div className="space-y-6">
                 {highlights.map((day, idx) => (
-                  <div key={idx} className="relative pl-8 pb-6 border-l-2 border-red-200 last:border-transparent last:pb-0">
-                    <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-red-600"></div>
-                    <div className="inline-block px-3 py-1 rounded-full bg-red-100 text-red-700 text-sm font-semibold mb-2">{day.day}</div>
+                  <div key={idx} className="relative pl-8 pb-6 border-l-2 border-orange-200 last:border-transparent last:pb-0">
+                    <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                    <div className="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-2">{day.day}</div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2">{day.title}</h3>
                     <p className="text-slate-700">{day.desc}</p>
                   </div>
@@ -224,15 +224,15 @@ export default function TirupatiPackageFromMysorePage() {
               <p className="text-slate-600 mb-6">Vehicle options for 2-day package (includes round trip 900 km, driver, fuel, tolls)</p>
               <div className="space-y-4">
                 {vehiclePricing.map((vehicle, idx) => (
-                  <div key={idx} className="rounded-xl border-2 border-slate-200 p-6 hover:border-red-300 transition-colors">
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:ring-orange-400 hover:shadow-md transition-all">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.models}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-xs text-slate-500">Total Package</p>
-                        <p className="text-3xl font-bold text-red-600">{vehicle.price}</p>
+                        <p className="text-xs text-slate-500">Total Package*</p>
+                        <p className="text-3xl font-bold text-orange-600">{vehicle.price}</p>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.perDay}</p>
                       </div>
                     </div>
@@ -241,6 +241,9 @@ export default function TirupatiPackageFromMysorePage() {
               </div>
               <p className="mt-4 text-sm text-slate-500">
                 * Prices for 2-day package. Same day return possible with slight reduction. Accommodation ₹500-5,000 per night.
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
               </p>
             </div>
 
@@ -283,7 +286,7 @@ export default function TirupatiPackageFromMysorePage() {
               <div className="space-y-4">
                 <div className="border-b border-slate-200 pb-4">
                   <h3 className="font-bold text-slate-900 mb-2">How much does Tirupati package from Mysore cost?</h3>
-                  <p className="text-slate-700">Tirupati package from Mysore starting from ₹15,000 for 1-2 days including vehicle, driver, and fuel. Accommodation not included. Distance is 450 km one way, approximately 8-9 hours drive.</p>
+                  <p className="text-slate-700">Tirupati package from Mysore starting from ₹12,500 for 1-2 days including vehicle, driver, and fuel. Accommodation not included. Distance is 450 km one way, approximately 8-9 hours drive.</p>
                 </div>
                 <div className="border-b border-slate-200 pb-4">
                   <h3 className="font-bold text-slate-900 mb-2">What is the best time for darshan?</h3>
@@ -303,7 +306,7 @@ export default function TirupatiPackageFromMysorePage() {
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="rounded-2xl bg-gradient-to-br from-red-600 to-orange-600 p-6 text-white sticky top-4">
+            <div className="rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-6 text-white sticky top-24">
               <h3 className="text-xl font-bold mb-4">Book Temple Tour</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2">
@@ -329,13 +332,13 @@ export default function TirupatiPackageFromMysorePage() {
                 href={BUSINESS_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-red-700 hover:bg-red-50 transition-colors"
+                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-orange-700 hover:bg-orange-50 transition-colors"
               >
                 WhatsApp: {BUSINESS_INFO.phone}
               </a>
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-red-700 transition-colors"
+                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
               >
                 Book Online
               </Link>
@@ -346,23 +349,23 @@ export default function TirupatiPackageFromMysorePage() {
               <h3 className="text-lg font-bold text-slate-900 mb-4">Important Tips</h3>
               <ul className="space-y-3 text-sm text-slate-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">•</span>
+                  <span className="text-orange-600 mt-1">•</span>
                   <span>Book darshan tickets online 3-7 days in advance</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">•</span>
+                  <span className="text-orange-600 mt-1">•</span>
                   <span>Carry photo ID proof for all pilgrims</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">•</span>
+                  <span className="text-orange-600 mt-1">•</span>
                   <span>Traditional dress code recommended (dhoti/saree)</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">•</span>
+                  <span className="text-orange-600 mt-1">•</span>
                   <span>Mobile phones not allowed inside temple</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-600 mt-1">•</span>
+                  <span className="text-orange-600 mt-1">•</span>
                   <span>Buy Laddu prasadam from official counters only</span>
                 </li>
               </ul>
@@ -372,15 +375,15 @@ export default function TirupatiPackageFromMysorePage() {
             <div className="mt-6 rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h3 className="text-lg font-bold text-slate-900 mb-4">Other Packages</h3>
               <div className="space-y-2">
-                <Link href={ROUTES.MYSORE_TO_BANGALORE} className="block p-3 rounded-lg hover:bg-red-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_BANGALORE} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Bangalore</div>
-                  <div className="text-sm text-slate-600">Drop/Transfer • Starting from ₹2,800</div>
+                  <div className="text-sm text-slate-600">Drop/Transfer • Starting from ₹2,800*</div>
                 </Link>
-                <Link href={ROUTES.MYSORE_COORG_WAYANAD} className="block p-3 rounded-lg hover:bg-red-50 transition-colors">
+                <Link href={ROUTES.MYSORE_COORG_WAYANAD} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore Coorg Wayanad</div>
-                  <div className="text-sm text-slate-600">3-4 Days • Starting from ₹16,500</div>
+                  <div className="text-sm text-slate-600">3-4 Days • Starting from ₹16,500*</div>
                 </Link>
-                <Link href={ROUTES.CUSTOM_PACKAGES} className="block p-3 rounded-lg hover:bg-red-50 transition-colors">
+                <Link href={ROUTES.CUSTOM_PACKAGES} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Custom Packages</div>
                   <div className="text-sm text-slate-600">Build Your Tour</div>
                 </Link>

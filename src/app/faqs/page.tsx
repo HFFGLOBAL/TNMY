@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { createFAQSchema } from "@/lib/constants/schema-templates";
 import { BUSINESS_INFO } from "@/lib/constants/business-info";
 import { ROUTES } from "@/lib/constants/routes";
 
@@ -30,12 +32,17 @@ const faqs = [
   },
 ];
 
+const faqSchema = createFAQSchema(
+  faqs.map((f) => ({ question: f.q, answer: f.a }))
+);
+
 export default function FAQsPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <JsonLd data={faqSchema} />
       <Breadcrumbs items={[{ label: "FAQs", href: ROUTES.FAQS }]} />
 
-      <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
+      <div className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Frequently Asked Questions</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
           Quick answers for pricing, booking, vehicle options and trip planning.

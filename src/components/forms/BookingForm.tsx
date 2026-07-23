@@ -143,8 +143,8 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
 
   const containerClassName =
     layout === 'horizontal'
-      ? 'bg-white rounded-2xl shadow-lg ring-1 ring-slate-900/10 p-5 md:p-6 w-full'
-      : 'bg-white rounded-2xl shadow-lg ring-1 ring-slate-900/10 p-5 md:p-6 max-w-xl mx-auto';
+      ? 'bg-white rounded-2xl shadow-sm ring-1 ring-slate-900/10 p-5 md:p-6 w-full'
+      : 'bg-white rounded-2xl shadow-sm ring-1 ring-slate-900/10 p-5 md:p-6 max-w-xl mx-auto';
 
   return (
     <div className={containerClassName}>
@@ -229,7 +229,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 value={formData.pickup}
                 onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
                 placeholder="Mysore"
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               />
             </div>
@@ -240,7 +240,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 <select
                   value={formData.localPackage}
                   onChange={(e) => setFormData({ ...formData, localPackage: e.target.value })}
-                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 >
                   <option value="4-hours">4 Hours / 40 km</option>
@@ -256,7 +256,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                     <select
                       value={formData.airportName}
                       onChange={(e) => setFormData({ ...formData, airportName: e.target.value })}
-                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                       required
                     >
                       <option value="Bengaluru (BLR)">Bengaluru (BLR)</option>
@@ -273,7 +273,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                       value={formData.drop}
                       onChange={(e) => setFormData({ ...formData, drop: e.target.value })}
                       placeholder="Enter destination"
-                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                      className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                       required
                     />
                   </div>
@@ -287,7 +287,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                   value={formData.drop}
                   onChange={(e) => setFormData({ ...formData, drop: e.target.value })}
                   placeholder="Drop location"
-                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 />
               </div>
@@ -300,7 +300,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 value={formData.departDate}
                 onChange={(e) => setFormData({ ...formData, departDate: e.target.value })}
                 min={new Date().toISOString().split('T')[0]}
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               />
             </div>
@@ -311,7 +311,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 type="time"
                 value={formData.departTime}
                 onChange={(e) => setFormData({ ...formData, departTime: e.target.value })}
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
               />
             </div>
 
@@ -331,7 +331,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Your Name"
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               />
             </div>
@@ -344,7 +344,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="10-digit mobile"
                 pattern="[0-9+\s-]+"
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               />
             </div>
@@ -354,7 +354,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
               <select
                 value={formData.vehicle}
                 onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
               >
                 {vehicleOptions.map((o) => (
                   <option key={o.value} value={o.value}>
@@ -371,7 +371,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                   <select
                     value={formData.airportDirection}
                     onChange={(e) => setFormData({ ...formData, airportDirection: e.target.value })}
-                    className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                    className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                     required
                   >
                     <option value="to-airport">Drop to Airport</option>
@@ -383,7 +383,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                   <select
                     value={formData.airportName}
                     onChange={(e) => setFormData({ ...formData, airportName: e.target.value })}
-                    className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                    className="w-full px-3 py-2.5 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                     required
                   >
                     <option value="Bengaluru (BLR)">Bengaluru (BLR)</option>
@@ -398,7 +398,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
             <div className="md:col-span-12">
               <p className="text-center text-sm text-slate-600">
                 Prefer a call?{' '}
-                <a href={`tel:${BUSINESS_INFO.phone}`} className="text-blue-700 font-semibold hover:underline">
+                <a href={`tel:${BUSINESS_INFO.phone}`} className="text-[#e85c2d] font-semibold hover:underline">
                   {BUSINESS_INFO.phoneDisplay}
                 </a>
               </p>
@@ -447,7 +447,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 placeholder="Your Name"
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               />
             </div>
@@ -459,7 +459,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 placeholder="10-digit mobile"
                 pattern="[0-9+\s-]+"
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               />
             </div>
@@ -504,7 +504,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 <select
                   value={formData.airportDirection}
                   onChange={(e) => setFormData({ ...formData, airportDirection: e.target.value })}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 >
                   <option value="to-airport">Drop to Airport</option>
@@ -516,7 +516,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 <select
                   value={formData.airportName}
                   onChange={(e) => setFormData({ ...formData, airportName: e.target.value })}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 >
                   <option value="Bengaluru (BLR)">Bengaluru (BLR)</option>
@@ -534,7 +534,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
               <select
                 value={formData.localPackage}
                 onChange={(e) => setFormData({ ...formData, localPackage: e.target.value })}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               >
                 <option value="4-hours">4 Hours / 40 km</option>
@@ -554,7 +554,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                     type="text"
                     value="Mysore"
                     disabled
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-slate-100 text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition cursor-not-allowed"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-slate-100 text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition cursor-not-allowed"
                   />
                   <p className="mt-1 text-xs text-slate-500">Service available within Mysore city limits</p>
                 </div>
@@ -566,7 +566,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                     value={formData.pickup}
                     onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
                     placeholder="Pickup location"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                     required
                   />
                 </div>
@@ -582,7 +582,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                     value={formData.drop}
                     onChange={(e) => setFormData({ ...formData, drop: e.target.value })}
                     placeholder="Drop location"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                     required
                   />
                 </div>
@@ -595,7 +595,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                   value={formData.departDate}
                   onChange={(e) => setFormData({ ...formData, departDate: e.target.value })}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 />
               </div>
@@ -613,7 +613,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                     value={formData.pickup}
                     onChange={(e) => setFormData({ ...formData, pickup: e.target.value })}
                     placeholder="Pickup location"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                     required
                   />
                 </div>
@@ -625,7 +625,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                     value={formData.drop}
                     onChange={(e) => setFormData({ ...formData, drop: e.target.value })}
                     placeholder="Enter destination"
-                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                    className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-400 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                     required
                   />
                 </div>
@@ -637,7 +637,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                   value={formData.departDate}
                   onChange={(e) => setFormData({ ...formData, departDate: e.target.value })}
                   min={new Date().toISOString().split('T')[0]}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 />
               </div>
@@ -651,7 +651,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 type="time"
                 value={formData.departTime}
                 onChange={(e) => setFormData({ ...formData, departTime: e.target.value })}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
               />
             </div>
 
@@ -663,7 +663,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                   value={formData.returnDate}
                   onChange={(e) => setFormData({ ...formData, returnDate: e.target.value })}
                   min={formData.departDate || new Date().toISOString().split('T')[0]}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                  className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                   required
                 />
               </div>
@@ -681,7 +681,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
               <select
                 value={formData.vehicle}
                 onChange={(e) => setFormData({ ...formData, vehicle: e.target.value })}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-white text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition"
                 required
               >
                 {vehicleOptions.map((o) => (
@@ -697,7 +697,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
                 type="text"
                 value={vehicleCapacity[formData.vehicle] || '4'}
                 disabled
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-slate-100 text-slate-900 focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 outline-none transition cursor-not-allowed"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg bg-slate-100 text-slate-900 focus:ring-2 focus:ring-[#FF7444]/30 focus:border-[#FF7444] outline-none transition cursor-not-allowed"
               />
               <p className="mt-1 text-xs text-slate-500">Auto-selected based on vehicle type</p>
             </div>
@@ -713,7 +713,7 @@ export function BookingForm({ layout = 'vertical' }: BookingFormProps) {
 
           <p className="text-center text-sm text-slate-600">
             Prefer a call?{' '}
-            <a href={`tel:${BUSINESS_INFO.phone}`} className="text-blue-700 font-semibold hover:underline">
+            <a href={`tel:${BUSINESS_INFO.phone}`} className="text-[#e85c2d] font-semibold hover:underline">
               {BUSINESS_INFO.phoneDisplay}
             </a>
           </p>

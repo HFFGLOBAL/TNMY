@@ -15,7 +15,7 @@ export default function DestinationCoorgPage() {
       <Breadcrumbs items={[{ label: "Destinations", href: ROUTES.DESTINATIONS }, { label: "Coorg", href: ROUTES.DEST_COORG }]} />
 
       {/* Hero Section */}
-      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-amber-50 to-slate-50 p-8 md:p-12 mb-10">
+      <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 md:p-12 mb-10">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Mysore to Coorg Taxi Service</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
           Discover Scotland of India with our premium Mysore to Coorg taxi service. Enjoy comfortable rides through coffee estates, misty hills, and cascading waterfalls with professional drivers and transparent pricing.
@@ -23,31 +23,31 @@ export default function DestinationCoorgPage() {
         <div className="mt-6 flex flex-wrap gap-4">
           <Link 
             href={ROUTES.MYSORE_TO_COORG} 
-            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white hover:bg-blue-700 transition-colors shadow-sm"
+            className="inline-flex items-center justify-center rounded-lg bg-orange-600 px-6 py-3 text-base font-semibold text-white hover:bg-orange-700 transition-colors shadow-sm"
           >
             Book Coorg Taxi Now
           </Link>
           <Link 
             href={ROUTES.BOOK_TAXI} 
-            className="inline-flex items-center justify-center rounded-lg bg-white border-2 border-blue-600 px-6 py-3 text-base font-semibold text-blue-600 hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center rounded-lg bg-white border-2 border-orange-600 px-6 py-3 text-base font-semibold text-orange-600 hover:bg-orange-50 transition-colors"
           >
             Get Instant Quote
           </Link>
         </div>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Distance</div>
             <div className="text-slate-600">120 km from Mysore</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Travel Time</div>
             <div className="text-slate-600">2.5 - 3 hours</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Starting Fare</div>
-            <div className="text-slate-600">₹5,500 onwards</div>
+            <div className="text-slate-600">₹4,500 onwards</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Best Time</div>
             <div className="text-slate-600">Oct to Mar</div>
           </div>
@@ -66,7 +66,7 @@ export default function DestinationCoorgPage() {
             { name: "Madikeri Fort", desc: "Historical fort with palace, museum showcasing Kodava culture, and panoramic town views from ramparts." },
             { name: "Golden Temple Bylakuppe", desc: "Largest Tibetan settlement in India with magnificent monasteries, golden Buddha statues, prayer flags." }
           ].map((place) => (
-            <div key={place.name} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div key={place.name} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-md hover:ring-orange-300 transition-all">
               <h3 className="text-xl font-semibold text-slate-900 mb-2">{place.name}</h3>
               <p className="text-slate-600">{place.desc}</p>
             </div>
@@ -75,7 +75,7 @@ export default function DestinationCoorgPage() {
       </section>
 
       {/* Why Choose Our Service */}
-      <section className="mb-12 bg-amber-50 rounded-2xl p-8">
+      <section className="mb-12 bg-orange-50 rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose Our Mysore to Coorg Taxi Service?</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -86,7 +86,7 @@ export default function DestinationCoorgPage() {
             { title: "Safety First", desc: "Regular vehicle maintenance, GPS tracking, verified drivers for secure hill travel" },
             { title: "Local Knowledge", desc: "Drivers recommend authentic Coorgi restaurants, hidden waterfalls, and photo spots" }
           ].map((feature) => (
-            <div key={feature.title} className="bg-white rounded-lg p-5 shadow-sm">
+            <div key={feature.title} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
               <h3 className="font-semibold text-slate-900 mb-2">{feature.title}</h3>
               <p className="text-sm text-slate-600">{feature.desc}</p>
             </div>
@@ -97,7 +97,7 @@ export default function DestinationCoorgPage() {
       {/* Travel Information */}
       <section className="mb-12">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Coorg Travel Guide from Mysore</h2>
-        <div className="prose prose-slate max-w-none bg-white rounded-xl border border-slate-200 p-8">
+        <div className="prose prose-slate max-w-none bg-white rounded-2xl ring-1 ring-slate-900/10 p-8">
           <h3 className="text-xl font-semibold text-slate-900 mb-3">Best Season to Visit Coorg</h3>
           <p className="text-slate-700 mb-4">
             October to March is ideal with pleasant weather (15-28°C) perfect for sightseeing and trekking. Monsoon (June-September) transforms Coorg into lush green paradise with full-flowing waterfalls. Winter brings coffee blossom fragrance filling the valleys.
@@ -131,21 +131,21 @@ export default function DestinationCoorgPage() {
       </section>
 
       {/* Booking CTA */}
-      <section className="bg-gradient-to-r from-amber-600 to-orange-600 rounded-2xl p-8 md:p-12 text-white text-center">
+      <section className="rounded-2xl bg-slate-900 p-8 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Coffee Paradise with Us</h2>
-        <p className="text-lg mb-6 text-amber-50">
+        <p className="text-lg mb-6 text-orange-50">
           Book your Mysore to Coorg taxi for a memorable getaway. Comfortable vehicles, experienced drivers, flexible packages, and best rates guaranteed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link 
             href={ROUTES.BOOK_TAXI} 
-            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-amber-600 hover:bg-amber-50 transition-colors shadow-lg"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-orange-600 hover:bg-orange-50 transition-colors shadow-lg"
           >
             Book Coorg Taxi
           </Link>
           <a 
             href="tel:+919611353434" 
-            className="inline-flex items-center justify-center rounded-lg bg-amber-700 px-8 py-3 text-base font-semibold text-white hover:bg-amber-800 transition-colors border-2 border-white"
+            className="inline-flex items-center justify-center rounded-lg bg-orange-700 px-8 py-3 text-base font-semibold text-white hover:bg-orange-800 transition-colors border-2 border-white"
           >
             Call Now: +91 96113 53434
           </a>

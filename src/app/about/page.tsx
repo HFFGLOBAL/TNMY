@@ -39,11 +39,11 @@ export default function AboutPage() {
           <Breadcrumbs items={[{ label: "About Us", href: ROUTES.ABOUT }]} />
           
           {/* Hero Section */}
-          <div className="bg-linear-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mb-8 text-center text-white">
+          <div className="bg-linear-to-r from-orange-600 to-[#e85c2d] rounded-2xl p-8 md:p-12 mb-8 text-center text-white">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Premier Travel Agency & Taxi Services in Mysore
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-orange-100 max-w-3xl mx-auto">
               Your Trusted Partner for Travels in Mysore Since {BUSINESS_INFO.founded} | 11+ Years Excellence
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 mt-6">
@@ -52,17 +52,17 @@ export default function AboutPage() {
                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                 </svg>
                 <span className="font-bold">{BUSINESS_INFO.rating.value}/5</span>
-                <span className="text-blue-100">({BUSINESS_INFO.rating.count}+ Reviews)</span>
+                <span className="text-orange-100">({BUSINESS_INFO.rating.count}+ Reviews)</span>
               </div>
-              <div className="text-blue-100">|</div>
+              <div className="text-orange-100">|</div>
               <div className="font-semibold">10,000+ Happy Travelers</div>
-              <div className="text-blue-100">|</div>
+              <div className="text-orange-100">|</div>
               <div className="font-semibold">24/7 Service</div>
             </div>
           </div>
 
           {/* Who We Are - SEO Optimized */}
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-8 mb-8">
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8 mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-6">Who We Are - Leading Travels in Mysore</h2>
             <div className="prose prose-lg max-w-none text-slate-700">
               <p className="mb-4">
@@ -81,7 +81,7 @@ export default function AboutPage() {
           </div>
 
           {/* Why Choose MM Mysore Travels */}
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-8 mb-8">
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8 mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
               Why MM Mysore Travels is the Best Choice for Taxi Services in Mysore
             </h2>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                   desc: "Punctual pickups and drop-offs. Your schedule is our priority."
                 }
               ].map((feature, idx) => (
-                <div key={idx} className="p-6 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all">
+                <div key={idx} className="p-6 rounded-xl bg-white ring-1 ring-slate-900/10 hover:ring-orange-400 hover:shadow-md transition-all">
                   <div className="text-4xl mb-3">{feature.icon}</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                   <p className="text-slate-600 text-sm">{feature.desc}</p>
@@ -138,86 +138,88 @@ export default function AboutPage() {
           </div>
 
           {/* Our Services - SEO Optimized */}
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-8 mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Comprehensive Taxi Services in Mysore</h2>
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8 mb-8">
+            <Link href={ROUTES.TAXI_SERVICES} className="block group">
+              <h2 className="text-3xl font-bold text-slate-900 mb-6 group-hover:text-orange-700 transition-colors">Comprehensive Taxi Services in Mysore</h2>
+            </Link>
             <p className="text-slate-700 mb-6">
               As a full-service <strong>travel agency in Mysore</strong>, we offer complete transportation solutions:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <div className="flex gap-3">
-                  <svg className="w-6 h-6 text-blue-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <Link href={ROUTES.OUTSTATION_TAXI} className="flex gap-3 group">
+                  <svg className="w-6 h-6 text-orange-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Outstation Taxi Services</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">Outstation Taxi Services</h3>
                     <p className="text-slate-600">
-                      Book <strong>outstation taxi from Mysore</strong> to Coorg, Ooty, Wayanad, Bangalore, Kodaikanal, Goa, and all major destinations. Starting at ₹11/km.
+                      Book <strong>outstation taxi from Mysore</strong> to Coorg, Ooty, Wayanad, Bangalore, Kodaikanal, Goa, and all major destinations. Starting at ₹12/km.
                     </p>
                   </div>
-                </div>
-                
-                <div className="flex gap-3">
-                  <svg className="w-6 h-6 text-blue-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                </Link>
+
+                <Link href={ROUTES.SIGHTSEEING_TAXI} className="flex gap-3 group">
+                  <svg className="w-6 h-6 text-orange-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Mysore Local Sightseeing</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">Mysore Local Sightseeing</h3>
                     <p className="text-slate-600">
                       Half-day and full-day <strong>Mysore city taxi service</strong> covering Mysore Palace, Chamundi Hills, Brindavan Gardens, and all major attractions.
                     </p>
                   </div>
-                </div>
+                </Link>
 
-                <div className="flex gap-3">
-                  <svg className="w-6 h-6 text-blue-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <Link href={ROUTES.AIRPORT_TRANSFER} className="flex gap-3 group">
+                  <svg className="w-6 h-6 text-orange-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Airport Transfer Service</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">Airport Transfer Service</h3>
                     <p className="text-slate-600">
                       Reliable <strong>airport taxi service in Mysore</strong> for Bangalore, Coimbatore, Mangalore airports. On-time pickups guaranteed.
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
 
               <div className="space-y-4">
-                <div className="flex gap-3">
-                  <svg className="w-6 h-6 text-blue-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <Link href={ROUTES.TOUR_PACKAGES} className="flex gap-3 group">
+                  <svg className="w-6 h-6 text-orange-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Tour Packages from Mysore</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">Tour Packages from Mysore</h3>
                     <p className="text-slate-600">
                       Customized <strong>Mysore tour packages</strong> including 1-day trips, multi-day tours, honeymoon packages, and family vacation plans.
                     </p>
                   </div>
-                </div>
+                </Link>
 
-                <div className="flex gap-3">
-                  <svg className="w-6 h-6 text-blue-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <Link href={ROUTES.CORPORATE_CAB} className="flex gap-3 group">
+                  <svg className="w-6 h-6 text-orange-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Corporate Cab Service</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">Corporate Cab Service</h3>
                     <p className="text-slate-600">
                       Professional <strong>corporate taxi service in Mysore</strong> for business travel, employee transport, and corporate events.
                     </p>
                   </div>
-                </div>
+                </Link>
 
-                <div className="flex gap-3">
-                  <svg className="w-6 h-6 text-blue-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                <Link href={ROUTES.WEDDING_CAR} className="flex gap-3 group">
+                  <svg className="w-6 h-6 text-orange-600 shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">Wedding Car Rental</h3>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-700 transition-colors">Wedding Car Rental</h3>
                     <p className="text-slate-600">
                       Premium <strong>wedding car rental in Mysore</strong> with decorated vehicles and professional chauffeurs for your special day.
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -227,17 +229,17 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6 text-center">Our Commitment to You</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-5xl font-bold text-blue-400 mb-2">{BUSINESS_INFO.rating.value}/5</div>
+                <div className="text-5xl font-bold text-orange-400 mb-2">{BUSINESS_INFO.rating.value}/5</div>
                 <div className="text-lg font-semibold mb-2">Customer Rating</div>
                 <div className="text-slate-300 text-sm">Based on {BUSINESS_INFO.rating.count}+ verified reviews</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-blue-400 mb-2">{BUSINESS_INFO.yearsExperience}</div>
+                <div className="text-5xl font-bold text-orange-400 mb-2">{BUSINESS_INFO.yearsExperience}</div>
                 <div className="text-lg font-semibold mb-2">Years of Excellence</div>
                 <div className="text-slate-300 text-sm">Trusted by thousands since {BUSINESS_INFO.founded}</div>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-blue-400 mb-2">24/7</div>
+                <div className="text-5xl font-bold text-orange-400 mb-2">24/7</div>
                 <div className="text-lg font-semibold mb-2">Always Available</div>
                 <div className="text-slate-300 text-sm">Round-the-clock booking & support</div>
               </div>
@@ -245,7 +247,7 @@ export default function AboutPage() {
           </div>
 
           {/* Contact CTA */}
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-8 text-center">
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8 text-center">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
               Experience the Best Travels in Mysore
             </h2>
@@ -255,7 +257,7 @@ export default function AboutPage() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-orange-600 text-white font-bold text-lg hover:bg-orange-700 transition-colors shadow-lg"
               >
                 Book Taxi Online
               </Link>
@@ -269,7 +271,7 @@ export default function AboutPage() {
               </a>
               <a
                 href={`tel:${BUSINESS_INFO.phone}`}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-blue-600 text-blue-600 font-bold text-lg hover:bg-blue-50 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-[#FF7444] text-[#FF7444] font-bold text-lg hover:bg-orange-50 transition-colors"
               >
                 Call {BUSINESS_INFO.phoneDisplay}
               </a>

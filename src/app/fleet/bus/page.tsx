@@ -38,7 +38,7 @@ export default function FleetBusPage() {
       <JsonLd data={busProductSchema} />
       <Breadcrumbs items={[{ label: "Fleet", href: ROUTES.FLEET }, { label: "Bus", href: ROUTES.FLEET_BUS }]} />
       
-      <div className="mt-6 rounded-3xl bg-gradient-to-br from-orange-600 to-red-700 p-10 text-white shadow-xl">
+      <div className="mt-6 rounded-3xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-10 text-white shadow-xl">
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Bus Rental in Mysore</h1>
         <p className="mt-4 text-xl text-white/95 max-w-3xl">Large 30-45 seater buses for corporate events, school trips, wedding guests, and mass transportation. Spacious, comfortable, and economical for big groups.</p>
         
@@ -67,7 +67,7 @@ export default function FleetBusPage() {
         <p className="mt-3 text-lg text-slate-600 max-w-3xl">Choose from different bus configurations based on your group size, budget, and comfort requirements for travels around Karnataka.</p>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+          <div className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-bold text-slate-900">AC Tourist Bus (35-45 Seater)</h3>
             <p className="mt-2 text-slate-600">Premium air-conditioned buses with comfortable push-back seats, entertainment systems, and spacious interiors. Ideal for outstation tours to hill stations, pilgrimages, and corporate events. Features include individual reading lights, overhead storage, and large windows for scenic views.</p>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -78,7 +78,7 @@ export default function FleetBusPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 hover:shadow-lg transition-shadow">
+          <div className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-lg transition-shadow">
             <h3 className="text-xl font-bold text-slate-900">Non-AC Standard Bus (40-50 Seater)</h3>
             <p className="mt-2 text-slate-600">Budget-friendly option for local events, school trips, and short-distance group travel. Well-maintained with comfortable seating and good ventilation. Cost-effective solution for large groups where air conditioning is not essential. Suitable for winter months and cooler destinations.</p>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -142,45 +142,45 @@ export default function FleetBusPage() {
       <div className="mt-16">
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Ideal For</h2>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-2xl mb-4">🏛️</div>
             <h3 className="text-xl font-bold text-slate-900">Corporate Events</h3>
             <p className="mt-2 text-slate-600">Company annual days, team outings, conferences, and training programs. Transport entire department or multiple teams together with professional service.</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <div className="w-12 h-12 rounded-lg bg-blue-100 flex items-center justify-center text-2xl mb-4">🏫</div>
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
+            <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-2xl mb-4">🏫</div>
             <h3 className="text-xl font-bold text-slate-900">School/College Trips</h3>
             <p className="mt-2 text-slate-600">Educational tours, industrial visits, sports events, and cultural competitions. Safe and supervised travel for student groups with responsible drivers.</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <div className="w-12 h-12 rounded-lg bg-pink-100 flex items-center justify-center text-2xl mb-4">💒</div>
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
+            <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-2xl mb-4">💒</div>
             <h3 className="text-xl font-bold text-slate-900">Wedding Transportation</h3>
             <p className="mt-2 text-slate-600">Transport wedding guests from hotels to venues, mandap to reception, airport pickups. Coordinate multiple trips for baraat and guest groups efficiently.</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <div className="w-12 h-12 rounded-lg bg-green-100 flex items-center justify-center text-2xl mb-4">⛪</div>
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
+            <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-2xl mb-4">⛪</div>
             <h3 className="text-xl font-bold text-slate-900">Religious Pilgrimages</h3>
             <p className="mt-2 text-slate-600">Temple tours, Tirupati darshan, Dharmasthala visits, and Kerala temple circuits. Comfortable travel for senior citizens and large family groups on spiritual journeys.</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center text-2xl mb-4">🎉</div>
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
+            <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-2xl mb-4">🎉</div>
             <h3 className="text-xl font-bold text-slate-900">Community Events</h3>
             <p className="mt-2 text-slate-600">Association trips, club outings, residential society picnics, and social gatherings. Transport neighborhood groups for day trips and celebrations.</p>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <div className="w-12 h-12 rounded-lg bg-red-100 flex items-center justify-center text-2xl mb-4">🏔️</div>
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
+            <div className="w-12 h-12 rounded-lg bg-orange-100 flex items-center justify-center text-2xl mb-4">🏔️</div>
             <h3 className="text-xl font-bold text-slate-900">Multi-Day Tours</h3>
             <p className="mt-2 text-slate-600">Extended tour packages covering multiple destinations. Coorg-Wayanad circuits, Kerala tours, Goa trips, and customized multi-city itineraries for large groups.</p>
           </div>
         </div>
       </div>
 
-      <div className="mt-16 rounded-2xl border border-slate-200 bg-white p-8">
+      <div className="mt-16 rounded-2xl bg-white ring-1 ring-slate-900/10 p-8">
         <h2 className="text-2xl font-bold text-slate-900">Popular Routes with Bus Rental</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex items-start gap-3">
@@ -228,7 +228,7 @@ export default function FleetBusPage() {
         </div>
       </div>
 
-      <div className="mt-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 p-8 text-white">
+      <div className="mt-16 rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-8 text-white">
         <h2 className="text-2xl font-bold">Bus Booking Guidelines</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -250,11 +250,11 @@ export default function FleetBusPage() {
         </div>
       </div>
 
-      <div className="mt-16 text-center rounded-3xl bg-slate-900 p-10">
+      <div className="mt-16 rounded-2xl bg-slate-900 p-8 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold text-white">Book Bus Rental in Mysore</h2>
         <p className="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">Perfect for large group transportation with maximum comfort and economy. Get instant quotes for your bus rental requirements in Mysore.</p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="tel:+919611353434" className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-8 py-4 text-lg font-semibold text-white hover:bg-orange-700 transition-colors">
+          <a href="tel:+919611353434" className="inline-flex items-center justify-center rounded-xl bg-[#FF7444] px-8 py-4 text-lg font-semibold text-white hover:bg-[#e85c2d] transition-colors">
             Call +91 96113 53434
           </a>
           <a href="https://wa.me/919611353434?text=Hi, I want to book a bus for group travel" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-emerald-600 px-8 py-4 text-lg font-semibold text-white hover:bg-emerald-700 transition-colors">

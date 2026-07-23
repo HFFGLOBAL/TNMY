@@ -15,7 +15,7 @@ export default function DestinationOotyPage() {
       <Breadcrumbs items={[{ label: "Destinations", href: ROUTES.DESTINATIONS }, { label: "Ooty", href: ROUTES.DEST_OOTY }]} />
 
       {/* Hero Section */}
-      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-sky-50 to-slate-50 p-8 md:p-12 mb-10">
+      <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 md:p-12 mb-10">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Mysore to Ooty Taxi Service</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
           Visit the Queen of Hill Stations with our reliable Mysore to Ooty taxi service. Experience tea gardens, botanical beauty, and scenic Nilgiri mountains with comfortable vehicles and professional drivers.
@@ -23,31 +23,31 @@ export default function DestinationOotyPage() {
         <div className="mt-6 flex flex-wrap gap-4">
           <Link 
             href={ROUTES.MYSORE_TO_OOTY} 
-            className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white hover:bg-blue-700 transition-colors shadow-sm"
+            className="inline-flex items-center justify-center rounded-lg bg-orange-600 px-6 py-3 text-base font-semibold text-white hover:bg-orange-700 transition-colors shadow-sm"
           >
             Book Ooty Taxi Now
           </Link>
           <Link 
             href={ROUTES.BOOK_TAXI} 
-            className="inline-flex items-center justify-center rounded-lg bg-white border-2 border-blue-600 px-6 py-3 text-base font-semibold text-blue-600 hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center rounded-lg bg-white border-2 border-orange-600 px-6 py-3 text-base font-semibold text-orange-600 hover:bg-orange-50 transition-colors"
           >
             Get Instant Quote
           </Link>
         </div>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Distance</div>
             <div className="text-slate-600">125 km from Mysore</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Travel Time</div>
             <div className="text-slate-600">3 - 3.5 hours</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Starting Fare</div>
-            <div className="text-slate-600">₹6,500 onwards</div>
+            <div className="text-slate-600">₹5,500 onwards</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Best Time</div>
             <div className="text-slate-600">Apr-Jun, Sep-Nov</div>
           </div>
@@ -66,7 +66,7 @@ export default function DestinationOotyPage() {
             { name: "Tea Museum", desc: "Learn tea processing from plucking to packaging, taste fresh Nilgiri tea, and shop authentic loose leaf varieties." },
             { name: "Rose Garden", desc: "India's largest rose garden with 20,000 rose bushes, 2,800 varieties spread across 10 acres on hillside terraces." }
           ].map((place) => (
-            <div key={place.name} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div key={place.name} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-md hover:ring-orange-300 transition-all">
               <h3 className="text-xl font-semibold text-slate-900 mb-2">{place.name}</h3>
               <p className="text-slate-600">{place.desc}</p>
             </div>
@@ -75,7 +75,7 @@ export default function DestinationOotyPage() {
       </section>
 
       {/* Why Choose Our Service */}
-      <section className="mb-12 bg-sky-50 rounded-2xl p-8">
+      <section className="mb-12 bg-orange-50 rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Book Mysore to Ooty Cab with Us?</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -86,7 +86,7 @@ export default function DestinationOotyPage() {
             { title: "On-Time Service", desc: "Punctual pickups from Mysore hotels/homes ensuring you maximize Ooty sightseeing time" },
             { title: "Local Insights", desc: "Drivers suggest best photo spots, authentic restaurants, and hidden gems in Nilgiris" }
           ].map((feature) => (
-            <div key={feature.title} className="bg-white rounded-lg p-5 shadow-sm">
+            <div key={feature.title} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
               <h3 className="font-semibold text-slate-900 mb-2">{feature.title}</h3>
               <p className="text-sm text-slate-600">{feature.desc}</p>
             </div>
@@ -97,7 +97,7 @@ export default function DestinationOotyPage() {
       {/* Travel Information */}
       <section className="mb-12">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Ooty Travel Guide from Mysore</h2>
-        <div className="prose prose-slate max-w-none bg-white rounded-xl border border-slate-200 p-8">
+        <div className="prose prose-slate max-w-none bg-white rounded-2xl ring-1 ring-slate-900/10 p-8">
           <h3 className="text-xl font-semibold text-slate-900 mb-3">Best Time to Visit Ooty</h3>
           <p className="text-slate-700 mb-4">
             April to June (summer) offers pleasant 15-25°C weather perfect for escaping heat. September to November (post-monsoon) features lush greenery and clear skies. December to February brings cold weather (5-15°C) ideal for experiencing winter charm. Avoid monsoon season (July-August) due to landslides and road closures.
@@ -131,21 +131,21 @@ export default function DestinationOotyPage() {
       </section>
 
       {/* Booking CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 md:p-12 text-white text-center">
+      <section className="rounded-2xl bg-slate-900 p-8 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Book Your Ooty Adventure Today</h2>
-        <p className="text-lg mb-6 text-blue-50">
+        <p className="text-lg mb-6 text-orange-50">
           Experience the beauty of Queen of Hills with our comfortable Mysore to Ooty taxi service. Professional drivers, well-maintained vehicles, transparent pricing.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link 
             href={ROUTES.BOOK_TAXI} 
-            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-600 hover:bg-blue-50 transition-colors shadow-lg"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-orange-600 hover:bg-orange-50 transition-colors shadow-lg"
           >
             Book Ooty Taxi
           </Link>
           <a 
             href="tel:+919611353434" 
-            className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-8 py-3 text-base font-semibold text-white hover:bg-blue-800 transition-colors border-2 border-white"
+            className="inline-flex items-center justify-center rounded-lg bg-orange-700 px-8 py-3 text-base font-semibold text-white hover:bg-orange-800 transition-colors border-2 border-white"
           >
             Call: +91 96113 53434
           </a>

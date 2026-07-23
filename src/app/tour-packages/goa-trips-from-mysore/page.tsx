@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Goa Trips from Mysore | Starting from ₹18,000 | 3-5 Days Beach Package",
   description: "Book Goa trip from Mysore starting from ₹18,000 for 3-5 days. Explore beaches, nightlife, Portuguese heritage. Professional drivers, AC vehicles, flexible itinerary.",
   keywords: ["goa trip from mysore", "mysore to goa package", "goa beach tour", "3 day goa package", "coastal road trip"],
-  alternates: { canonical: "/goa-trips-from-mysore/" },
+  alternates: { canonical: "/tour-packages/goa-trips-from-mysore/"},
 };
 
 const tourPackage = createTourPackageSchema({
@@ -119,7 +119,7 @@ export default function GoaTripsFromMysorePage() {
         ]} />
         
         {/* Header */}
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-orange-50 to-yellow-50 p-8 mb-8">
+        <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
             Goa Trips from Mysore
           </h1>
@@ -136,7 +136,7 @@ export default function GoaTripsFromMysorePage() {
               <div className="text-sm font-semibold text-slate-600">One Way</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">Starting from ₹18,000</div>
+              <div className="text-2xl font-bold text-slate-900">Starting from ₹18,000*</div>
               <div className="text-sm font-semibold text-slate-600">Package Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -186,7 +186,7 @@ export default function GoaTripsFromMysorePage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Popular Beaches to Explore</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {popularBeaches.map((beach, idx) => (
-                  <div key={idx} className="rounded-xl border border-slate-200 p-4">
+                  <div key={idx} className="rounded-xl ring-1 ring-slate-900/10 p-4">
                     <h3 className="text-lg font-bold text-slate-900">{beach.name}</h3>
                     <p className="text-sm text-slate-600 mt-1">{beach.type}</p>
                     <p className="text-sm text-slate-700 mt-2">{beach.vibe}</p>
@@ -219,14 +219,14 @@ export default function GoaTripsFromMysorePage() {
               <p className="text-slate-600 mb-6">Vehicle options for 4-day Goa trip (includes round trip 1100+ km, driver, fuel, tolls)</p>
               <div className="space-y-4">
                 {vehiclePricing.map((vehicle, idx) => (
-                  <div key={idx} className="rounded-xl border-2 border-slate-200 p-6 hover:border-orange-300 transition-colors">
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:ring-orange-400 hover:shadow-md transition-all">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.models}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-xs text-slate-500">Total Package</p>
+                        <p className="text-xs text-slate-500">Total Package*</p>
                         <p className="text-3xl font-bold text-orange-600">{vehicle.price}</p>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.perDay}</p>
                       </div>
@@ -236,6 +236,9 @@ export default function GoaTripsFromMysorePage() {
               </div>
               <p className="mt-4 text-sm text-slate-500">
                 * Prices for 4-day package. Add ₹4,500-9,000 per extra day. Goa accommodation ₹1,000-10,000 per night based on season and location.
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
               </p>
             </div>
 
@@ -298,7 +301,7 @@ export default function GoaTripsFromMysorePage() {
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="rounded-2xl bg-gradient-to-br from-orange-600 to-orange-700 p-6 text-white sticky top-4">
+            <div className="rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-6 text-white sticky top-24">
               <h3 className="text-xl font-bold mb-4">Book Beach Vacation</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2">
@@ -330,7 +333,7 @@ export default function GoaTripsFromMysorePage() {
               </a>
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-orange-800 transition-colors"
+                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
               >
                 Book Online
               </Link>
@@ -342,11 +345,11 @@ export default function GoaTripsFromMysorePage() {
               <div className="space-y-2">
                 <Link href={ROUTES.MYSORE_COORG_WAYANAD} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore Coorg Wayanad</div>
-                  <div className="text-sm text-slate-600">3-4 Days • Starting from ₹16,500</div>
+                  <div className="text-sm text-slate-600">3-4 Days • Starting from ₹16,500*</div>
                 </Link>
                 <Link href={ROUTES.MYSORE_OOTY_COORG} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore Ooty Coorg</div>
-                  <div className="text-sm text-slate-600">3-5 Days • Starting from ₹18,000</div>
+                  <div className="text-sm text-slate-600">3-5 Days • Starting from ₹18,000*</div>
                 </Link>
                 <Link href={ROUTES.CUSTOM_PACKAGES} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Custom Packages</div>

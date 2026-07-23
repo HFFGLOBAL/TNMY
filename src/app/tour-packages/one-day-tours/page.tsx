@@ -29,7 +29,7 @@ export default function OneDayToursHubPage() {
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link
               href={ROUTES.BOOK_TAXI}
-              className="inline-flex items-center justify-center rounded-xl bg-blue-600 px-6 py-3 text-base font-semibold text-white hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center justify-center rounded-xl bg-orange-600 px-6 py-3 text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
             >
               Get quote for one-day tour
             </Link>
@@ -50,25 +50,25 @@ export default function OneDayToursHubPage() {
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link
             href={ROUTES.MYSORE_ONE_DAY_TOUR}
-            className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow"
+            className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg hover:ring-orange-400 transition-all"
           >
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-bold text-slate-900">Mysore One Day Tour</h3>
               <span className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-900/10">Sightseeing</span>
             </div>
             <p className="mt-2 text-slate-600">Palace, Zoo, Chamundi Hills, Church, Brindavan Gardens.</p>
-            <div className="mt-4 text-sm font-semibold text-blue-700">Explore →</div>
+            <div className="mt-4 text-sm font-semibold text-orange-700">Explore →</div>
           </Link>
           <Link
             href={ROUTES.MYSORE_TO_BANGALORE}
-            className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow"
+            className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg hover:ring-orange-400 transition-all"
           >
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-lg font-bold text-slate-900">Mysore to Bangalore</h3>
               <span className="rounded-full bg-slate-50 px-3 py-1 text-xs font-semibold text-slate-700 ring-1 ring-slate-900/10">Transfer</span>
             </div>
             <p className="mt-2 text-slate-600">Fast, comfortable intercity ride for business or leisure.</p>
-            <div className="mt-4 text-sm font-semibold text-blue-700">Explore →</div>
+            <div className="mt-4 text-sm font-semibold text-orange-700">Explore →</div>
           </Link>
         </div>
       </section>

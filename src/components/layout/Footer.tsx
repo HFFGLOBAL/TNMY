@@ -55,6 +55,7 @@ export function Footer() {
               <li><Link href={ROUTES.ABOUT} className="hover:text-white transition-colors">About Us</Link></li>
               <li><Link href={ROUTES.SERVICES} className="hover:text-white transition-colors">Our Services</Link></li>
               <li><Link href={ROUTES.TOUR_PACKAGES} className="hover:text-white transition-colors">Tour Packages</Link></li>
+              <li><Link href={ROUTES.FLEET} className="hover:text-white transition-colors">Our Fleet</Link></li>
               <li><Link href={ROUTES.PRICING} className="hover:text-white transition-colors">Pricing</Link></li>
               <li><Link href={ROUTES.REVIEWS} className="hover:text-white transition-colors">Reviews</Link></li>
               <li><Link href={ROUTES.BLOG} className="hover:text-white transition-colors">Blog</Link></li>
@@ -106,8 +107,8 @@ export function Footer() {
         <div className="border-t border-slate-800 mt-8 pt-8 text-sm text-center">
           <p>
             © {currentYear} {BUSINESS_INFO.name}. All rights reserved. | 
-            <Link href="/privacy-policy" className="hover:text-white ml-2">Privacy Policy</Link> | 
-            <Link href="/terms-conditions" className="hover:text-white ml-2">Terms & Conditions</Link>
+            <Link href="/privacy-policy/" className="hover:text-white ml-2">Privacy Policy</Link> |
+            <Link href="/terms-conditions/" className="hover:text-white ml-2">Terms & Conditions</Link>
           </p>
           <p className="mt-2 text-slate-400">
             Serving Mysuru and Karnataka since {BUSINESS_INFO.founded}
@@ -118,7 +119,7 @@ export function Footer() {
               href="https://hffglobal.com" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+              className="text-orange-400 hover:text-orange-300 transition-colors font-semibold"
             >
               HFF Global
             </a>

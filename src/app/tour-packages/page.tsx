@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ROUTES } from "@/lib/constants/routes";
+import { BUSINESS_INFO } from "@/lib/constants/business-info";
 import { useState } from "react";
 
 // Note: Metadata for this page is set in layout.tsx or via Next.js conventions
@@ -15,7 +16,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_ONE_DAY_TOUR,
     duration: "1 Day",
     distance: "80 km",
-    price: "Starting from ₹2,000",
+    price: "Starting from ₹2,000*",
     category: "one-day",
     destination: "mysore",
     description: "Complete Mysore city tour covering Palace, Chamundi Hills, Brindavan Gardens, St. Philomena's Church",
@@ -26,7 +27,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_TO_COORG,
     duration: "1 Day",
     distance: "120 km",
-    price: "Starting from ₹4,500",
+    price: "Starting from ₹4,500*",
     category: "one-day",
     destination: "coorg",
     description: "Abbey Falls, Raja's Seat, Coffee Plantations, Omkareshwara Temple with scenic drive",
@@ -37,7 +38,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_TO_OOTY,
     duration: "1 Day",
     distance: "125 km",
-    price: "Starting from ₹5,500",
+    price: "Starting from ₹5,500*",
     category: "one-day",
     destination: "ooty",
     description: "Queen of Hill Stations - Botanical Garden, Ooty Lake, Tea Gardens, scenic toy train",
@@ -48,7 +49,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_TO_WAYANAD,
     duration: "1-2 Days",
     distance: "140 km",
-    price: "Starting from ₹5,000",
+    price: "Starting from ₹5,000*",
     category: "multi-day",
     destination: "wayanad",
     description: "Edakkal Caves, Soochipara Falls, wildlife sanctuaries, spice plantations",
@@ -59,7 +60,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_COORG_WAYANAD,
     duration: "3-4 Days",
     distance: "400 km",
-    price: "Starting from ₹16,500",
+    price: "Starting from ₹16,500*",
     category: "multi-day",
     destination: "multi",
     description: "Complete Karnataka-Kerala tour covering coffee estates, waterfalls, wildlife",
@@ -70,7 +71,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_OOTY_COORG,
     duration: "3-5 Days",
     distance: "450 km",
-    price: "Starting from ₹18,000",
+    price: "Starting from ₹18,000*",
     category: "multi-day",
     destination: "multi",
     description: "Best of South India hill stations - tea gardens, coffee estates, scenic valleys",
@@ -81,7 +82,7 @@ const tourPackages = [
     href: ROUTES.MYSORE_OOTY_KODAIKANAL,
     duration: "4-6 Days",
     distance: "550 km",
-    price: "Starting from ₹19,500",
+    price: "Starting from ₹19,500*",
     category: "multi-day",
     destination: "multi",
     description: "Extended hill station tour covering Tamil Nadu and Karnataka highlights",
@@ -92,7 +93,7 @@ const tourPackages = [
     href: ROUTES.GOA_TRIPS,
     duration: "3-5 Days",
     distance: "560 km",
-    price: "Starting from ₹18,000",
+    price: "Starting from ₹18,000*",
     category: "multi-day",
     destination: "goa",
     description: "Beach paradise - North Goa, South Goa beaches, churches, nightlife, water sports",
@@ -103,7 +104,7 @@ const tourPackages = [
     href: ROUTES.TIRUPATI_PACKAGE,
     duration: "1-2 Days",
     distance: "450 km",
-    price: "Starting from ₹12,500",
+    price: "Starting from ₹12,500*",
     category: "multi-day",
     destination: "tirupati",
     description: "Spiritual journey to Tirupati Balaji with comfortable travel and darshan arrangements",
@@ -111,10 +112,10 @@ const tourPackages = [
   },
   {
     name: "Mysore Bangalore Nandi Hills",
-    href: ROUTES.MYSORE_TO_BANGALORE,
+    href: `${ROUTES.MYSORE_TO_BANGALORE}#multi-day-packages`,
     duration: "2 Days",
     distance: "210 km",
-    price: "Starting from ₹7,500",
+    price: "Starting from ₹7,500*",
     category: "multi-day",
     destination: "bangalore",
     description: "Mysore to Bangalore transfer with city sightseeing and sunrise at Nandi Hills",
@@ -122,10 +123,10 @@ const tourPackages = [
   },
   {
     name: "Bangalore Shivanasamudra Falls",
-    href: ROUTES.MYSORE_TO_BANGALORE,
+    href: `${ROUTES.MYSORE_TO_BANGALORE}#multi-day-packages`,
     duration: "2 Days",
     distance: "285 km",
-    price: "Starting from ₹8,000",
+    price: "Starting from ₹8,000*",
     category: "multi-day",
     destination: "bangalore",
     description: "Mysore to Bangalore journey with waterfall excursion and shopping experience",
@@ -133,10 +134,10 @@ const tourPackages = [
   },
   {
     name: "Complete Bangalore Explorer",
-    href: ROUTES.MYSORE_TO_BANGALORE,
+    href: `${ROUTES.MYSORE_TO_BANGALORE}#multi-day-packages`,
     duration: "3 Days",
     distance: "360 km",
-    price: "Starting from ₹12,000",
+    price: "Starting from ₹12,000*",
     category: "multi-day",
     destination: "bangalore",
     description: "Comprehensive Bangalore tour covering city attractions, Nandi Hills, and Lepakshi temple",
@@ -144,10 +145,10 @@ const tourPackages = [
   },
   {
     name: "Weekend Adventure Package",
-    href: ROUTES.MYSORE_TO_BANGALORE,
+    href: `${ROUTES.MYSORE_TO_BANGALORE}#multi-day-packages`,
     duration: "3 Days",
     distance: "400 km",
-    price: "Starting from ₹13,500",
+    price: "Starting from ₹13,500*",
     category: "multi-day",
     destination: "bangalore",
     description: "Adventure-packed weekend with Anthargange caves, Nandi Hills, and Savandurga trek",
@@ -185,20 +186,20 @@ export default function TourPackagesHubPage() {
         <Breadcrumbs items={[{ label: "Tour Packages", href: ROUTES.TOUR_PACKAGES }]} />
 
         {/* Hero Section */}
-        <section className="mt-6 overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <section className="mt-6 overflow-hidden rounded-2xl bg-linear-to-r from-orange-600 to-[#e85c2d] text-white">
           <div className="p-8 md:p-12">
             <div className="inline-flex items-center rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur-sm">
               15+ Curated Tours • Private Cabs • Expert Drivers
             </div>
             <h1 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight">Tour Packages from Mysore</h1>
-            <p className="mt-4 max-w-3xl text-lg text-blue-100">
+            <p className="mt-4 max-w-3xl text-lg text-orange-100">
               Explore Karnataka and beyond with our carefully crafted tour packages. From one-day getaways to multi-day adventures, 
               we offer the perfect travel experience with comfortable vehicles and knowledgeable drivers.
             </p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="inline-flex items-center justify-center rounded-xl bg-white text-blue-600 px-6 py-3 text-base font-bold hover:bg-blue-50 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center rounded-xl bg-white text-orange-600 px-6 py-3 text-base font-bold hover:bg-orange-50 transition-colors shadow-lg"
               >
                 Book Your Tour Now
               </Link>
@@ -212,91 +213,95 @@ export default function TourPackagesHubPage() {
           </div>
         </section>
 
-        {/* Filters */}
-        <section className="mt-8">
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-6">
-            <h2 className="text-lg font-bold text-slate-900 mb-4">Filter Tours</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Duration Filter */}
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-3">Tour Duration</label>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    { value: "all", label: "All Tours" },
-                    { value: "one-day", label: "One Day" },
-                    { value: "multi-day", label: "Multi-Day" },
-                    { value: "custom", label: "Custom" }
-                  ].map((cat) => (
-                    <button
-                      key={cat.value}
-                      onClick={() => setSelectedCategory(cat.value)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        selectedCategory === cat.value
-                          ? "bg-blue-600 text-white shadow-md"
-                          : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                      }`}
-                    >
-                      {cat.label}
-                    </button>
-                  ))}
+        <div className="mt-8 lg:grid lg:grid-cols-4 lg:gap-8 lg:items-start">
+          {/* Filters — left sidebar on large screens, stacked panel above the grid on smaller screens */}
+          <section className="lg:col-span-1 lg:sticky lg:top-24">
+            <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-6">
+              <h2 className="text-lg font-bold text-slate-900 mb-4">Filter Tours</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
+                {/* Duration Filter */}
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-3">Tour Duration</label>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { value: "all", label: "All Tours" },
+                      { value: "one-day", label: "One Day" },
+                      { value: "multi-day", label: "Multi-Day" },
+                      { value: "custom", label: "Custom" }
+                    ].map((cat) => (
+                      <button
+                        key={cat.value}
+                        onClick={() => setSelectedCategory(cat.value)}
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                          selectedCategory === cat.value
+                            ? "bg-orange-600 text-white shadow-md"
+                            : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                        }`}
+                      >
+                        {cat.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Destination Filter */}
+                <div>
+                  <label className="block text-sm font-semibold text-slate-700 mb-3">Destination</label>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      { value: "all", label: "All Destinations" },
+                      { value: "mysore", label: "Mysore" },
+                      { value: "coorg", label: "Coorg" },
+                      { value: "ooty", label: "Ooty" },
+                      { value: "wayanad", label: "Wayanad" },
+                      { value: "bangalore", label: "Bangalore" },
+                      { value: "goa", label: "Goa" },
+                      { value: "tirupati", label: "Tirupati" }
+                    ].map((dest) => (
+                      <button
+                        key={dest.value}
+                        onClick={() => setSelectedDestination(dest.value)}
+                        className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+                          selectedDestination === dest.value
+                            ? "bg-orange-600 text-white shadow-md"
+                            : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                        }`}
+                      >
+                        {dest.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 
-              {/* Destination Filter */}
-              <div>
-                <label className="block text-sm font-semibold text-slate-700 mb-3">Destination</label>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    { value: "all", label: "All Destinations" },
-                    { value: "mysore", label: "Mysore" },
-                    { value: "coorg", label: "Coorg" },
-                    { value: "ooty", label: "Ooty" },
-                    { value: "wayanad", label: "Wayanad" },
-                    { value: "bangalore", label: "Bangalore" },
-                    { value: "goa", label: "Goa" },
-                    { value: "tirupati", label: "Tirupati" }
-                  ].map((dest) => (
-                    <button
-                      key={dest.value}
-                      onClick={() => setSelectedDestination(dest.value)}
-                      className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                        selectedDestination === dest.value
-                          ? "bg-emerald-600 text-white shadow-md"
-                          : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                      }`}
-                    >
-                      {dest.label}
-                    </button>
-                  ))}
-                </div>
+              {/* Results Count */}
+              <div className="mt-4 pt-4 border-t border-slate-200">
+                <p className="text-sm text-slate-600">
+                  Showing <span className="font-bold text-slate-900">{filteredPackages.length}</span> tour package{filteredPackages.length !== 1 ? 's' : ''}
+                </p>
+                <p className="mt-2 text-xs text-slate-500">
+                  * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
+                </p>
               </div>
             </div>
+          </section>
 
-            {/* Results Count */}
-            <div className="mt-4 pt-4 border-t border-slate-200">
-              <p className="text-sm text-slate-600">
-                Showing <span className="font-bold text-slate-900">{filteredPackages.length}</span> tour package{filteredPackages.length !== 1 ? 's' : ''}
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Tour Grid */}
-        <section className="mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Tour Grid */}
+          <section className="mt-8 lg:mt-0 lg:col-span-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6">
             {filteredPackages.map((tour, i) => (
               <Link
                 key={i}
                 href={tour.href}
-                className="group bg-white rounded-2xl ring-1 ring-slate-900/5 hover:ring-blue-400 hover:shadow-xl transition-all overflow-hidden"
+                className="group bg-white rounded-2xl ring-1 ring-slate-900/10 hover:ring-orange-400 hover:shadow-lg transition-all overflow-hidden"
               >
                 {/* Card Header */}
                 <div className="p-6">
                   <div className="flex items-start justify-between gap-3 mb-3">
-                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
                       {tour.name}
                     </h3>
-                    <span className="shrink-0 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700 ring-1 ring-blue-600/20">
+                    <span className="shrink-0 rounded-full bg-orange-50 px-3 py-1 text-xs font-bold text-orange-700 ring-1 ring-orange-600/20">
                       {tour.duration}
                     </span>
                   </div>
@@ -339,7 +344,7 @@ export default function TourPackagesHubPage() {
                   </div>
 
                   {/* CTA */}
-                  <div className="flex items-center gap-2 text-blue-600 font-semibold text-sm group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-2 text-orange-600 font-semibold text-sm group-hover:gap-3 transition-all">
                     View Details & Book
                     <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -363,17 +368,18 @@ export default function TourPackagesHubPage() {
                   setSelectedCategory("all");
                   setSelectedDestination("all");
                 }}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white font-bold hover:bg-blue-700 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-orange-600 text-white font-bold hover:bg-[#e85c2d] transition-colors"
               >
                 Reset Filters
               </button>
             </div>
           )}
-        </section>
+          </section>
+        </div>
 
         {/* Why Choose Us */}
         <section className="mt-12">
-          <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-white">
+          <div className="bg-slate-900 rounded-2xl p-8 text-white">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Why Book Tour Packages with MM Mysore Travels?</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {[
@@ -415,7 +421,7 @@ export default function TourPackagesHubPage() {
                 }
               ].map((feature, i) => (
                 <div key={i} className="text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-500/20 text-blue-400 mb-3">
+                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-500/20 text-orange-400 mb-3">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold mb-2">{feature.title}</h3>
@@ -428,7 +434,7 @@ export default function TourPackagesHubPage() {
 
         {/* CTA Section */}
         <section className="mt-12 text-center">
-          <div className="bg-white rounded-2xl ring-1 ring-slate-900/5 p-8">
+          <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8">
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-3">Can't Find Your Perfect Tour?</h2>
             <p className="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
               Let us create a custom itinerary just for you. Tell us your preferences, and we'll plan the perfect trip.
@@ -436,15 +442,15 @@ export default function TourPackagesHubPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={ROUTES.CUSTOM_PACKAGES}
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-blue-600 text-white font-bold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-orange-600 text-white font-bold text-lg hover:bg-[#e85c2d] transition-colors shadow-lg"
               >
                 Create Custom Package
               </Link>
               <a
-                href={`tel:+919886252306`}
+                href={`tel:${BUSINESS_INFO.phone}`}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-lg border-2 border-slate-900 text-slate-900 font-bold text-lg hover:bg-slate-50 transition-colors"
               >
-                Call +91 98862 52306
+                Call {BUSINESS_INFO.phoneDisplay}
               </a>
             </div>
           </div>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Mysore to Bangalore Taxi | Starting from ₹2,800 | One Way & Round Trip Cab Booking",
   description: "Book Mysore to Bangalore cab starting from ₹2,800. 150 km highway drive in 3 hours. Airport pickup, business travel, city tours. Professional drivers. 24/7 available.",
   keywords: ["mysore to bangalore taxi", "mysore to bangalore cab", "bangalore taxi from mysore", "mysore bangalore car rental"],
-  alternates: { canonical: "/mysore-to-bangalore/" },
+  alternates: { canonical: "/tour-packages/mysore-to-bangalore/"},
 };
 
 const tourPackage = createTourPackageSchema({
@@ -87,7 +87,7 @@ export default function MysoreToBangalorePage() {
         ]} />
         
         {/* Header */}
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-slate-50 p-8 mb-8">
+        <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
             Mysore to Bangalore Taxi Service
           </h1>
@@ -104,7 +104,7 @@ export default function MysoreToBangalorePage() {
               <div className="text-sm font-semibold text-slate-600">Duration</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">₹2,800</div>
+              <div className="text-2xl font-bold text-slate-900">₹2,800*</div>
               <div className="text-sm font-semibold text-slate-600">Starting Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -152,86 +152,8 @@ export default function MysoreToBangalorePage() {
               </p>
             </div>
 
-            {/* Vehicle Pricing */}
-            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Vehicle Options & Pricing</h2>
-              <p className="text-slate-600 mb-6">Choose the right vehicle for your group size and budget</p>
-              <div className="space-y-4">
-                {vehiclePricing.map((vehicle, idx) => (
-                  <div key={idx} className="rounded-xl border-2 border-slate-200 p-6 hover:border-blue-300 transition-colors">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                      <div>
-                        <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
-                        <p className="text-sm text-slate-600 mt-1">{vehicle.models}</p>
-                        <div className="mt-3 flex flex-wrap gap-2">
-                          {vehicle.features.map((feature, i) => (
-                            <span key={i} className="px-2 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">
-                              {feature}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="flex gap-6">
-                        <div className="text-center">
-                          <p className="text-xs text-slate-500 mb-1">One Way</p>
-                          <p className="text-2xl font-bold text-blue-600">{vehicle.oneWay}</p>
-                        </div>
-                        <div className="text-center">
-                          <p className="text-xs text-slate-500 mb-1">Round Trip</p>
-                          <p className="text-2xl font-bold text-emerald-600">{vehicle.roundTrip}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="mt-4 text-sm text-slate-500">
-                * Prices include fuel, tolls, driver charges, and taxes. No hidden costs.
-              </p>
-            </div>
-
-            {/* Popular Drop Locations */}
-            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Popular Drop Locations in Bangalore</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="rounded-lg border border-slate-200 p-4">
-                  <h3 className="font-bold text-slate-900 mb-2">✈️ Airports</h3>
-                  <ul className="text-sm text-slate-600 space-y-1">
-                    <li>• Kempegowda International Airport (Devanahalli)</li>
-                    <li>• HAL Airport (Old Airport)</li>
-                  </ul>
-                </div>
-                <div className="rounded-lg border border-slate-200 p-4">
-                  <h3 className="font-bold text-slate-900 mb-2">🚉 Railway Stations</h3>
-                  <ul className="text-sm text-slate-600 space-y-1">
-                    <li>• Bangalore City Railway Station (Majestic)</li>
-                    <li>• Yeshwantpur Junction</li>
-                    <li>• Bangalore Cantonment</li>
-                  </ul>
-                </div>
-                <div className="rounded-lg border border-slate-200 p-4">
-                  <h3 className="font-bold text-slate-900 mb-2">💼 IT Hubs & Corporate</h3>
-                  <ul className="text-sm text-slate-600 space-y-1">
-                    <li>• Electronic City (Phase 1 & 2)</li>
-                    <li>• Whitefield Tech Parks</li>
-                    <li>• Manyata Tech Park</li>
-                    <li>• Outer Ring Road Companies</li>
-                  </ul>
-                </div>
-                <div className="rounded-lg border border-slate-200 p-4">
-                  <h3 className="font-bold text-slate-900 mb-2">🏙️ City Areas</h3>
-                  <ul className="text-sm text-slate-600 space-y-1">
-                    <li>• Indiranagar, Koramangala</li>
-                    <li>• MG Road, Brigade Road</li>
-                    <li>• Jayanagar, BTM Layout</li>
-                    <li>• Marathahalli, HSR Layout</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
             {/* Service Highlights */}
-            <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 p-6 mb-6 ring-1 ring-blue-100">
+            <div className="rounded-2xl bg-linear-to-br from-orange-50 to-slate-50 p-6 mb-6 ring-1 ring-orange-100">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Why Choose Our Service</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {[
@@ -253,282 +175,45 @@ export default function MysoreToBangalorePage() {
               </div>
             </div>
 
-            {/* Bangalore Sightseeing Add-On */}
+            {/* Vehicle Pricing */}
             <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Add Bangalore Sightseeing to Your Trip</h2>
-              <p className="text-slate-600 mb-6">
-                Extend your journey with a guided tour of Bangalore's top attractions. Perfect for those with time to explore the Garden City!
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {[
-                  { name: "Nandi Hills", distance: "60 km from city", time: "2-3 hours", highlight: "Sunrise views, ancient temples, paragliding" },
-                  { name: "Lalbagh Botanical Garden", distance: "City center", time: "1-2 hours", highlight: "240 acres of flora, glass house, flower shows" },
-                  { name: "Bangalore Palace", distance: "City center", time: "1-2 hours", highlight: "Tudor-style architecture, royal artifacts" },
-                  { name: "Cubbon Park", distance: "City center", time: "1 hour", highlight: "300 acres greenery, walking trails, museums" },
-                  { name: "ISKCON Temple", distance: "7 km from center", time: "1 hour", highlight: "Modern temple, spiritual experience" },
-                  { name: "Bannerghatta National Park", distance: "22 km", time: "3-4 hours", highlight: "Safari, zoo, butterfly park, boating" },
-                  { name: "Tipu Sultan's Palace", distance: "City center", time: "1 hour", highlight: "Indo-Islamic architecture, historical significance" },
-                  { name: "UB City Mall", distance: "City center", time: "2 hours", highlight: "Luxury shopping, dining, entertainment" },
-                ].map((place, idx) => (
-                  <div key={idx} className="rounded-lg border-2 border-slate-200 p-4 hover:border-blue-300 transition-colors">
-                    <h3 className="font-bold text-slate-900 mb-2">{place.name}</h3>
-                    <div className="space-y-1 text-sm">
-                      <p className="text-slate-600">📍 {place.distance}</p>
-                      <p className="text-slate-600">⏱️ {place.time}</p>
-                      <p className="text-blue-700 mt-2">{place.highlight}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="rounded-xl bg-blue-50 p-4 border border-blue-200">
-                <h3 className="font-bold text-slate-900 mb-3">Sightseeing Packages</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="font-semibold text-slate-900">Half-Day City Tour</p>
-                      <p className="text-sm text-slate-600">4-5 hours • 3-4 attractions</p>
-                    </div>
-                    <p className="text-lg font-bold text-blue-600">+₹1,500</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="font-semibold text-slate-900">Full-Day Bangalore Tour</p>
-                      <p className="text-sm text-slate-600">8-9 hours • 6-8 attractions</p>
-                    </div>
-                    <p className="text-lg font-bold text-blue-600">+₹2,500</p>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="font-semibold text-slate-900">Nandi Hills Sunrise Trip</p>
-                      <p className="text-sm text-slate-600">Early morning • 4-5 hours</p>
-                    </div>
-                    <p className="text-lg font-bold text-blue-600">+₹2,000</p>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs text-slate-500">* Add-on prices in addition to transfer cost. Entry tickets not included.</p>
-              </div>
-            </div>
-
-            {/* Popular Day Trips from Bangalore */}
-            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Popular Day Trips from Bangalore</h2>
-              <p className="text-slate-600 mb-6">
-                Planning to stay in Bangalore? Explore these exciting destinations within 150 km for a perfect day trip!
-              </p>
-              
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Vehicle Options & Pricing</h2>
+              <p className="text-slate-600 mb-6">Choose the right vehicle for your group size and budget</p>
               <div className="space-y-4">
-                {[
-                  {
-                    category: "Adventure & Trekking",
-                    places: [
-                      { name: "Nandi Hills", distance: "60 km", time: "1.5 hours", activity: "Sunrise trek, cycling, paragliding" },
-                      { name: "Ramnagaram", distance: "50 km", time: "1 hour", activity: "Rock climbing, Sholay filming location" },
-                      { name: "Anthargange Caves", distance: "70 km", time: "1.5 hours", activity: "Cave exploration, night trek" },
-                      { name: "Savandurga Hills", distance: "60 km", time: "1.5 hours", activity: "Asia's largest monolith, trekking" },
-                    ]
-                  },
-                  {
-                    category: "Nature & Wildlife",
-                    places: [
-                      { name: "Bannerghatta National Park", distance: "22 km", time: "45 mins", activity: "Safari, zoo, butterfly park" },
-                      { name: "Manchinbele Dam", distance: "40 km", time: "1 hour", activity: "Water sports, picnic spot, boating" },
-                      { name: "Jayamangali Blackbuck Reserve", distance: "90 km", time: "2 hours", activity: "Wildlife photography, endangered species" },
-                      { name: "BR Hills Wildlife Sanctuary", distance: "140 km", time: "3 hours", activity: "Western Ghats biodiversity, temple" },
-                    ]
-                  },
-                  {
-                    category: "Historical & Religious",
-                    places: [
-                      { name: "Lepakshi Temple", distance: "120 km", time: "2.5 hours", activity: "Hanging pillar, Nandi statue, murals" },
-                      { name: "Shravanabelagola", distance: "145 km", time: "3 hours", activity: "58 ft Gomateshwara statue, Jain temples" },
-                      { name: "Madhugiri Fort", distance: "100 km", time: "2 hours", activity: "2nd largest monolith, fort trekking" },
-                      { name: "Devarayanadurga", distance: "70 km", time: "1.5 hours", activity: "Hill station, ancient temples, trekking" },
-                    ]
-                  },
-                  {
-                    category: "Waterfalls & Scenic Spots",
-                    places: [
-                      { name: "Shivanasamudra Falls", distance: "135 km", time: "2.5 hours", activity: "Twin waterfalls, power plant, scenic beauty" },
-                      { name: "Hogenakkal Falls", distance: "145 km", time: "3 hours", activity: "Coracle rides, river bathing, fishing" },
-                      { name: "Chunchi Falls", distance: "90 km", time: "2 hours", activity: "Trekking, natural pool, picnic spot" },
-                      { name: "Mekedatu", distance: "100 km", time: "2 hours", activity: "Cauvery confluence, river gorge, trekking" },
-                    ]
-                  },
-                ].map((category, idx) => (
-                  <div key={idx} className="rounded-lg border-2 border-slate-200 p-5">
-                    <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
-                      <span className="text-blue-600">
-                        {idx === 0 ? "🏔️" : idx === 1 ? "🦚" : idx === 2 ? "🏛️" : "💧"}
-                      </span>
-                      {category.category}
-                    </h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {category.places.map((place, pidx) => (
-                        <div key={pidx} className="rounded-md bg-slate-50 p-3">
-                          <h4 className="font-semibold text-slate-900">{place.name}</h4>
-                          <p className="text-xs text-slate-600 mt-1">📍 {place.distance} • ⏱️ {place.time}</p>
-                          <p className="text-sm text-blue-700 mt-2">{place.activity}</p>
+                {vehiclePricing.map((vehicle, idx) => (
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:ring-orange-400 hover:shadow-md transition-all">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
+                        <p className="text-sm text-slate-600 mt-1">{vehicle.models}</p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                          {vehicle.features.map((feature, i) => (
+                            <span key={i} className="px-2 py-1 rounded-full bg-orange-50 text-orange-700 text-xs font-semibold">
+                              {feature}
+                            </span>
+                          ))}
                         </div>
-                      ))}
+                      </div>
+                      <div className="flex gap-6">
+                        <div className="text-center">
+                          <p className="text-xs text-slate-500 mb-1">One Way*</p>
+                          <p className="text-2xl font-bold text-orange-600">{vehicle.oneWay}</p>
+                        </div>
+                        <div className="text-center">
+                          <p className="text-xs text-slate-500 mb-1">Round Trip*</p>
+                          <p className="text-2xl font-bold text-orange-600">{vehicle.roundTrip}</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
-
-              <div className="mt-6 rounded-xl bg-emerald-50 p-4 border border-emerald-200">
-                <h3 className="font-bold text-slate-900 mb-2">📞 Customize Your Bangalore Day Trip</h3>
-                <p className="text-sm text-slate-700">
-                  Want to visit any of these places? We can arrange a customized day trip from Bangalore with 
-                  comfortable vehicles and experienced drivers. Contact us for personalized itinerary and pricing.
-                </p>
-              </div>
-            </div>
-
-            {/* Extended Tour Packages */}
-            <div className="rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 p-6 mb-6 ring-1 ring-purple-100">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Multi-Day Bangalore Packages</h2>
-              <p className="text-slate-600 mb-6">
-                Combine your Mysore-Bangalore transfer with extended tours for a complete Karnataka experience
+              <p className="mt-4 text-sm text-slate-500">
+                * Prices include fuel, tolls, driver charges, and taxes. No hidden costs.
               </p>
-              
-              <div className="space-y-4">
-                <div className="rounded-xl bg-white p-5 border-2 border-purple-200">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="text-lg font-bold text-slate-900">Mysore → Bangalore → Nandi Hills</h3>
-                      <p className="text-sm text-slate-600 mt-1">2 Days • Sunrise Special</p>
-                    </div>
-                    <p className="text-2xl font-bold text-purple-600">₹7,500</p>
-                  </div>
-                  <ul className="text-sm text-slate-700 space-y-1">
-                    <li>• Day 1: Mysore to Bangalore transfer + city sightseeing</li>
-                    <li>• Day 2: Early morning Nandi Hills sunrise + return</li>
-                    <li>• Includes: AC vehicle, driver, fuel, tolls</li>
-                  </ul>
-                </div>
-
-                <div className="rounded-xl bg-white p-5 border-2 border-purple-200">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="text-lg font-bold text-slate-900">Mysore → Bangalore → Shivanasamudra</h3>
-                      <p className="text-sm text-slate-600 mt-1">2 Days • Waterfall Experience</p>
-                    </div>
-                    <p className="text-2xl font-bold text-purple-600">₹8,000</p>
-                  </div>
-                  <ul className="text-sm text-slate-700 space-y-1">
-                    <li>• Day 1: Mysore to Bangalore with shopping break</li>
-                    <li>• Day 2: Bangalore to Shivanasamudra Falls + return</li>
-                    <li>• Includes: Transportation, experienced driver</li>
-                  </ul>
-                </div>
-
-                <div className="rounded-xl bg-white p-5 border-2 border-purple-200">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="text-lg font-bold text-slate-900">Complete Bangalore Explorer</h3>
-                      <p className="text-sm text-slate-600 mt-1">3 Days • City + Nearby Attractions</p>
-                    </div>
-                    <p className="text-2xl font-bold text-purple-600">₹12,000</p>
-                  </div>
-                  <ul className="text-sm text-slate-700 space-y-1">
-                    <li>• Day 1: Mysore to Bangalore + Airport/Hotel drop</li>
-                    <li>• Day 2: Full-day Bangalore city tour (8 attractions)</li>
-                    <li>• Day 3: Nandi Hills sunrise + Lepakshi temple + return</li>
-                    <li>• Perfect for: First-time visitors, family trips</li>
-                  </ul>
-                </div>
-
-                <div className="rounded-xl bg-white p-5 border-2 border-purple-200">
-                  <div className="flex justify-between items-start mb-3">
-                    <div>
-                      <h3 className="text-lg font-bold text-slate-900">Weekend Adventure Package</h3>
-                      <p className="text-sm text-slate-600 mt-1">3 Days • Nature & Adventure</p>
-                    </div>
-                    <p className="text-2xl font-bold text-purple-600">₹13,500</p>
-                  </div>
-                  <ul className="text-sm text-slate-700 space-y-1">
-                    <li>• Day 1: Mysore to Bangalore via Srirangapatna</li>
-                    <li>• Day 2: Bangalore → Anthargange caves → Nandi Hills</li>
-                    <li>• Day 3: Savandurga trek + return to Mysore</li>
-                    <li>• Ideal for: Adventure enthusiasts, trekking lovers</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-6 text-center">
-                <a
-                  href={BUSINESS_INFO.whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-purple-600 px-6 py-3 text-base font-semibold text-white hover:bg-purple-700 transition-colors"
-                >
-                  <span>💬</span>
-                  Customize Your Package
-                </a>
-              </div>
-            </div>
-
-            {/* Route Information */}
-            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Route & Travel Tips</h2>
-              
-              <div className="space-y-4">
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-2">🛣️ Highway Details</h3>
-                  <div className="rounded-lg bg-slate-50 p-4">
-                    <p className="text-slate-700 mb-2"><strong>Route:</strong> Mysore → Srirangapatna → Mandya → Ramanagara → Bangalore</p>
-                    <p className="text-slate-700 mb-2"><strong>Highway:</strong> NH275 (Bangalore-Mysore Expressway)</p>
-                    <p className="text-slate-700 mb-2"><strong>Road Condition:</strong> Excellent 4-lane highway</p>
-                    <p className="text-slate-700"><strong>Toll Plazas:</strong> 2 toll points (₹120-140 total)</p>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-2">🍽️ Rest Stops & Restaurants</h3>
-                  <div className="space-y-2">
-                    <div className="rounded-lg bg-slate-50 p-3">
-                      <p className="font-semibold text-slate-900">Kamat Upachar (Bidadi)</p>
-                      <p className="text-sm text-slate-600">75 km from Mysore • South Indian food, clean restrooms</p>
-                    </div>
-                    <div className="rounded-lg bg-slate-50 p-3">
-                      <p className="font-semibold text-slate-900">Vaibhav Hotel (Ramanagara)</p>
-                      <p className="text-sm text-slate-600">90 km from Mysore • Popular breakfast spot</p>
-                    </div>
-                    <div className="rounded-lg bg-slate-50 p-3">
-                      <p className="font-semibold text-slate-900">A2B Restaurant (Multiple locations)</p>
-                      <p className="text-sm text-slate-600">Along highway • Vegetarian meals, snacks</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-2">⏰ Best Time to Travel</h3>
-                  <div className="rounded-lg bg-slate-50 p-4">
-                    <ul className="space-y-2 text-slate-700">
-                      <li><strong>Early Morning (5-7 AM):</strong> Best for airport flights, less traffic in Bangalore</li>
-                      <li><strong>Mid-Morning (9-11 AM):</strong> Ideal for city sightseeing, shops open</li>
-                      <li><strong>Evening (4-6 PM):</strong> Avoid 5-7 PM Bangalore traffic peak hours</li>
-                      <li><strong>Night (After 9 PM):</strong> Empty roads, faster travel, 10% night surcharge</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-slate-900 mb-2">💡 Travel Tips</h3>
-                  <div className="rounded-lg bg-blue-50 p-4 border border-blue-200">
-                    <ul className="space-y-2 text-sm text-slate-700">
-                      <li>✓ Book 2-3 hours before flight departure for airport transfers</li>
-                      <li>✓ Carry cash for tolls and snacks (cards accepted at restaurants)</li>
-                      <li>✓ Bangalore Electronic City adds 30-45 mins during peak hours</li>
-                      <li>✓ Request pickup 15 mins early if traveling with kids/elderly</li>
-                      <li>✓ Share flight details for airport pickups (we track delays)</li>
-                      <li>✓ Best weather: October-March (pleasant), avoid July-August (heavy rain)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
+              </p>
             </div>
 
             {/* What's Included */}
@@ -610,6 +295,326 @@ export default function MysoreToBangalorePage() {
               </div>
             </div>
 
+            {/* Popular Drop Locations */}
+            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Popular Drop Locations in Bangalore</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="rounded-lg border border-slate-200 p-4">
+                  <h3 className="font-bold text-slate-900 mb-2">✈️ Airports</h3>
+                  <ul className="text-sm text-slate-600 space-y-1">
+                    <li>• Kempegowda International Airport (Devanahalli)</li>
+                    <li>• HAL Airport (Old Airport)</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-slate-200 p-4">
+                  <h3 className="font-bold text-slate-900 mb-2">🚉 Railway Stations</h3>
+                  <ul className="text-sm text-slate-600 space-y-1">
+                    <li>• Bangalore City Railway Station (Majestic)</li>
+                    <li>• Yeshwantpur Junction</li>
+                    <li>• Bangalore Cantonment</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-slate-200 p-4">
+                  <h3 className="font-bold text-slate-900 mb-2">💼 IT Hubs & Corporate</h3>
+                  <ul className="text-sm text-slate-600 space-y-1">
+                    <li>• Electronic City (Phase 1 & 2)</li>
+                    <li>• Whitefield Tech Parks</li>
+                    <li>• Manyata Tech Park</li>
+                    <li>• Outer Ring Road Companies</li>
+                  </ul>
+                </div>
+                <div className="rounded-lg border border-slate-200 p-4">
+                  <h3 className="font-bold text-slate-900 mb-2">🏙️ City Areas</h3>
+                  <ul className="text-sm text-slate-600 space-y-1">
+                    <li>• Indiranagar, Koramangala</li>
+                    <li>• MG Road, Brigade Road</li>
+                    <li>• Jayanagar, BTM Layout</li>
+                    <li>• Marathahalli, HSR Layout</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Bangalore Sightseeing Add-On */}
+            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Add Bangalore Sightseeing to Your Trip</h2>
+              <p className="text-slate-600 mb-6">
+                Extend your journey with a guided tour of Bangalore's top attractions. Perfect for those with time to explore the Garden City!
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                {[
+                  { name: "Nandi Hills", distance: "60 km from city", time: "2-3 hours", highlight: "Sunrise views, ancient temples, paragliding" },
+                  { name: "Lalbagh Botanical Garden", distance: "City center", time: "1-2 hours", highlight: "240 acres of flora, glass house, flower shows" },
+                  { name: "Bangalore Palace", distance: "City center", time: "1-2 hours", highlight: "Tudor-style architecture, royal artifacts" },
+                  { name: "Cubbon Park", distance: "City center", time: "1 hour", highlight: "300 acres greenery, walking trails, museums" },
+                  { name: "ISKCON Temple", distance: "7 km from center", time: "1 hour", highlight: "Modern temple, spiritual experience" },
+                  { name: "Bannerghatta National Park", distance: "22 km", time: "3-4 hours", highlight: "Safari, zoo, butterfly park, boating" },
+                  { name: "Tipu Sultan's Palace", distance: "City center", time: "1 hour", highlight: "Indo-Islamic architecture, historical significance" },
+                  { name: "UB City Mall", distance: "City center", time: "2 hours", highlight: "Luxury shopping, dining, entertainment" },
+                ].map((place, idx) => (
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4 hover:ring-orange-400 hover:shadow-md transition-all">
+                    <h3 className="font-bold text-slate-900 mb-2">{place.name}</h3>
+                    <div className="space-y-1 text-sm">
+                      <p className="text-slate-600">📍 {place.distance}</p>
+                      <p className="text-slate-600">⏱️ {place.time}</p>
+                      <p className="text-orange-700 mt-2">{place.highlight}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="rounded-xl bg-orange-50 p-4 border border-orange-200">
+                <h3 className="font-bold text-slate-900 mb-3">Sightseeing Packages</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="font-semibold text-slate-900">Half-Day City Tour</p>
+                      <p className="text-sm text-slate-600">4-5 hours • 3-4 attractions</p>
+                    </div>
+                    <p className="text-lg font-bold text-orange-600">+₹1,500*</p>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="font-semibold text-slate-900">Full-Day Bangalore Tour</p>
+                      <p className="text-sm text-slate-600">8-9 hours • 6-8 attractions</p>
+                    </div>
+                    <p className="text-lg font-bold text-orange-600">+₹2,500*</p>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <p className="font-semibold text-slate-900">Nandi Hills Sunrise Trip</p>
+                      <p className="text-sm text-slate-600">Early morning • 4-5 hours</p>
+                    </div>
+                    <p className="text-lg font-bold text-orange-600">+₹2,000*</p>
+                  </div>
+                </div>
+                <p className="mt-4 text-xs text-slate-500">* Add-on prices in addition to transfer cost. Entry tickets not included.</p>
+                <p className="mt-1 text-xs text-slate-500">* Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.</p>
+              </div>
+            </div>
+
+            {/* Popular Day Trips from Bangalore */}
+            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Popular Day Trips from Bangalore</h2>
+              <p className="text-slate-600 mb-6">
+                Planning to stay in Bangalore? Explore these exciting destinations within 150 km for a perfect day trip!
+              </p>
+              
+              <div className="space-y-4">
+                {[
+                  {
+                    category: "Adventure & Trekking",
+                    places: [
+                      { name: "Nandi Hills", distance: "60 km", time: "1.5 hours", activity: "Sunrise trek, cycling, paragliding" },
+                      { name: "Ramnagaram", distance: "50 km", time: "1 hour", activity: "Rock climbing, Sholay filming location" },
+                      { name: "Anthargange Caves", distance: "70 km", time: "1.5 hours", activity: "Cave exploration, night trek" },
+                      { name: "Savandurga Hills", distance: "60 km", time: "1.5 hours", activity: "Asia's largest monolith, trekking" },
+                    ]
+                  },
+                  {
+                    category: "Nature & Wildlife",
+                    places: [
+                      { name: "Bannerghatta National Park", distance: "22 km", time: "45 mins", activity: "Safari, zoo, butterfly park" },
+                      { name: "Manchinbele Dam", distance: "40 km", time: "1 hour", activity: "Water sports, picnic spot, boating" },
+                      { name: "Jayamangali Blackbuck Reserve", distance: "90 km", time: "2 hours", activity: "Wildlife photography, endangered species" },
+                      { name: "BR Hills Wildlife Sanctuary", distance: "140 km", time: "3 hours", activity: "Western Ghats biodiversity, temple" },
+                    ]
+                  },
+                  {
+                    category: "Historical & Religious",
+                    places: [
+                      { name: "Lepakshi Temple", distance: "120 km", time: "2.5 hours", activity: "Hanging pillar, Nandi statue, murals" },
+                      { name: "Shravanabelagola", distance: "145 km", time: "3 hours", activity: "58 ft Gomateshwara statue, Jain temples" },
+                      { name: "Madhugiri Fort", distance: "100 km", time: "2 hours", activity: "2nd largest monolith, fort trekking" },
+                      { name: "Devarayanadurga", distance: "70 km", time: "1.5 hours", activity: "Hill station, ancient temples, trekking" },
+                    ]
+                  },
+                  {
+                    category: "Waterfalls & Scenic Spots",
+                    places: [
+                      { name: "Shivanasamudra Falls", distance: "135 km", time: "2.5 hours", activity: "Twin waterfalls, power plant, scenic beauty" },
+                      { name: "Hogenakkal Falls", distance: "145 km", time: "3 hours", activity: "Coracle rides, river bathing, fishing" },
+                      { name: "Chunchi Falls", distance: "90 km", time: "2 hours", activity: "Trekking, natural pool, picnic spot" },
+                      { name: "Mekedatu", distance: "100 km", time: "2 hours", activity: "Cauvery confluence, river gorge, trekking" },
+                    ]
+                  },
+                ].map((category, idx) => (
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-5">
+                    <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+                      <span className="text-orange-600">
+                        {idx === 0 ? "🏔️" : idx === 1 ? "🦚" : idx === 2 ? "🏛️" : "💧"}
+                      </span>
+                      {category.category}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                      {category.places.map((place, pidx) => (
+                        <div key={pidx} className="rounded-md bg-slate-50 p-3">
+                          <h4 className="font-semibold text-slate-900">{place.name}</h4>
+                          <p className="text-xs text-slate-600 mt-1">📍 {place.distance} • ⏱️ {place.time}</p>
+                          <p className="text-sm text-orange-700 mt-2">{place.activity}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-6 rounded-xl bg-orange-50 p-4 border border-orange-200">
+                <h3 className="font-bold text-slate-900 mb-2">📞 Customize Your Bangalore Day Trip</h3>
+                <p className="text-sm text-slate-700">
+                  Want to visit any of these places? We can arrange a customized day trip from Bangalore with 
+                  comfortable vehicles and experienced drivers. Contact us for personalized itinerary and pricing.
+                </p>
+              </div>
+            </div>
+
+            {/* Extended Tour Packages */}
+            <div id="multi-day-packages" className="rounded-2xl bg-linear-to-br from-orange-50 to-slate-50 p-6 mb-6 ring-1 ring-orange-100 scroll-mt-24">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Multi-Day Bangalore Packages</h2>
+              <p className="text-slate-600 mb-6">
+                Combine your Mysore-Bangalore transfer with extended tours for a complete Karnataka experience
+              </p>
+              
+              <div className="space-y-4">
+                <div className="rounded-xl bg-white p-5 border-2 border-orange-200">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900">Mysore → Bangalore → Nandi Hills</h3>
+                      <p className="text-sm text-slate-600 mt-1">2 Days • Sunrise Special</p>
+                    </div>
+                    <p className="text-2xl font-bold text-orange-600">₹7,500*</p>
+                  </div>
+                  <ul className="text-sm text-slate-700 space-y-1">
+                    <li>• Day 1: Mysore to Bangalore transfer + city sightseeing</li>
+                    <li>• Day 2: Early morning Nandi Hills sunrise + return</li>
+                    <li>• Includes: AC vehicle, driver, fuel, tolls</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-xl bg-white p-5 border-2 border-orange-200">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900">Mysore → Bangalore → Shivanasamudra</h3>
+                      <p className="text-sm text-slate-600 mt-1">2 Days • Waterfall Experience</p>
+                    </div>
+                    <p className="text-2xl font-bold text-orange-600">₹8,000*</p>
+                  </div>
+                  <ul className="text-sm text-slate-700 space-y-1">
+                    <li>• Day 1: Mysore to Bangalore with shopping break</li>
+                    <li>• Day 2: Bangalore to Shivanasamudra Falls + return</li>
+                    <li>• Includes: Transportation, experienced driver</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-xl bg-white p-5 border-2 border-orange-200">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900">Complete Bangalore Explorer</h3>
+                      <p className="text-sm text-slate-600 mt-1">3 Days • City + Nearby Attractions</p>
+                    </div>
+                    <p className="text-2xl font-bold text-orange-600">₹12,000*</p>
+                  </div>
+                  <ul className="text-sm text-slate-700 space-y-1">
+                    <li>• Day 1: Mysore to Bangalore + Airport/Hotel drop</li>
+                    <li>• Day 2: Full-day Bangalore city tour (8 attractions)</li>
+                    <li>• Day 3: Nandi Hills sunrise + Lepakshi temple + return</li>
+                    <li>• Perfect for: First-time visitors, family trips</li>
+                  </ul>
+                </div>
+
+                <div className="rounded-xl bg-white p-5 border-2 border-orange-200">
+                  <div className="flex justify-between items-start mb-3">
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900">Weekend Adventure Package</h3>
+                      <p className="text-sm text-slate-600 mt-1">3 Days • Nature & Adventure</p>
+                    </div>
+                    <p className="text-2xl font-bold text-orange-600">₹13,500*</p>
+                  </div>
+                  <ul className="text-sm text-slate-700 space-y-1">
+                    <li>• Day 1: Mysore to Bangalore via Srirangapatna</li>
+                    <li>• Day 2: Bangalore → Anthargange caves → Nandi Hills</li>
+                    <li>• Day 3: Savandurga trek + return to Mysore</li>
+                    <li>• Ideal for: Adventure enthusiasts, trekking lovers</li>
+                  </ul>
+                </div>
+              </div>
+              <p className="mt-4 text-xs text-slate-500">* Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.</p>
+
+              <div className="mt-6 text-center">
+                <a
+                  href={BUSINESS_INFO.whatsappLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 text-base font-semibold text-white hover:bg-emerald-700 transition-colors"
+                >
+                  <span>💬</span>
+                  Customize Your Package
+                </a>
+              </div>
+            </div>
+
+            {/* Route Information */}
+            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Route & Travel Tips</h2>
+              
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-bold text-slate-900 mb-2">🛣️ Highway Details</h3>
+                  <div className="rounded-lg bg-slate-50 p-4">
+                    <p className="text-slate-700 mb-2"><strong>Route:</strong> Mysore → Srirangapatna → Mandya → Ramanagara → Bangalore</p>
+                    <p className="text-slate-700 mb-2"><strong>Highway:</strong> NH275 (Bangalore-Mysore Expressway)</p>
+                    <p className="text-slate-700 mb-2"><strong>Road Condition:</strong> Excellent 4-lane highway</p>
+                    <p className="text-slate-700"><strong>Toll Plazas:</strong> 2 toll points (₹120-140 total)</p>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-slate-900 mb-2">🍽️ Rest Stops & Restaurants</h3>
+                  <div className="space-y-2">
+                    <div className="rounded-lg bg-slate-50 p-3">
+                      <p className="font-semibold text-slate-900">Kamat Upachar (Bidadi)</p>
+                      <p className="text-sm text-slate-600">75 km from Mysore • South Indian food, clean restrooms</p>
+                    </div>
+                    <div className="rounded-lg bg-slate-50 p-3">
+                      <p className="font-semibold text-slate-900">Vaibhav Hotel (Ramanagara)</p>
+                      <p className="text-sm text-slate-600">90 km from Mysore • Popular breakfast spot</p>
+                    </div>
+                    <div className="rounded-lg bg-slate-50 p-3">
+                      <p className="font-semibold text-slate-900">A2B Restaurant (Multiple locations)</p>
+                      <p className="text-sm text-slate-600">Along highway • Vegetarian meals, snacks</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-slate-900 mb-2">⏰ Best Time to Travel</h3>
+                  <div className="rounded-lg bg-slate-50 p-4">
+                    <ul className="space-y-2 text-slate-700">
+                      <li><strong>Early Morning (5-7 AM):</strong> Best for airport flights, less traffic in Bangalore</li>
+                      <li><strong>Mid-Morning (9-11 AM):</strong> Ideal for city sightseeing, shops open</li>
+                      <li><strong>Evening (4-6 PM):</strong> Avoid 5-7 PM Bangalore traffic peak hours</li>
+                      <li><strong>Night (After 9 PM):</strong> Empty roads, faster travel, 10% night surcharge</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-bold text-slate-900 mb-2">💡 Travel Tips</h3>
+                  <div className="rounded-lg bg-orange-50 p-4 border border-orange-200">
+                    <ul className="space-y-2 text-sm text-slate-700">
+                      <li>✓ Book 2-3 hours before flight departure for airport transfers</li>
+                      <li>✓ Carry cash for tolls and snacks (cards accepted at restaurants)</li>
+                      <li>✓ Bangalore Electronic City adds 30-45 mins during peak hours</li>
+                      <li>✓ Request pickup 15 mins early if traveling with kids/elderly</li>
+                      <li>✓ Share flight details for airport pickups (we track delays)</li>
+                      <li>✓ Best weather: October-March (pleasant), avoid July-August (heavy rain)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* FAQ */}
             <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
@@ -645,7 +650,7 @@ export default function MysoreToBangalorePage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             {/* Quick Booking Card */}
-            <div className="rounded-2xl bg-gradient-to-br from-emerald-600 to-emerald-700 p-6 text-white sticky top-4">
+            <div className="rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-6 text-white sticky top-4">
               <h3 className="text-xl font-bold mb-4">Book Your Cab Now</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2">
@@ -671,13 +676,13 @@ export default function MysoreToBangalorePage() {
                 href={BUSINESS_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-emerald-700 hover:bg-emerald-50 transition-colors"
+                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-orange-700 hover:bg-orange-50 transition-colors"
               >
                 WhatsApp: {BUSINESS_INFO.phone}
               </a>
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-emerald-800 transition-colors"
+                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
               >
                 Book Online
               </Link>
@@ -687,19 +692,19 @@ export default function MysoreToBangalorePage() {
             <div className="mt-6 rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h3 className="text-lg font-bold text-slate-900 mb-4">Related Routes</h3>
               <div className="space-y-2">
-                <Link href={ROUTES.MYSORE_TO_COORG} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_COORG} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Coorg</div>
-                  <div className="text-sm text-slate-600">120 km • ₹4,500</div>
+                  <div className="text-sm text-slate-600">120 km • ₹4,500*</div>
                 </Link>
-                <Link href={ROUTES.MYSORE_TO_OOTY} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_OOTY} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Ooty</div>
-                  <div className="text-sm text-slate-600">125 km • ₹4,800</div>
+                  <div className="text-sm text-slate-600">125 km • ₹5,500*</div>
                 </Link>
-                <Link href={ROUTES.MYSORE_TO_WAYANAD} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_WAYANAD} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Wayanad</div>
-                  <div className="text-sm text-slate-600">135 km • ₹5,000</div>
+                  <div className="text-sm text-slate-600">135 km • ₹5,000*</div>
                 </Link>
-                <Link href={ROUTES.AIRPORT_TRANSFER} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.AIRPORT_TRANSFER} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Airport Transfer Service</div>
                   <div className="text-sm text-slate-600">All airports</div>
                 </Link>

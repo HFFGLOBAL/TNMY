@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Book Mysore to Coorg cab starting from ₹4,500. 120 km scenic drive through coffee plantations. Visit Abbey Falls, Raja's Seat, Dubare. Professional drivers. 24/7 available.",
   keywords: ["mysore to coorg taxi", "mysore to coorg cab", "coorg taxi from mysore", "mysore coorg car rental"],
   alternates: {
-    canonical: "/mysore-to-coorg/",
+    canonical: "/tour-packages/mysore-to-coorg/",
   },
 };
 
@@ -79,7 +79,7 @@ export default function MysoreToCoorgPage() {
               <div className="text-sm font-semibold text-slate-600">Duration</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">₹4,500</div>
+              <div className="text-2xl font-bold text-slate-900">₹4,500*</div>
               <div className="text-sm font-semibold text-slate-600">Starting Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -110,9 +110,9 @@ export default function MysoreToCoorgPage() {
             <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Detailed Day Itinerary</h2>
               <div className="space-y-6">
-                <div className="relative pl-8 pb-6 border-l-2 border-blue-200">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">06:00 AM - 07:00 AM</div>
+                <div className="relative pl-8 pb-6 border-l-2 border-orange-200">
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">06:00 AM - 07:00 AM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Departure from Mysore</h3>
                   <p className="text-slate-700">
                     Pickup from your location in Mysore (hotel, home, railway station). Begin your scenic journey to Coorg through NH275, 
@@ -120,9 +120,9 @@ export default function MysoreToCoorgPage() {
                   </p>
                 </div>
 
-                <div className="relative pl-8 pb-6 border-l-2 border-blue-200">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">09:30 AM - 10:30 AM</div>
+                <div className="relative pl-8 pb-6 border-l-2 border-orange-200">
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">09:30 AM - 10:30 AM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Abbey Falls Visit</h3>
                   <p className="text-slate-700">
                     First stop at the breathtaking Abbey Falls cascading from 70 feet height. Walk through coffee plantations 
@@ -131,9 +131,9 @@ export default function MysoreToCoorgPage() {
                   </p>
                 </div>
 
-                <div className="relative pl-8 pb-6 border-l-2 border-blue-200">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">11:00 AM - 12:00 PM</div>
+                <div className="relative pl-8 pb-6 border-l-2 border-orange-200">
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">11:00 AM - 12:00 PM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Raja's Seat & Gardens</h3>
                   <p className="text-slate-700">
                     Visit the famous Raja's Seat viewpoint where Kodagu kings enjoyed sunsets. Beautiful garden with seasonal 
@@ -142,9 +142,9 @@ export default function MysoreToCoorgPage() {
                   </p>
                 </div>
 
-                <div className="relative pl-8 pb-6 border-l-2 border-blue-200">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">12:30 PM - 01:30 PM</div>
+                <div className="relative pl-8 pb-6 border-l-2 border-orange-200">
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">12:30 PM - 01:30 PM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Lunch Break</h3>
                   <p className="text-slate-700">
                     Enjoy authentic Coorg cuisine at a recommended local restaurant. Try specialties like Pandi Curry (pork curry), 
@@ -152,9 +152,9 @@ export default function MysoreToCoorgPage() {
                   </p>
                 </div>
 
-                <div className="relative pl-8 pb-6 border-l-2 border-blue-200">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">02:00 PM - 03:30 PM</div>
+                <div className="relative pl-8 pb-6 border-l-2 border-orange-200">
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">02:00 PM - 03:30 PM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Coffee Plantation Tour</h3>
                   <p className="text-slate-700">
                     Guided tour through aromatic coffee estates. Learn about coffee cultivation, processing, and roasting. 
@@ -163,9 +163,9 @@ export default function MysoreToCoorgPage() {
                   </p>
                 </div>
 
-                <div className="relative pl-8 pb-6 border-l-2 border-blue-200">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">04:00 PM - 05:00 PM</div>
+                <div className="relative pl-8 pb-6 border-l-2 border-orange-200">
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">04:00 PM - 05:00 PM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Omkareshwara Temple</h3>
                   <p className="text-slate-700">
                     Visit the 19th-century Omkareshwara Temple featuring unique blend of Islamic and Gothic architecture. 
@@ -174,8 +174,8 @@ export default function MysoreToCoorgPage() {
                 </div>
 
                 <div className="relative pl-8">
-                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                  <div className="text-sm font-semibold text-blue-600 mb-1">05:30 PM - 08:30 PM</div>
+                  <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                  <div className="text-sm font-semibold text-orange-600 mb-1">05:30 PM - 08:30 PM</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">Return to Mysore</h3>
                   <p className="text-slate-700">
                     Begin return journey to Mysore. Drop at your preferred location (hotel, home, railway station). 
@@ -186,7 +186,7 @@ export default function MysoreToCoorgPage() {
             </div>
 
             {/* Tour Highlights */}
-            <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 p-6 mb-6 ring-1 ring-blue-100">
+            <div className="rounded-2xl bg-linear-to-br from-orange-50 to-slate-50 p-6 mb-6 ring-1 ring-orange-100">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Tour Highlights</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {[
@@ -290,8 +290,8 @@ export default function MysoreToCoorgPage() {
                     <tr>
                       <th className="px-4 py-3 text-left font-semibold text-slate-700">Vehicle Type</th>
                       <th className="px-4 py-3 text-left font-semibold text-slate-700">Capacity</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-700">One Way</th>
-                      <th className="px-4 py-3 text-left font-semibold text-slate-700">Round Trip</th>
+                      <th className="px-4 py-3 text-left font-semibold text-slate-700">One Way*</th>
+                      <th className="px-4 py-3 text-left font-semibold text-slate-700">Round Trip*</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200">
@@ -319,10 +319,26 @@ export default function MysoreToCoorgPage() {
               <p className="text-sm text-slate-600 mt-4">
                 *Prices include driver charges, fuel, and toll. No hidden charges.
               </p>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
+              </p>
+            </div>
+
+            {/* FAQs */}
+            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">FAQs</h2>
+              <div className="space-y-4">
+                {faqs.mainEntity.map((faq: any, i: number) => (
+                  <div key={i} className="border-b border-slate-200 pb-4 last:border-0">
+                    <h3 className="font-semibold text-slate-900 mb-2">{faq.name}</h3>
+                    <p className="text-slate-700">{faq.acceptedAnswer.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Enquiry Form */}
-            <div className="rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800 p-8 mb-6 text-white">
+            <div className="rounded-2xl bg-linear-to-br from-slate-900 to-slate-800 p-8 mb-6 text-white">
               <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Ready to Book Your Coorg Tour?</h2>
               <p className="text-slate-300 text-center mb-6">Get instant quote or call us now for immediate booking</p>
               
@@ -335,7 +351,7 @@ export default function MysoreToCoorgPage() {
                       href={`tel:${BUSINESS_INFO.phone}`}
                       className="flex items-center gap-3 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
                     >
-                      <svg className="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                       </svg>
                       <div>
@@ -361,7 +377,7 @@ export default function MysoreToCoorgPage() {
                       href={ROUTES.BOOK_TAXI}
                       className="flex items-center gap-3 p-4 rounded-lg bg-white/10 hover:bg-white/20 transition-colors"
                     >
-                      <svg className="w-6 h-6 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                       </svg>
                       <div>
@@ -377,8 +393,8 @@ export default function MysoreToCoorgPage() {
                   <h3 className="text-lg font-bold mb-4">Why Book With Us?</h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                       </div>
@@ -388,8 +404,8 @@ export default function MysoreToCoorgPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                       </div>
@@ -399,8 +415,8 @@ export default function MysoreToCoorgPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                       </div>
@@ -410,8 +426,8 @@ export default function MysoreToCoorgPage() {
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                         </svg>
                       </div>
@@ -425,19 +441,6 @@ export default function MysoreToCoorgPage() {
               </div>
             </div>
 
-            {/* FAQs */}
-            <div className="rounded-2xl bg-white p-6 mb-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">FAQs</h2>
-              <div className="space-y-4">
-                {faqs.mainEntity.map((faq: any, i: number) => (
-                  <div key={i} className="border-b border-slate-200 pb-4 last:border-0">
-                    <h3 className="font-semibold text-slate-900 mb-2">{faq.name}</h3>
-                    <p className="text-slate-700">{faq.acceptedAnswer.text}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
             {/* Related Tours */}
             <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Explore More Karnataka Tours</h2>
@@ -446,21 +449,21 @@ export default function MysoreToCoorgPage() {
                   {
                     name: "Mysore to Ooty",
                     distance: "125 km",
-                    price: "₹4,800",
+                    price: "₹5,500*",
                     highlights: "Tea Gardens, Botanical Garden, Ooty Lake",
                     href: ROUTES.MYSORE_TO_OOTY
                   },
                   {
                     name: "Mysore to Wayanad",
                     distance: "140 km",
-                    price: "₹5,200",
+                    price: "₹5,000*",
                     highlights: "Edakkal Caves, Soochipara Falls, Wildlife",
                     href: ROUTES.MYSORE_TO_WAYANAD
                   },
                   {
                     name: "Mysore One Day Tour",
                     distance: "80 km",
-                    price: "₹2,500",
+                    price: "₹2,000*",
                     highlights: "Palace, Chamundi Hills, Brindavan Gardens",
                     href: ROUTES.MYSORE_ONE_DAY_TOUR
                   }
@@ -468,9 +471,9 @@ export default function MysoreToCoorgPage() {
                   <Link
                     key={i}
                     href={tour.href}
-                    className="group p-4 rounded-xl border-2 border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all"
+                    className="group p-4 rounded-xl bg-white ring-1 ring-slate-900/10 hover:ring-orange-400 hover:shadow-lg transition-all"
                   >
-                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-600 mb-2">{tour.name}</h3>
+                    <h3 className="text-lg font-bold text-slate-900 group-hover:text-orange-600 mb-2">{tour.name}</h3>
                     <div className="space-y-1 text-sm text-slate-600 mb-3">
                       <div className="flex items-center gap-2">
                         <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -487,7 +490,7 @@ export default function MysoreToCoorgPage() {
                       </div>
                     </div>
                     <p className="text-xs text-slate-600 mb-3">{tour.highlights}</p>
-                    <div className="text-blue-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                    <div className="text-orange-600 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
                       View Details
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -517,7 +520,7 @@ export default function MysoreToCoorgPage() {
               <div className="space-y-4">
                 <a
                   href={`tel:${BUSINESS_INFO.phone}`}
-                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                  className="block w-full bg-orange-600 hover:bg-[#e85c2d] text-white text-center py-3 px-4 rounded-lg font-bold transition-colors"
                 >
                   Call now
                 </a>

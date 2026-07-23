@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { JsonLd } from './JsonLd';
+import { createBreadcrumbSchema } from '@/lib/constants/schema-templates';
+import { BUSINESS_INFO } from '@/lib/constants/business-info';
 
 interface BreadcrumbItem {
   label: string;
@@ -10,8 +13,17 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: 'Home', url: BUSINESS_INFO.url },
+    ...items.map((item) => ({
+      name: item.label,
+      url: new URL(item.href, BUSINESS_INFO.url).toString(),
+    })),
+  ]);
+
   return (
     <nav aria-label="Breadcrumb" className="py-4">
+      <JsonLd data={breadcrumbSchema} />
       <ol
         itemScope
         itemType="https://schema.org/BreadcrumbList"
@@ -26,7 +38,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
           <Link
             href="/"
             itemProp="item"
-            className="hover:text-blue-600 transition-colors"
+            className="hover:text-[#e85c2d] transition-colors"
           >
             <span itemProp="name">Home</span>
           </Link>
@@ -53,7 +65,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
               <Link
                 href={item.href}
                 itemProp="item"
-                className="hover:text-blue-600 transition-colors"
+                className="hover:text-[#e85c2d] transition-colors"
               >
                 <span itemProp="name">{item.label}</span>
               </Link>

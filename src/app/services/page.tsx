@@ -36,14 +36,14 @@ export default function ServicesPage() {
       title: "Outstation Taxi",
       desc: "Comfortable intercity travel to Ooty, Coorg, Bangalore, Wayanad, and beyond. Well-maintained AC vehicles.",
       features: ["One-way & Round trip", "Transparent pricing", "Experienced drivers", "24/7 available"],
-      price: "Starting from ₹13/km",
+      price: "Starting from ₹12/km",
       link: ROUTES.OUTSTATION_TAXI
     },
     {
       title: "Local Sightseeing",
       desc: "Explore Mysore's palaces, temples, gardens at your own pace. Customizable itineraries available.",
       features: ["Full day packages", "Half day options", "Knowledgeable drivers", "All major attractions"],
-      price: "Starting from ₹2,000/day",
+      price: "Starting from ₹1,800/day",
       link: ROUTES.SIGHTSEEING_TAXI
     },
     {
@@ -57,7 +57,7 @@ export default function ServicesPage() {
       title: "Tempo Traveller",
       desc: "Spacious 12-17 seater vehicles for group travel, family tours, corporate outings.",
       features: ["Push-back seats", "AC facility", "Music system", "Large luggage space"],
-      price: "₹20 - ₹24 per km",
+      price: "₹22/km",
       link: "/fleet/tempo-traveller/"
     },
     {
@@ -73,6 +73,13 @@ export default function ServicesPage() {
       features: ["Fixed monthly rates", "Dedicated vehicles", "Professional drivers", "Invoicing support"],
       price: "Custom monthly packages",
       link: ROUTES.CORPORATE_CAB
+    },
+    {
+      title: "Wedding Car Rental",
+      desc: "Premium decorated cars and chauffeurs for weddings and special occasions in Mysore.",
+      features: ["Decorated vehicles", "Professional chauffeurs", "On-time service", "Custom packages"],
+      price: "Custom event packages",
+      link: ROUTES.WEDDING_CAR
     }
   ];
 
@@ -82,21 +89,21 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <Breadcrumbs items={[{ label: "Services", href: ROUTES.SERVICES }]} />
         
-        <div className="bg-linear-to-r from-blue-600 to-blue-800 rounded-2xl p-8 md:p-12 mb-10 text-center text-white">
+        <div className="bg-linear-to-r from-orange-600 to-[#e85c2d] rounded-2xl p-8 md:p-12 mb-10 text-center text-white">
           <div className="inline-flex items-center rounded-full bg-white/20 px-4 py-1.5 text-sm font-semibold backdrop-blur-sm mb-4">
             Top Travels in Mysore • 11+ Years Experience • Highly Rated
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Leading Taxi Services in Mysore
           </h1>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg text-orange-100 max-w-3xl mx-auto">
             MM Mysore Travels - Your trusted <strong className="text-white">travel agency in Mysore</strong> offering comprehensive <strong className="text-white">taxi services in Mysore</strong> and clean AC <strong className="text-white">cabs in Mysore</strong> for all your travel needs. Book outstation cabs, local tours, airport transfers, and more with 24/7 availability.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
-            <div key={i} className="bg-white rounded-2xl ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow p-7">
+            <div key={i} className="bg-white rounded-2xl ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow p-6">
               <h2 className="text-xl font-bold text-slate-900 mb-2">
                 {service.title}
               </h2>
@@ -118,7 +125,7 @@ export default function ServicesPage() {
               </div>
               <Link
                 href={service.link}
-                className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
+                className="block w-full bg-orange-600 hover:bg-orange-700 text-white text-center py-3 px-4 rounded-lg font-semibold transition-colors"
               >
                 Learn more
               </Link>

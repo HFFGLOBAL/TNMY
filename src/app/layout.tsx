@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     description: "4.9 rated Mysore travels. Book taxis, tour packages to Coorg, Ooty, Wayanad. 11+ years trusted service.",
     images: [
       {
-        url: "/images/hero/hero-bg1.png",
+        url: "/images/hero/hero-bg2.jpeg",
         alt: "Travels in Mysore - Best Taxi & Tour Services",
       },
     ],
@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Travels in Mysore | Best Taxi Services & Tour Packages",
     description: "4.9 rated Mysore travels. Book taxis, tour packages. 11+ years trusted service.",
-    images: ["/images/hero/hero-bg1.png"],
+    images: ["/images/hero/hero-bg2.jpeg"],
   },
   robots: {
     index: true,
@@ -107,7 +107,7 @@ export default function RootLayout({
       <head>
         {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2563eb" />
+        <meta name="theme-color" content="#FF7444" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />

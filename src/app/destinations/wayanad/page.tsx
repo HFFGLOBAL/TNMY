@@ -17,7 +17,7 @@ export default function DestinationWayanadPage() {
       />
 
       {/* Hero Section */}
-      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-slate-50 p-8 md:p-12 mb-10">
+      <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 md:p-12 mb-10">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Mysore to Wayanad Taxi Service</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
           Experience Kerala's pristine hill station with our comfortable Mysore to Wayanad taxi service. Book professional drivers, transparent pricing, and enjoy scenic 140 km journey through Western Ghats.
@@ -37,19 +37,19 @@ export default function DestinationWayanadPage() {
           </Link>
         </div>
         <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Distance</div>
             <div className="text-slate-600">140 km from Mysore</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Travel Time</div>
             <div className="text-slate-600">3.5 - 4 hours</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Starting Fare</div>
-            <div className="text-slate-600">₹5,800 onwards</div>
+            <div className="text-slate-600">₹5,000 onwards</div>
           </div>
-          <div className="bg-white rounded-lg p-3 shadow-sm">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-4">
             <div className="font-semibold text-slate-900">Best Time</div>
             <div className="text-slate-600">Oct to May</div>
           </div>
@@ -68,7 +68,7 @@ export default function DestinationWayanadPage() {
             { name: "Pookode Lake", desc: "Freshwater lake surrounded by evergreen forests, ideal for boating and nature walks." },
             { name: "Wayanad Wildlife Sanctuary", desc: "Home to elephants, tigers, leopards with jeep safaris through dense forests and bamboo groves." }
           ].map((place) => (
-            <div key={place.name} className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md transition-shadow">
+            <div key={place.name} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-md hover:ring-orange-300 transition-all">
               <h3 className="text-xl font-semibold text-slate-900 mb-2">{place.name}</h3>
               <p className="text-slate-600">{place.desc}</p>
             </div>
@@ -77,7 +77,7 @@ export default function DestinationWayanadPage() {
       </section>
 
       {/* Why Choose Our Service */}
-      <section className="mb-12 bg-blue-50 rounded-2xl p-8">
+      <section className="mb-12 bg-orange-50 rounded-2xl p-8">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Book Mysore to Wayanad Taxi with Us?</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -88,7 +88,7 @@ export default function DestinationWayanadPage() {
             { title: "Flexible Packages", desc: "One-way, round trip, and multi-day tour packages customized to your schedule" },
             { title: "Local Expertise", desc: "Drivers provide insights on best viewpoints, food stops, and lesser-known attractions" }
           ].map((feature) => (
-            <div key={feature.title} className="bg-white rounded-lg p-5 shadow-sm">
+            <div key={feature.title} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
               <h3 className="font-semibold text-slate-900 mb-2">{feature.title}</h3>
               <p className="text-sm text-slate-600">{feature.desc}</p>
             </div>
@@ -99,7 +99,7 @@ export default function DestinationWayanadPage() {
       {/* Travel Information */}
       <section className="mb-12">
         <h2 className="text-3xl font-bold text-slate-900 mb-6">Wayanad Travel Guide from Mysore</h2>
-        <div className="prose prose-slate max-w-none bg-white rounded-xl border border-slate-200 p-8">
+        <div className="prose prose-slate max-w-none bg-white rounded-2xl ring-1 ring-slate-900/10 p-8">
           <h3 className="text-xl font-semibold text-slate-900 mb-3">Best Time to Visit Wayanad</h3>
           <p className="text-slate-700 mb-4">
             October to May offers pleasant weather (15-25°C) ideal for sightseeing and trekking. Monsoon (June-September) brings heavy rains and lush greenery but limited outdoor activities. Winter months are perfect for Mysore to Wayanad taxi trips.
@@ -128,21 +128,21 @@ export default function DestinationWayanadPage() {
       </section>
 
       {/* Booking CTA */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-12 text-white text-center">
+      <section className="rounded-2xl bg-slate-900 p-8 text-center text-white">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Explore Wayanad?</h2>
-        <p className="text-lg mb-6 text-blue-50">
+        <p className="text-lg mb-6 text-orange-50">
           Book your Mysore to Wayanad taxi now for a comfortable and memorable hill station experience. Professional drivers, clean vehicles, transparent pricing.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link 
             href={ROUTES.BOOK_TAXI} 
-            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-blue-600 hover:bg-blue-50 transition-colors shadow-lg"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-orange-600 hover:bg-orange-50 transition-colors shadow-lg"
           >
             Book Taxi Online
           </Link>
           <a 
             href="tel:+919611353434" 
-            className="inline-flex items-center justify-center rounded-lg bg-blue-800 px-8 py-3 text-base font-semibold text-white hover:bg-blue-900 transition-colors border-2 border-white"
+            className="inline-flex items-center justify-center rounded-lg bg-orange-800 px-8 py-3 text-base font-semibold text-white hover:bg-orange-900 transition-colors border-2 border-white"
           >
             Call +91 96113 53434
           </a>

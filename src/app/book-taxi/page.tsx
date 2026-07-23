@@ -53,7 +53,7 @@ export default function BookTaxiPage() {
                   { icon: "✓", title: "Clean Vehicles", desc: "Well-maintained, sanitized AC cabs" },
                   { icon: "✓", title: "Flexible Cancellation", desc: "Easy cancellation policy with full refund" },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl ring-1 ring-slate-900/5">
+                  <div key={i} className="flex items-start gap-3 p-4 bg-slate-50 rounded-xl ring-1 ring-slate-900/10">
                     <span className="text-emerald-600 text-2xl font-bold">{item.icon}</span>
                     <div>
                       <h3 className="font-bold text-slate-900">{item.title}</h3>
@@ -88,15 +88,15 @@ export default function BookTaxiPage() {
           </div>
 
           <div className="lg:col-span-1">
-            <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-6 sticky top-24">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Need help?</h3>
-              <p className="text-slate-600 mb-5">
+            <div className="bg-linear-to-br from-orange-600 to-[#e85c2d] rounded-2xl p-6 text-white sticky top-24">
+              <h3 className="text-xl font-bold text-white mb-3">Need help?</h3>
+              <p className="text-orange-100 mb-5">
                 Our customer support team is available 24/7 to assist you with your booking.
               </p>
               <div className="space-y-3">
                 <a
                   href={`tel:${BUSINESS_INFO.phone}`}
-                  className="block w-full bg-[#FF7444] hover:bg-[#e85c2d] text-white text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                  className="block w-full bg-white hover:bg-orange-50 text-orange-700 text-center py-3 px-4 rounded-lg font-bold transition-colors"
                 >
                   Call {BUSINESS_INFO.phoneDisplay}
                 </a>
@@ -110,14 +110,14 @@ export default function BookTaxiPage() {
                 </a>
                 <a
                   href={`mailto:${BUSINESS_INFO.email}`}
-                  className="block w-full bg-slate-700 hover:bg-slate-800 text-white text-center py-3 px-4 rounded-lg font-bold transition-colors"
+                  className="block w-full bg-white/10 hover:bg-white/20 text-white ring-1 ring-white/40 text-center py-3 px-4 rounded-lg font-bold transition-colors"
                 >
                   Email
                 </a>
               </div>
 
-              <div className="mt-6 pt-6 border-t">
-                <h4 className="font-bold text-gray-900 mb-3">Popular Services</h4>
+              <div className="mt-6 pt-6 border-t border-white/20">
+                <h4 className="font-bold text-white mb-3">Popular Services</h4>
                 <ul className="space-y-2 text-sm">
                   {[
                     { label: "Mysore to Coorg", href: ROUTES.MYSORE_TO_COORG },
@@ -127,7 +127,7 @@ export default function BookTaxiPage() {
                     { label: "All Services", href: ROUTES.SERVICES },
                   ].map((item) => (
                     <li key={item.href}>
-                      <Link href={item.href} className="text-blue-600 hover:underline">
+                      <Link href={item.href} className="text-orange-100 hover:text-white hover:underline">
                         → {item.label}
                       </Link>
                     </li>
@@ -135,10 +135,10 @@ export default function BookTaxiPage() {
                 </ul>
               </div>
 
-              <div className="mt-6 pt-6 border-t border-slate-200">
+              <div className="mt-6 pt-6 border-t border-white/20">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-slate-900">{BUSINESS_INFO.rating.value}/{BUSINESS_INFO.rating.max}</div>
-                  <p className="text-center text-sm text-slate-600 mt-1">
+                  <div className="text-2xl font-bold text-white">{BUSINESS_INFO.rating.value}/{BUSINESS_INFO.rating.max}</div>
+                  <p className="text-center text-sm text-orange-100 mt-1">
                   Based on {BUSINESS_INFO.rating.count}+ Google reviews
                   </p>
                 </div>

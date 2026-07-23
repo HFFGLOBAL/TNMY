@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { createFAQSchema } from "@/lib/constants/schema-templates";
 import { BUSINESS_INFO } from "@/lib/constants/business-info";
 import { ROUTES } from "@/lib/constants/routes";
 
@@ -10,11 +12,23 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact/" },
 };
 
+const contactFaqs = [
+  { q: "How do I book a cab?", a: "Call us, WhatsApp, or use our online booking form. We confirm bookings instantly." },
+  { q: "What are your payment options?", a: "Cash, UPI, cards accepted. Online payment options available." },
+  { q: "Do you provide outstation services?", a: "Yes, we serve all major destinations like Coorg, Ooty, Wayanad, Bangalore, and more." },
+  { q: "Are your drivers experienced?", a: "Yes, all drivers are verified and trained with 10+ years experience." },
+  { q: "What's your cancellation policy?", a: "Free cancellation up to 2 hours before pickup. Contact us for details." },
+  { q: "Do you offer airport transfers?", a: "Yes, we provide reliable airport pickup/drop for Bangalore and Mysore airports." },
+];
+
+const contactFaqSchema = createFAQSchema(contactFaqs.map((f) => ({ question: f.q, answer: f.a })));
+
 export default function ContactPage() {
   return (
     <>
       <div className="bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <JsonLd data={contactFaqSchema} />
         <Breadcrumbs items={[{ label: "Contact Us", href: ROUTES.CONTACT }]} />
         
         <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8 mb-8 text-center">
@@ -39,7 +53,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Phone</h3>
-                  <a href={`tel:${BUSINESS_INFO.phone}`} className="text-blue-600 hover:underline text-lg">
+                  <a href={`tel:${BUSINESS_INFO.phone}`} className="text-[#e85c2d] hover:underline text-lg">
                     {BUSINESS_INFO.phoneDisplay}
                   </a>
                   <p className="text-sm text-slate-600">Available 24/7 for bookings and support</p>
@@ -75,7 +89,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-900 mb-1">Email</h3>
-                  <a href={`mailto:${BUSINESS_INFO.email}`} className="text-purple-600 hover:underline text-lg break-all">
+                  <a href={`mailto:${BUSINESS_INFO.email}`} className="text-[#e85c2d] hover:underline text-lg break-all">
                     {BUSINESS_INFO.email}
                   </a>
                   <p className="text-sm text-slate-600">We'll respond within 24 hours</p>
@@ -167,7 +181,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-slate-50 rounded-xl ring-1 ring-slate-900/5">
+            <div className="mt-8 p-6 bg-slate-50 rounded-xl ring-1 ring-slate-900/10">
               <h3 className="font-bold text-slate-900 mb-2">Customer satisfaction</h3>
               <p className="text-2xl font-bold text-slate-900 mb-1">{BUSINESS_INFO.rating.value}/{BUSINESS_INFO.rating.max}</p>
               <p className="text-sm text-slate-600">Based on {BUSINESS_INFO.rating.count}+ reviews</p>
@@ -178,15 +192,8 @@ export default function ContactPage() {
         <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Frequently asked questions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { q: "How do I book a cab?", a: "Call us, WhatsApp, or use our online booking form. We confirm bookings instantly." },
-              { q: "What are your payment options?", a: "Cash, UPI, cards accepted. Online payment options available." },
-              { q: "Do you provide outstation services?", a: "Yes, we serve all major destinations like Coorg, Ooty, Wayanad, Bangalore, and more." },
-              { q: "Are your drivers experienced?", a: "Yes, all drivers are verified and trained with 10+ years experience." },
-              { q: "What's your cancellation policy?", a: "Free cancellation up to 2 hours before pickup. Contact us for details." },
-              { q: "Do you offer airport transfers?", a: "Yes, we provide reliable airport pickup/drop for Bangalore and Mysore airports." },
-            ].map((faq, i) => (
-              <div key={i} className="rounded-xl bg-slate-50 ring-1 ring-slate-900/5 p-5">
+            {contactFaqs.map((faq, i) => (
+              <div key={i} className="rounded-xl bg-slate-50 ring-1 ring-slate-900/10 p-5">
                 <h3 className="font-bold text-slate-900 mb-2">{faq.q}</h3>
                 <p className="text-slate-600">{faq.a}</p>
               </div>

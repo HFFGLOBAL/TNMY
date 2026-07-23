@@ -45,7 +45,7 @@ export default function CorporateCabMysorePage() {
       <JsonLd data={corporateServiceSchema} />
       <Breadcrumbs items={[{ label: "Services", href: ROUTES.SERVICES }, { label: "Corporate Cab", href: ROUTES.CORPORATE_CAB }]} />
 
-      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-slate-50 p-8">
+      <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Corporate Cab Service in Mysore</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
           Professional corporate transportation for executives, business travel, guest pickups, and corporate events. Dedicated support for your business needs.
@@ -73,7 +73,7 @@ export default function CorporateCabMysorePage() {
         <h2 className="text-3xl font-bold text-slate-900">Why Choose Us for Corporate Travel?</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, idx) => (
-            <div key={idx} className="rounded-xl border border-slate-200 bg-white p-6 hover:shadow-md transition-shadow">
+            <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-md hover:ring-orange-300 transition-all">
               <h3 className="text-lg font-semibold text-slate-900">{feature.title}</h3>
               <p className="mt-2 text-slate-600">{feature.desc}</p>
             </div>
@@ -82,7 +82,7 @@ export default function CorporateCabMysorePage() {
       </div>
 
       {/* Corporate Solutions */}
-      <div className="mt-12 rounded-2xl bg-slate-50 p-8 border border-slate-200">
+      <div className="mt-12 rounded-2xl bg-white ring-1 ring-slate-900/10 p-8">
         <h2 className="text-3xl font-bold text-slate-900">Corporate Solutions</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="rounded-xl bg-white p-6 ring-1 ring-slate-900/10">
@@ -110,18 +110,42 @@ export default function CorporateCabMysorePage() {
       <div className="mt-12">
         <h2 className="text-3xl font-bold text-slate-900">Corporate Travel FAQs</h2>
         <div className="mt-6 space-y-4">
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">Can we set up a corporate account?</h3>
             <p className="mt-2 text-slate-600">Yes! We offer customized corporate accounts with monthly billing, dedicated managers, and priority service.</p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">What are your minimum booking requirements?</h3>
             <p className="mt-2 text-slate-600">We work with companies of all sizes. No minimum booking requirement. Contact our corporate team for custom packages.</p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">Do you offer late-night/early morning travel?</h3>
             <p className="mt-2 text-slate-600">Absolutely! Our 24/7 service is perfect for early morning airport pickups and late-night executive travel.</p>
           </div>
+        </div>
+      </div>
+
+      {/* Final CTA */}
+      <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-center text-white">
+        <h2 className="text-3xl font-bold">Ready to Set Up Corporate Cabs?</h2>
+        <p className="mt-3 text-lg text-slate-300 max-w-2xl mx-auto">
+          Get an instant quote on WhatsApp or call us directly — professional drivers, transparent pricing, and 24/7 availability.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={BUSINESS_INFO.whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-8 py-3 text-base font-semibold text-white hover:bg-emerald-700 transition-colors"
+          >
+            WhatsApp Now
+          </a>
+          <Link
+            href={ROUTES.BOOK_TAXI}
+            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-slate-900 hover:bg-slate-100 transition-colors"
+          >
+            Book Online
+          </Link>
         </div>
       </div>
     </div>

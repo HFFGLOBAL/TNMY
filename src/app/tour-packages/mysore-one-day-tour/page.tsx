@@ -6,9 +6,9 @@ import { ROUTES } from "@/lib/constants/routes";
 
 export const metadata: Metadata = {
   title: "Mysore One Day Tour Package | Local Sightseeing | Palace, Zoo, Gardens",
-  description: "Book Mysore one day tour starting from ₹1,500. Visit Mysore Palace, Chamundi Hills, Zoo, Brindavan Gardens. Professional guide & driver. AC cabs available.",
+  description: "Book Mysore one day tour starting from ₹2,000. Visit Mysore Palace, Chamundi Hills, Zoo, Brindavan Gardens. Professional guide & driver. AC cabs available.",
   keywords: ["mysore one day tour", "mysore local sightseeing", "mysore city tour", "mysore tourist places"],
-  alternates: { canonical: "/mysore-one-day-tour/" },
+  alternates: { canonical: "/tour-packages/mysore-one-day-tour/"},
 };
 
 export default function MysoreOneDayTourPage() {
@@ -34,7 +34,7 @@ export default function MysoreOneDayTourPage() {
               <div className="text-sm font-semibold text-slate-600">Attractions</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">₹1,500</div>
+              <div className="text-2xl font-bold text-slate-900">₹2,000*</div>
               <div className="text-sm font-semibold text-slate-600">Starting Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -71,41 +71,6 @@ export default function MysoreOneDayTourPage() {
             </div>
 
             <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
-              <h2 className="text-2xl font-bold text-slate-900 mb-4">Pricing Details</h2>
-              <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead className="bg-slate-50">
-                  <tr>
-                    <th className="px-4 py-3 text-left font-semibold text-slate-700">Vehicle Type</th>
-                    <th className="px-4 py-3 text-left font-semibold text-slate-700">Capacity</th>
-                    <th className="px-4 py-3 text-left font-semibold text-slate-700">Price</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200">
-                  <tr>
-                    <td className="px-4 py-3 text-slate-700">Sedan (AC)</td>
-                    <td className="px-4 py-3 text-slate-700">4 Passengers</td>
-                    <td className="px-4 py-3 font-bold text-slate-900">₹2,000</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-slate-700">SUV (AC)</td>
-                    <td className="px-4 py-3 text-slate-700">6-7 Passengers</td>
-                    <td className="px-4 py-3 font-bold text-slate-900">₹2,500</td>
-                  </tr>
-                  <tr>
-                    <td className="px-4 py-3 text-slate-700">Tempo Traveller</td>
-                    <td className="px-4 py-3 text-slate-700">12-14 Passengers</td>
-                    <td className="px-4 py-3 font-bold text-slate-900">₹4,000</td>
-                  </tr>
-                </tbody>
-              </table>
-              </div>
-              <p className="text-sm text-slate-600 mt-4">
-                *Price includes AC cab, driver charges, fuel. Entry tickets not included.
-              </p>
-            </div>
-
-            <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h2 className="text-2xl font-bold text-slate-900 mb-4">What's Included</h2>
               <ul className="space-y-2">
                 {[
@@ -137,13 +102,74 @@ export default function MysoreOneDayTourPage() {
                 ))}
               </ul>
             </div>
+
+            <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">Pricing Details</h2>
+              <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead className="bg-slate-50">
+                  <tr>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-700">Vehicle Type</th>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-700">Capacity</th>
+                    <th className="px-4 py-3 text-left font-semibold text-slate-700">Price*</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-200">
+                  <tr>
+                    <td className="px-4 py-3 text-slate-700">Sedan (AC)</td>
+                    <td className="px-4 py-3 text-slate-700">4 Passengers</td>
+                    <td className="px-4 py-3 font-bold text-slate-900">₹2,000</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3 text-slate-700">SUV (AC)</td>
+                    <td className="px-4 py-3 text-slate-700">6-7 Passengers</td>
+                    <td className="px-4 py-3 font-bold text-slate-900">₹2,500</td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-3 text-slate-700">Tempo Traveller</td>
+                    <td className="px-4 py-3 text-slate-700">12-14 Passengers</td>
+                    <td className="px-4 py-3 font-bold text-slate-900">₹4,000</td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+              <p className="text-sm text-slate-600 mt-4">
+                *Price includes AC cab, driver charges, fuel. Entry tickets not included.
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
+              </p>
+            </div>
+
+            {/* FAQ */}
+            <div className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
+              <div className="space-y-4">
+                <div className="border-b border-slate-200 pb-4">
+                  <h3 className="font-bold text-slate-900 mb-2">What time does the tour start and can it be customized?</h3>
+                  <p className="text-slate-700">The tour typically starts at 8:00 AM with pickup from your hotel, but timing can be adjusted to suit your schedule. The itinerary can also be customized to add or skip attractions based on your interests and available time.</p>
+                </div>
+                <div className="border-b border-slate-200 pb-4">
+                  <h3 className="font-bold text-slate-900 mb-2">Is entry to Mysore Palace included in the price?</h3>
+                  <p className="text-slate-700">No, entry tickets to Mysore Palace and other monuments are not included in the tour price. You can purchase tickets directly at the venue; our driver will guide you to the ticket counter.</p>
+                </div>
+                <div className="border-b border-slate-200 pb-4">
+                  <h3 className="font-bold text-slate-900 mb-2">What if my visit falls on a Sunday or public holiday?</h3>
+                  <p className="text-slate-700">Mysore Palace is beautifully illuminated with nearly 100,000 lights every Sunday evening and on public holidays (7:00 PM to 7:40 PM), so a Sunday visit is a great opportunity to see the palace lit up. Do note that some attractions may have different timings on public holidays, so it's best to confirm in advance.</p>
+                </div>
+                <div>
+                  <h3 className="font-bold text-slate-900 mb-2">Is lunch included in the tour package?</h3>
+                  <p className="text-slate-700">No, lunch is not included in the package price. We stop at a local restaurant around 1:00 PM where you can enjoy a meal at your own expense. Our driver can recommend good options nearby.</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl ring-1 ring-slate-900/10 p-6 sticky top-24">
               <h3 className="text-xl font-bold text-slate-900 mb-4">Book Mysore Tour</h3>
               <div className="space-y-4">
-                <a href={`tel:${BUSINESS_INFO.phone}`} className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-bold transition-colors">
+                <a href={`tel:${BUSINESS_INFO.phone}`} className="block w-full bg-orange-600 hover:bg-[#e85c2d] text-white text-center py-3 px-4 rounded-lg font-bold transition-colors">
                   Call now
                 </a>
                 <a href={BUSINESS_INFO.whatsappLink} target="_blank" rel="noopener noreferrer" className="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center py-3 px-4 rounded-lg font-bold transition-colors">
@@ -158,7 +184,7 @@ export default function MysoreOneDayTourPage() {
                 <ul className="space-y-2 text-sm text-slate-700">
                   <li className="flex items-start">
                     <span className="text-emerald-600 mr-2">✓</span>
-                    <span>Palace closed on Sundays & public holidays</span>
+                    <span>Palace is illuminated in the evening on Sundays & public holidays</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-emerald-600 mr-2">✓</span>

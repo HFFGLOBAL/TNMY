@@ -12,7 +12,7 @@ export function TopBar() {
           <div className="flex items-center gap-4">
             <a
               href={`mailto:${BUSINESS_INFO.email}`}
-              className="hidden sm:flex items-center gap-2 hover:text-[#F2A65A] transition-colors"
+              className="hidden sm:flex items-center gap-2 hover:text-[#FF7444] transition-colors"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
@@ -22,7 +22,7 @@ export function TopBar() {
             </a>
             <a
               href={`tel:${BUSINESS_INFO.phone}`}
-              className="flex items-center gap-2 hover:text-[#F2A65A] transition-colors"
+              className="flex items-center gap-2 hover:text-[#FF7444] transition-colors"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -37,7 +37,7 @@ export function TopBar() {
               href={BUSINESS_INFO.social.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F2A65A] transition-colors"
+              className="hover:text-[#FF7444] transition-colors"
               aria-label="Facebook"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -48,7 +48,7 @@ export function TopBar() {
               href={BUSINESS_INFO.social.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F2A65A] transition-colors"
+              className="hover:text-[#FF7444] transition-colors"
               aria-label="Instagram"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -59,7 +59,7 @@ export function TopBar() {
               href={BUSINESS_INFO.social.twitter}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F2A65A] transition-colors"
+              className="hover:text-[#FF7444] transition-colors"
               aria-label="Twitter"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -70,7 +70,7 @@ export function TopBar() {
               href={BUSINESS_INFO.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F2A65A] transition-colors"
+              className="hover:text-[#FF7444] transition-colors"
               aria-label="LinkedIn"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@ export function TopBar() {
               href={BUSINESS_INFO.social.youtube}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F2A65A] transition-colors"
+              className="hover:text-[#FF7444] transition-colors"
               aria-label="YouTube"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

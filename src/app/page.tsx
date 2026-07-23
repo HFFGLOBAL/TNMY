@@ -31,7 +31,7 @@ export default function Home() {
     {
       title: "Outstation Taxi",
       desc: "Book outstation cabs from Mysore to Coorg, Ooty, Wayanad, Bangalore and more with transparent pricing.",
-      meta: "Starting from ₹11/km",
+      meta: "Starting from ₹12/km",
       href: ROUTES.OUTSTATION_TAXI,
     },
     {
@@ -43,7 +43,7 @@ export default function Home() {
     {
       title: "Airport Transfer",
       desc: "Mysore to Bangalore airport taxi with on-time pickup and clear coordination.",
-      meta: "Starting from ₹1,800",
+      meta: "Starting from ₹2,800",
       href: ROUTES.AIRPORT_TRANSFER,
     },
     {
@@ -67,12 +67,12 @@ export default function Home() {
   ];
 
   const fleet = [
-    { id: "sedan-dzire", name: "Dzire Sedan", href: ROUTES.FLEET_SEDAN, desc: "Comfortable 4 seater", image: "/images/vehicles/Dzire.png", price: "₹11/km" },
-    { id: "suv-ertiga", name: "Ertiga SUV", href: ROUTES.FLEET_SUV, desc: "Family trips and luggage", image: "/images/vehicles/Ertiga.png", price: "₹15/km" },
-    { id: "suv-innova", name: "Innova Crysta", href: ROUTES.FLEET_SUV, desc: "7-seater premium comfort", image: "/images/vehicles/Innova.png", price: "₹17/km" },
+    { id: "sedan-dzire", name: "Dzire Sedan", href: ROUTES.FLEET_SEDAN, desc: "Comfortable 4 seater", image: "/images/vehicles/Dzire.png", price: "₹12/km" },
+    { id: "suv-ertiga", name: "Ertiga SUV", href: ROUTES.FLEET_SUV, desc: "Family trips and luggage", image: "/images/vehicles/Ertiga.png", price: "₹14/km" },
+    { id: "suv-innova", name: "Innova Crysta", href: ROUTES.FLEET_SUV, desc: "7-seater premium comfort", image: "/images/vehicles/Innova.png", price: "₹18/km" },
     { id: "sedan-etios", name: "Etios Sedan", href: ROUTES.FLEET_SEDAN, desc: "Budget-friendly sedan", image: "/images/vehicles/Etios.png", price: "₹12/km" },
-    { id: "tempo", name: "Tempo Traveller", href: ROUTES.FLEET_TEMPO, desc: "Group travel 13-17 seater", image: "/images/vehicles/Tempo-Traveller.png", price: "₹18/km" },
-    { id: "bus", name: "Tourist Bus", href: ROUTES.FLEET_BUS, desc: "Large groups 30+ seater", image: "/images/vehicles/Crysta.webp", price: "₹30/km" },
+    { id: "tempo", name: "Tempo Traveller", href: ROUTES.FLEET_TEMPO, desc: "Group travel 13-17 seater", image: "/images/vehicles/Tempo-Traveller.png", price: "₹22/km" },
+    { id: "bus", name: "Tourist Bus", href: ROUTES.FLEET_BUS, desc: "Large groups 30+ seater", image: "/images/vehicles/Crysta.webp", price: "₹35/km" },
   ];
 
   const featuredPackages = [
@@ -271,7 +271,7 @@ export default function Home() {
                         </div>
 
                         <div className="mt-5 hidden md:inline-flex items-center gap-2 rounded-xl bg-white/90 px-4 py-2 text-sm font-semibold ring-1 ring-slate-900/10">
-                          <span className="text-blue-700">₹11/km</span>
+                          <span className="text-[#e85c2d]">₹12/km</span>
                           <span className="text-slate-700">starting outstation pricing</span>
                         </div>
 
@@ -328,7 +328,7 @@ export default function Home() {
                     <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                       {fleet.map((v) => (
                         <Link key={v.id} href={v.href} className="block">
-                          <div className="group rounded-2xl border border-slate-200 bg-[#E5D9B6] p-6 hover:shadow-lg transition-shadow">
+                          <div className="group rounded-2xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-lg hover:ring-orange-400 transition-all">
                             <div className="relative overflow-hidden rounded-xl bg-slate-50 ring-1 ring-slate-900/10">
                               <div className="relative h-48">
                                 <Image src={v.image} alt={`${v.name} taxi service in Mysore - ${v.desc} available for outstation trips and local sightseeing`} fill className="object-contain p-3" />
@@ -336,7 +336,7 @@ export default function Home() {
                             </div>
                             <div className="mt-4 flex items-start justify-between gap-3">
                               <div>
-                                <h3 className="text-lg font-bold text-slate-900 group-hover:text-blue-700 transition-colors">{v.name}</h3>
+                                <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#e85c2d] transition-colors">{v.name}</h3>
                                 <p className="mt-1 text-sm text-slate-600">{v.desc}</p>
                                 <p className="mt-2 text-lg font-bold text-[#FF7444] bg-slate-50 px-4 py-2 rounded-lg inline-block">{v.price}</p>
                               </div>
@@ -373,7 +373,7 @@ export default function Home() {
                             fill 
                             className="object-cover group-hover:scale-110 transition-transform duration-300" 
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                          <div className="absolute inset-0 bg-linear-to-t from-slate-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
                       ))}
                     </div>
@@ -383,7 +383,38 @@ export default function Home() {
                 <section className="bg-slate-50">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="text-center">
-                      <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold tracking-wide text-blue-700 ring-1 ring-blue-200">
+                      <div className="inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold tracking-wide text-orange-700 ring-1 ring-orange-200">
+                        What our customers say
+                      </div>
+                      <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Trusted Mysore Cab Service Reviews</h2>
+                      <p className="mt-3 text-center text-slate-600 max-w-2xl mx-auto">
+                        Real feedback from customers who booked outstation taxis, airport transfers, and local sightseeing cabs.
+                      </p>
+                    </div>
+
+                    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+                      {testimonials.map((t, idx) => (
+                        <div key={idx} className="rounded-2xl bg-white p-8 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow">
+                          <div className="flex items-center gap-1 mb-4">
+                            {[...Array(t.rating)].map((_, i) => (
+                              <span key={i} className="text-yellow-400 text-lg">★</span>
+                            ))}
+                          </div>
+                          <p className="text-slate-700 leading-relaxed text-base">&ldquo;{t.text}&rdquo;</p>
+                          <div className="mt-6 pt-6 border-t border-slate-200">
+                            <div className="font-semibold text-slate-900">{t.name}</div>
+                            <div className="text-sm text-slate-600 mt-1">Trip: {t.route}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </section>
+
+                <section className="bg-slate-50">
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                    <div className="text-center">
+                      <div className="inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold tracking-wide text-orange-700 ring-1 ring-orange-200">
                         Popular Destinations
                       </div>
                       <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Popular Outstation Routes from Mysore</h2>
@@ -395,7 +426,7 @@ export default function Home() {
                     <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
                       {destinations.map((dest) => (
                         <Link key={dest.name} href={dest.href} className="group">
-                          <div className="relative aspect-square rounded-full overflow-hidden ring-4 ring-slate-200 group-hover:ring-blue-400 transition-all">
+                          <div className="relative aspect-square rounded-full overflow-hidden ring-4 ring-slate-200 group-hover:ring-orange-400 transition-all">
                             <Image src={dest.image} alt={`${dest.name} taxi service from Mysore - Travels in Mysore to ${dest.name}`} fill className="object-cover group-hover:scale-110 transition-transform duration-300" />
                             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
                               <span className="text-white font-bold text-center px-2">{dest.name}</span>
@@ -422,10 +453,10 @@ export default function Home() {
                     <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
                       {services.map((s) => (
                         <Link key={s.href} href={s.href} className="block">
-                          <div className="group h-full rounded-2xl border border-slate-200 bg-white p-7 hover:shadow-lg transition-shadow">
+                          <div className="group h-full rounded-2xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-lg hover:ring-orange-400 transition-all">
                             <div className="flex items-start justify-between gap-4">
                               <div className="min-w-0">
-                                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-700 transition-colors">{s.title}</h3>
+                                <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#e85c2d] transition-colors">{s.title}</h3>
                                 <p className="mt-2 text-sm text-slate-600">{s.desc}</p>
                               </div>
                               <div className="shrink-0 rounded-xl bg-slate-50 p-2.5 ring-1 ring-slate-900/10">
@@ -459,7 +490,7 @@ export default function Home() {
 
                     <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {popularRoutes.map((r) => (
-                        <div key={r.title} className="rounded-2xl border border-slate-200 bg-white p-7 hover:shadow-lg transition-shadow">
+                        <div key={r.title} className="rounded-2xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-lg hover:ring-orange-400 transition-all">
                           <div className="flex items-start justify-between gap-4">
                             <div className="min-w-0">
                               <h3 className="text-xl font-bold text-slate-900">{r.title}</h3>
@@ -521,7 +552,7 @@ export default function Home() {
                 <section className="bg-slate-50">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="text-center">
-                      <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold tracking-wide text-blue-700 ring-1 ring-blue-200">
+                      <div className="inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold tracking-wide text-orange-700 ring-1 ring-orange-200">
                         Curated Experiences
                       </div>
                       <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Best Tour Packages from Mysore (Car with Driver)</h2>
@@ -533,7 +564,7 @@ export default function Home() {
                     <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {featuredPackages.map((p) => (
                         <Link key={p.href} href={p.href} className="block">
-                          <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white hover:shadow-lg transition-shadow">
+                          <div className="group overflow-hidden rounded-2xl bg-white ring-1 ring-slate-900/10 hover:shadow-lg hover:ring-orange-400 transition-all">
                             <div className="relative h-44">
                               <Image src={p.image} alt={`${p.title} tour package from Mysore - ${p.meta} trip with taxi services in Mysore`} fill className="object-cover" />
                               <div className="absolute inset-0 bg-linear-to-t from-slate-900/55 via-slate-900/10 to-transparent" />
@@ -549,7 +580,7 @@ export default function Home() {
                             </div>
                             <div className="p-6">
                               <div className="text-sm text-slate-600">Includes driver, clean vehicle, and itinerary support.</div>
-                              <div className="mt-4 inline-flex items-center text-sm font-semibold text-blue-700 group-hover:text-blue-800 transition-colors">
+                              <div className="mt-4 inline-flex items-center text-sm font-semibold text-[#e85c2d] group-hover:text-[#d94f22] transition-colors">
                                 View details
                               </div>
                             </div>
@@ -560,46 +591,15 @@ export default function Home() {
                   </div>
                 </section>
 
-                <section className="bg-slate-50">
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div className="text-center">
-                      <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold tracking-wide text-blue-700 ring-1 ring-blue-200">
-                        What our customers say
-                      </div>
-                      <h2 className="mt-4 text-3xl md:text-4xl font-bold text-slate-900">Trusted Mysore Cab Service Reviews</h2>
-                      <p className="mt-3 text-center text-slate-600 max-w-2xl mx-auto">
-                        Real feedback from customers who booked outstation taxis, airport transfers, and local sightseeing cabs.
-                      </p>
-                    </div>
-
-                    <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-                      {testimonials.map((t, idx) => (
-                        <div key={idx} className="rounded-2xl bg-white p-8 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow">
-                          <div className="flex items-center gap-1 mb-4">
-                            {[...Array(t.rating)].map((_, i) => (
-                              <span key={i} className="text-yellow-400 text-lg">★</span>
-                            ))}
-                          </div>
-                          <p className="text-slate-700 leading-relaxed text-base">&ldquo;{t.text}&rdquo;</p>
-                          <div className="mt-6 pt-6 border-t border-slate-200">
-                            <div className="font-semibold text-slate-900">{t.name}</div>
-                            <div className="text-sm text-slate-600 mt-1">Trip: {t.route}</div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </section>
-
                 <section className="bg-white">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="text-center">
-                      <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold tracking-wide text-blue-700 ring-1 ring-blue-200 mb-4">
+                      <div className="inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold tracking-wide text-orange-700 ring-1 ring-orange-200 mb-4">
                         Trusted Tour Operator & Organizer in Mysore
                       </div>
                       <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Leading Travels in Mysore for All Your Transportation Needs</h2>
                       <p className="mt-4 text-lg text-slate-600 max-w-4xl mx-auto">
-                        If you are looking to explore the lovely Mysore, <strong>Travels in Mysore</strong> has got your back. We offer comprehensive <strong>cab and tour packages in Mysore</strong> to ensure you have a seamless journey while you enjoy the city without any hiccups. Our <strong>cabs in Mysore</strong> are driven by professional drivers with extensive knowledge of the region. Through years of driving in these areas, they have explored and discovered hidden gems as well.
+                        If you are looking to explore the lovely Mysore, <strong>Travels in Mysore</strong> has got your back with comprehensive <strong>cab and tour packages in Mysore</strong>, driven by professional drivers with extensive local knowledge.
                       </p>
                     </div>
 
@@ -607,45 +607,33 @@ export default function Home() {
                       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
                         <h3 className="text-2xl font-bold text-slate-900">Oldest & Most Renowned Travel Agency in Mysore</h3>
                         <p className="mt-4 text-slate-700 leading-relaxed">
-                          As one of the <strong>oldest and most renowned travel agencies of Mysore</strong>, we at <strong>Travels in Mysore</strong> have continuously improved all our services to meet modern travel needs. We have a dedicated team for <strong>taxi services in Mysore</strong> that ensures all precautionary measures are followed for your safety and comfort.
-                        </p>
-                        <p className="mt-4 text-slate-700 leading-relaxed">
-                          We carefully choose hotels with proper sanitization standards and lesser crowds. Our commitment is to offer the <strong>best tour packages and travel experiences in Mysore</strong> with complete peace of mind. With over {BUSINESS_INFO.yearsExperience} of experience, we have established ourselves as one of the top travels in Mysore, serving thousands of satisfied customers.
+                          As one of the <strong>oldest and most renowned travel agencies of Mysore</strong>, we at <strong>Travels in Mysore</strong> maintain a dedicated team for <strong>taxi services in Mysore</strong> focused on your safety and comfort. With over {BUSINESS_INFO.yearsExperience} of experience, we&apos;ve served thousands of satisfied customers with the <strong>best tour packages and travel experiences in Mysore</strong>.
                         </p>
                       </div>
 
                       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
                         <h3 className="text-2xl font-bold text-slate-900">Complete Taxi Services in Mysore</h3>
                         <p className="mt-4 text-slate-700 leading-relaxed">
-                          As a full-service travel agency in Mysore, we provide taxi services for every occasion. Whether you need a quick airport transfer, a comfortable outstation cab to Coorg or Ooty, or a multi-day tour package exploring South India&apos;s hill stations, our travels in Mysore service has you covered. We operate 24/7 with transparent pricing starting at just ₹11/km for outstation trips.
-                        </p>
-                        <p className="mt-4 text-slate-700 leading-relaxed">
-                          Our Mysore taxi service includes sedans for couples, SUVs for families, tempo travellers for groups, and buses for large gatherings. All vehicles come with <strong>experienced drivers</strong> who know the routes inside out and can guide you to hidden gems, ensuring safe, informative, and timely travel experiences.
+                          Our travels in Mysore service covers every occasion — quick airport transfers, comfortable outstation cabs to Coorg or Ooty, and multi-day tour packages across South India&apos;s hill stations — with sedans, SUVs, tempo travellers, and buses, all driven by <strong>experienced drivers</strong>, operating 24/7 with transparent pricing starting at ₹12/km.
                         </p>
                       </div>
 
                       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
                         <h3 className="text-2xl font-bold text-slate-900">Popular Tour Packages from Mysore</h3>
                         <p className="mt-4 text-slate-700 leading-relaxed">
-                          Our travel agency in Mysore specializes in curated tour packages that showcase the best of South India. The Mysore to Coorg tour package takes you through coffee plantations and waterfalls, while the Mysore to Ooty package lets you experience the Queen of Hill Stations with its tea gardens and scenic railways. Multi-day packages like Mysore-Ooty-Coorg combine multiple destinations for a comprehensive travel experience.
-                        </p>
-                        <p className="mt-4 text-slate-700 leading-relaxed">
-                          For those seeking spiritual journeys, we offer Tirupati packages from Mysore. Adventure enthusiasts can book our Goa trips from Mysore covering beaches and nightlife. All tour packages include comfortable accommodation recommendations, driver allowances, and flexible itineraries tailored to your preferences through our travels in Mysore service.
+                          Our curated tour packages showcase the best of South India — Mysore to Coorg through coffee plantations and waterfalls, Mysore to Ooty&apos;s tea gardens and scenic railways, multi-day Mysore-Ooty-Coorg itineraries, plus Tirupati and Goa trips from Mysore — all with accommodation recommendations, driver allowances, and flexible itineraries.
                         </p>
                       </div>
 
                       <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8">
                         <h3 className="text-2xl font-bold text-slate-900">Airport Transfer & Corporate Services</h3>
                         <p className="mt-4 text-slate-700 leading-relaxed">
-                          Our airport taxi service from Mysore to Bangalore Kempegowda International Airport ensures punctual pickups with flight tracking technology. We understand the importance of timing for airport transfers and maintain a spotless record for on-time service. Early morning and late-night airport transfers are our specialty, with fixed pricing and no surge charges.
-                        </p>
-                        <p className="mt-4 text-slate-700 leading-relaxed">
-                          Corporate clients benefit from our dedicated taxi services in Mysore with priority booking, GST invoices, monthly billing cycles, and volume discounts. Our professional drivers maintain confidentiality and punctuality for business meetings, conferences, and client pickups. Wedding car rentals in Mysore are also available with decorated vehicles for your special occasions.
+                          Our airport taxi service to Bangalore Kempegowda International Airport ensures punctual pickups with flight tracking and fixed pricing, no surge charges. Corporate clients get priority booking, GST invoices, and monthly billing for taxi services in Mysore, and wedding car rentals in Mysore are available with decorated vehicles for special occasions.
                         </p>
                       </div>
                     </div>
 
-                    <div className="mt-12 rounded-2xl bg-linear-to-br from-blue-600 to-indigo-700 p-10 text-white text-center">
+                    <div className="mt-12 rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-10 text-white text-center">
                       <h3 className="text-3xl font-bold">Book the Best Travels in Mysore Today</h3>
                       <p className="mt-4 text-lg text-white/90 max-w-3xl mx-auto">
                         Experience the difference with Karnataka&apos;s most trusted travel agency. Our taxi services in Mysore combine reliability, comfort, and affordability. Whether it&apos;s a local trip or an outstation adventure, MM Mysore Travels is your perfect travel partner.
@@ -665,7 +653,7 @@ export default function Home() {
                 <section className="bg-white">
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                     <div className="text-center">
-                      <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold tracking-wide text-blue-700 ring-1 ring-blue-200">
+                      <div className="inline-flex items-center rounded-full bg-orange-50 px-4 py-2 text-xs font-semibold tracking-wide text-orange-700 ring-1 ring-orange-200">
                         Why we&apos;re trusted
                       </div>
                       <h2 className="mt-6 text-4xl md:text-5xl font-bold text-slate-900">Why People Choose Our Mysore Taxi Service</h2>
@@ -680,19 +668,19 @@ export default function Home() {
                           number: "4.9",
                           label: "Average Rating",
                           desc: "Consistently praised for safety and professionalism.",
-                          color: "from-yellow-400 to-orange-500",
+                          color: "from-orange-400 to-orange-600",
                         },
                         {
                           number: BUSINESS_INFO.yearsExperience,
                           label: "Years of Service",
                           desc: "Trusted by thousands for reliable travel.",
-                          color: "from-blue-400 to-blue-600",
+                          color: "from-orange-500 to-[#e85c2d]",
                         },
                         {
                           number: "24/7",
                           label: "Always Available",
                           desc: "Round-the-clock support whenever you need us.",
-                          color: "from-emerald-400 to-emerald-600",
+                          color: "from-[#e85c2d] to-orange-700",
                         },
                       ].map((stat, idx) => (
                         <div key={idx} className="rounded-2xl bg-linear-to-br p-8 text-white shadow-lg" style={{ backgroundImage: `linear-gradient(135deg, var(--color-1), var(--color-2))` }}>
@@ -712,7 +700,7 @@ export default function Home() {
                         { title: "Real Support", desc: "Talk to real people 24/7 for help with changes or concerns." },
                         { title: "On-Time Guarantee", desc: "Punctual pickups and estimated arrivals you can rely on." },
                       ].map((item, idx) => (
-                        <div key={idx} className="rounded-xl border border-slate-200 bg-white p-6 hover:shadow-lg hover:border-blue-200 transition-all">
+                        <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-lg hover:ring-orange-400 transition-all">
                           <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
                           <p className="mt-2 text-slate-600 text-sm">{item.desc}</p>
                         </div>

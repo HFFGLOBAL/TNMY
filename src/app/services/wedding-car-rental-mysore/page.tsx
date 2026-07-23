@@ -25,11 +25,20 @@ export default function WeddingCarRentalMysorePage() {
     { type: "Mini Bus", capacity: "20-25 passengers", best: "Full wedding delegation" },
   ];
 
+  const whyChooseUs = [
+    { icon: "🌸", title: "Decorated Vehicles", desc: "Beautifully adorned cars available on request for the wedding party." },
+    { icon: "⏱️", title: "Punctual & Reliable", desc: "On-time pickups and drops so your event schedule stays on track." },
+    { icon: "🎩", title: "Experienced Chauffeurs", desc: "Courteous, well-trained drivers experienced with wedding events." },
+    { icon: "📋", title: "Flexible Packages", desc: "Custom plans for pre-wedding, wedding, and post-wedding transport." },
+    { icon: "🚘", title: "Premium Fleet Options", desc: "Choose from sedans, SUVs, tempo travellers, and mini buses." },
+    { icon: "📱", title: "Stress-Free Booking", desc: "Simple coordination via WhatsApp or call, with quick confirmations." },
+  ];
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <Breadcrumbs items={[{ label: "Services", href: ROUTES.SERVICES }, { label: "Wedding Car Rental", href: ROUTES.WEDDING_CAR }]} />
 
-      <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-rose-50 to-slate-50 p-8">
+      <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-rose-50 to-slate-50 p-8">
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">Wedding Car Rental in Mysore</h1>
         <p className="mt-4 text-lg text-slate-700 max-w-3xl">
           Comprehensive wedding transportation solutions with coordinated fleet service. Seamless pickups, drops, and venue transfers for your special day.
@@ -52,12 +61,26 @@ export default function WeddingCarRentalMysorePage() {
         </div>
       </div>
 
+      {/* Why Choose Us */}
+      <div className="mt-12">
+        <h2 className="text-3xl font-bold text-slate-900">Why Choose Us for Your Wedding</h2>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyChooseUs.map((item, idx) => (
+            <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:shadow-md hover:ring-orange-300 transition-all">
+              <div className="text-2xl mb-2">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-slate-900">{item.title}</h3>
+              <p className="mt-2 text-slate-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Vehicle Options */}
       <div className="mt-12">
         <h2 className="text-3xl font-bold text-slate-900">Vehicle Options for Your Wedding</h2>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {vehicles.map((vehicle, idx) => (
-            <div key={idx} className="rounded-xl border border-rose-200 bg-gradient-to-br from-rose-50 to-white p-6">
+            <div key={idx} className="rounded-xl border border-rose-200 bg-linear-to-br from-rose-50 to-white p-6">
               <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
               <p className="mt-2 text-lg font-semibold text-rose-600">{vehicle.capacity}</p>
               <p className="mt-2 text-sm text-slate-600">Best for: {vehicle.best}</p>
@@ -116,22 +139,46 @@ export default function WeddingCarRentalMysorePage() {
       <div className="mt-12">
         <h2 className="text-3xl font-bold text-slate-900">Wedding Transportation FAQs</h2>
         <div className="mt-6 space-y-4">
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">How far in advance should we book?</h3>
             <p className="mt-2 text-slate-600">We recommend booking 1-2 months in advance for weddings. This ensures availability and proper coordination with your event planner.</p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">Can you handle changes to the schedule?</h3>
             <p className="mt-2 text-slate-600">Absolutely! We understand weddings can have last-minute changes. Our team stays flexible and communicates regularly to adapt to your needs.</p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">Do you offer decorated vehicles?</h3>
             <p className="mt-2 text-slate-600">Yes! We can coordinate with decorators or provide beautifully adorned vehicles for special occasions. Contact us for custom decoration options.</p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white p-6">
+          <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">What about overnight/waiting charges?</h3>
             <p className="mt-2 text-slate-600">We offer flexible packages for multi-day events with reasonable waiting charges. Custom quotes available based on your wedding itinerary.</p>
           </div>
+        </div>
+      </div>
+
+      {/* Final CTA */}
+      <div className="mt-12 rounded-2xl bg-slate-900 p-8 text-center text-white">
+        <h2 className="text-3xl font-bold">Ready to Book Your Wedding Car?</h2>
+        <p className="mt-3 text-lg text-slate-300 max-w-2xl mx-auto">
+          Get an instant quote on WhatsApp or call us directly — professional drivers, transparent pricing, and 24/7 availability.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href={BUSINESS_INFO.whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg bg-emerald-600 px-8 py-3 text-base font-semibold text-white hover:bg-emerald-700 transition-colors"
+          >
+            WhatsApp Now
+          </a>
+          <Link
+            href={ROUTES.BOOK_TAXI}
+            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-slate-900 hover:bg-slate-100 transition-colors"
+          >
+            Book Online
+          </Link>
         </div>
       </div>
     </div>

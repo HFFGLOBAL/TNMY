@@ -71,15 +71,15 @@ export default function CustomPackagesPage() {
         <h2 className="text-xl font-bold text-slate-900">Browse ready-made options</h2>
         <p className="mt-2 text-slate-600">If you’re not sure where to start, pick a popular itinerary.</p>
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link href={ROUTES.ONE_DAY_TOURS} className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow">
+          <Link href={ROUTES.ONE_DAY_TOURS} className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg hover:ring-orange-400 transition-all">
             <h3 className="text-lg font-bold text-slate-900">One Day Tours</h3>
             <p className="mt-2 text-slate-600">Mysore sightseeing and nearby day trips.</p>
-            <div className="mt-4 text-sm font-semibold text-blue-700">Explore →</div>
+            <div className="mt-4 text-sm font-semibold text-orange-700">Explore →</div>
           </Link>
-          <Link href={ROUTES.MULTI_DAY_TOURS} className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg transition-shadow">
+          <Link href={ROUTES.MULTI_DAY_TOURS} className="rounded-2xl bg-white p-6 ring-1 ring-slate-900/10 hover:shadow-lg hover:ring-orange-400 transition-all">
             <h3 className="text-lg font-bold text-slate-900">Multi Day Tours</h3>
             <p className="mt-2 text-slate-600">Coorg, Ooty, Wayanad, Kodaikanal and more.</p>
-            <div className="mt-4 text-sm font-semibold text-blue-700">Explore →</div>
+            <div className="mt-4 text-sm font-semibold text-orange-700">Explore →</div>
           </Link>
         </div>
       </section>

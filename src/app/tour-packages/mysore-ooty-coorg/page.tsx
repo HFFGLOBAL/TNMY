@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Mysore Ooty Coorg Tour Package | Starting from ₹18,000 | 3-5 Days",
   description: "Book Mysore Ooty Coorg tour package starting from ₹18,000 for 3-5 days. Explore hill stations, tea gardens, coffee estates. Professional drivers, AC vehicles, flexible itinerary.",
   keywords: ["mysore ooty coorg package", "ooty coorg tour from mysore", "hill station tour", "3 day tour package"],
-  alternates: { canonical: "/mysore-ooty-coorg/" },
+  alternates: { canonical: "/tour-packages/mysore-ooty-coorg/"},
 };
 
 const tourPackage = createTourPackageSchema({
@@ -116,7 +116,7 @@ export default function MysoreOotyCoorgPage() {
         ]} />
         
         {/* Header */}
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-green-50 p-8 mb-8">
+        <div className="rounded-2xl border border-slate-200 bg-linear-to-br from-orange-50 to-slate-50 p-8 mb-8">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 mb-4">
             Mysore Ooty Coorg Tour Package
           </h1>
@@ -133,7 +133,7 @@ export default function MysoreOotyCoorgPage() {
               <div className="text-sm font-semibold text-slate-600">Circuit Distance</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-              <div className="text-2xl font-bold text-slate-900">Starting from ₹18,000</div>
+              <div className="text-2xl font-bold text-slate-900">Starting from ₹18,000*</div>
               <div className="text-sm font-semibold text-slate-600">Package Price</div>
             </div>
             <div className="rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
@@ -191,7 +191,7 @@ export default function MysoreOotyCoorgPage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Key Destinations</h2>
               <div className="space-y-4">
                 {destinations.map((dest, idx) => (
-                  <div key={idx} className="rounded-xl border border-slate-200 p-5">
+                  <div key={idx} className="rounded-xl ring-1 ring-slate-900/10 p-5">
                     <h3 className="text-xl font-bold text-slate-900 mb-2">{dest.name}</h3>
                     <p className="text-slate-600 text-sm">{dest.attractions}</p>
                   </div>
@@ -204,9 +204,9 @@ export default function MysoreOotyCoorgPage() {
               <h2 className="text-2xl font-bold text-slate-900 mb-4">Suggested 5-Day Itinerary</h2>
               <div className="space-y-6">
                 {highlights.map((day, idx) => (
-                  <div key={idx} className="relative pl-8 pb-6 border-l-2 border-blue-200 last:border-transparent last:pb-0">
-                    <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-blue-600"></div>
-                    <div className="inline-block px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-2">{day.day}</div>
+                  <div key={idx} className="relative pl-8 pb-6 border-l-2 border-orange-200 last:border-transparent last:pb-0">
+                    <div className="absolute left-0 -ml-2 w-4 h-4 rounded-full bg-orange-600"></div>
+                    <div className="inline-block px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold mb-2">{day.day}</div>
                     <h3 className="text-lg font-bold text-slate-900 mb-2">{day.title}</h3>
                     <p className="text-slate-700">{day.desc}</p>
                   </div>
@@ -223,15 +223,15 @@ export default function MysoreOotyCoorgPage() {
               <p className="text-slate-600 mb-6">Vehicle options for 4-day tour (prices include vehicle, driver, fuel, tolls)</p>
               <div className="space-y-4">
                 {vehiclePricing.map((vehicle, idx) => (
-                  <div key={idx} className="rounded-xl border-2 border-slate-200 p-6 hover:border-blue-300 transition-colors">
+                  <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:ring-orange-400 hover:shadow-md transition-all">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">{vehicle.type}</h3>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.models}</p>
                       </div>
                       <div className="text-right">
-                        <p className="text-xs text-slate-500">Total Package</p>
-                        <p className="text-3xl font-bold text-blue-600">{vehicle.price}</p>
+                        <p className="text-xs text-slate-500">Total Package*</p>
+                        <p className="text-3xl font-bold text-orange-600">{vehicle.price}</p>
                         <p className="text-sm text-slate-600 mt-1">{vehicle.perDay}</p>
                       </div>
                     </div>
@@ -240,6 +240,9 @@ export default function MysoreOotyCoorgPage() {
               </div>
               <p className="mt-4 text-sm text-slate-500">
                 * Prices shown are for 4 days. Add ₹4,500-9,000 per extra day depending on vehicle. Accommodation not included.
+              </p>
+              <p className="mt-1 text-xs text-slate-500">
+                * Prices are indicative and may vary based on season, fuel cost, and vehicle availability. Final fare will be confirmed at the time of booking.
               </p>
             </div>
 
@@ -302,7 +305,7 @@ export default function MysoreOotyCoorgPage() {
 
           {/* Sidebar */}
           <div className="lg:col-span-1">
-            <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 p-6 text-white sticky top-4">
+            <div className="rounded-2xl bg-linear-to-br from-orange-600 to-[#e85c2d] p-6 text-white sticky top-24">
               <h3 className="text-xl font-bold mb-4">Book This Package</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex items-center gap-2">
@@ -328,13 +331,13 @@ export default function MysoreOotyCoorgPage() {
                 href={BUSINESS_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-blue-700 hover:bg-blue-50 transition-colors"
+                className="block w-full rounded-lg bg-white px-6 py-3 text-center text-base font-semibold text-orange-700 hover:bg-orange-50 transition-colors"
               >
                 WhatsApp: {BUSINESS_INFO.phone}
               </a>
               <Link
                 href={ROUTES.BOOK_TAXI}
-                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-blue-800 transition-colors"
+                className="mt-3 block w-full rounded-lg border-2 border-white px-6 py-3 text-center text-base font-semibold text-white hover:bg-[#e85c2d] transition-colors"
               >
                 Book Online
               </Link>
@@ -344,17 +347,17 @@ export default function MysoreOotyCoorgPage() {
             <div className="mt-6 rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
               <h3 className="text-lg font-bold text-slate-900 mb-4">Related Tours</h3>
               <div className="space-y-2">
-                <Link href={ROUTES.MYSORE_TO_OOTY} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_OOTY} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Ooty</div>
-                  <div className="text-sm text-slate-600">1-2 Days • Starting from ₹4,800</div>
+                  <div className="text-sm text-slate-600">1-2 Days • Starting from ₹5,500*</div>
                 </Link>
-                <Link href={ROUTES.MYSORE_TO_COORG} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.MYSORE_TO_COORG} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore to Coorg</div>
-                  <div className="text-sm text-slate-600">1 Day • Starting from ₹4,500</div>
+                  <div className="text-sm text-slate-600">1 Day • Starting from ₹4,500*</div>
                 </Link>
-                <Link href={ROUTES.MYSORE_OOTY_KODAIKANAL} className="block p-3 rounded-lg hover:bg-blue-50 transition-colors">
+                <Link href={ROUTES.MYSORE_OOTY_KODAIKANAL} className="block p-3 rounded-lg hover:bg-orange-50 transition-colors">
                   <div className="font-semibold text-slate-900">Mysore Ooty Kodaikanal</div>
-                  <div className="text-sm text-slate-600">4-6 Days • Starting from ₹22,000</div>
+                  <div className="text-sm text-slate-600">4-6 Days • Starting from ₹19,500*</div>
                 </Link>
               </div>
             </div>

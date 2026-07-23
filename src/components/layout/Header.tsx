@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useMemo, useRef, useState, type FocusEvent, type RefObject } from "react";
@@ -11,9 +10,10 @@ import { TopBar } from "./TopBar";
 export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openDesktopMenu, setOpenDesktopMenu] = useState<null | "destinations" | "services">(null);
+  const [openDesktopMenu, setOpenDesktopMenu] = useState<null | "destinations" | "services" | "tourPackages">(null);
   const destinationsMenuRef = useRef<HTMLDivElement | null>(null);
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
+  const tourMenuRef = useRef<HTMLDivElement | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -52,8 +52,21 @@ export function Header() {
 
   const tourMenu = useMemo(
     () => ({
-      primary: [],
-      featured: [],
+      oneDay: [
+        { label: "Mysore to Coorg", href: ROUTES.MYSORE_TO_COORG },
+        { label: "Mysore to Ooty", href: ROUTES.MYSORE_TO_OOTY },
+        { label: "Mysore to Wayanad", href: ROUTES.MYSORE_TO_WAYANAD },
+        { label: "Mysore to Bangalore", href: ROUTES.MYSORE_TO_BANGALORE },
+        { label: "Mysore One Day Tour", href: ROUTES.MYSORE_ONE_DAY_TOUR },
+      ],
+      multiDay: [
+        { label: "Mysore, Coorg & Wayanad", href: ROUTES.MYSORE_COORG_WAYANAD },
+        { label: "Mysore, Ooty & Coorg", href: ROUTES.MYSORE_OOTY_COORG },
+        { label: "Mysore, Ooty & Kodaikanal", href: ROUTES.MYSORE_OOTY_KODAIKANAL },
+        { label: "Goa Trips from Mysore", href: ROUTES.GOA_TRIPS },
+        { label: "Tirupati Package", href: ROUTES.TIRUPATI_PACKAGE },
+        { label: "Custom Packages", href: ROUTES.CUSTOM_PACKAGES },
+      ],
     }),
     []
   );
@@ -61,12 +74,12 @@ export function Header() {
   const destinationsMenu = useMemo(
     () => ({
       all: [
-        { label: "Mysore", href: ROUTES.DEST_MYSORE, image: "/images/tours/Mysore.jpg" },
-        { label: "Coorg", href: ROUTES.DEST_COORG, image: "/images/tours/Coorg.jpg" },
-        { label: "Ooty", href: ROUTES.DEST_OOTY, image: "/images/tours/1.jpg" },
-        { label: "Wayanad", href: ROUTES.DEST_WAYANAD, image: "/images/tours/2.jpg" },
-        { label: "Bangalore", href: ROUTES.DEST_BANGALORE, image: "/images/tours/3.jpg" },
-        { label: "Kodaikanal", href: ROUTES.DEST_KODAIKANAL, image: "/images/tours/4.jpg" },
+        { label: "Mysore", href: ROUTES.DEST_MYSORE },
+        { label: "Coorg", href: ROUTES.DEST_COORG },
+        { label: "Ooty", href: ROUTES.DEST_OOTY },
+        { label: "Wayanad", href: ROUTES.DEST_WAYANAD },
+        { label: "Bangalore", href: ROUTES.DEST_BANGALORE },
+        { label: "Kodaikanal", href: ROUTES.DEST_KODAIKANAL },
       ],
     }),
     []
@@ -75,13 +88,13 @@ export function Header() {
   const servicesMenu = useMemo(
     () => ({
       core: [
-        { label: "Outstation Taxi", href: ROUTES.OUTSTATION_TAXI, description: "Transparent outstation pricing", image: "/images/fleet%20with%20driver/WhatsApp%20Image%202026-01-29%20at%2017.47.45.jpeg" },
-        { label: "Local Sightseeing", href: ROUTES.SIGHTSEEING_TAXI, description: "Explore Mysore and surrounding cities", image: "/images/tours/Mysore.jpg" },
-        { label: "Airport Transfer", href: ROUTES.AIRPORT_TRANSFER, description: "On-time pickup to/from airports", image: "/images/fleet%20with%20driver/WhatsApp%20Image%202026-01-29%20at%2017.47.46.jpeg" },
+        { label: "Outstation Taxi", href: ROUTES.OUTSTATION_TAXI, description: "Transparent outstation pricing" },
+        { label: "Local Sightseeing", href: ROUTES.SIGHTSEEING_TAXI, description: "Explore Mysore and surrounding cities" },
+        { label: "Airport Transfer", href: ROUTES.AIRPORT_TRANSFER, description: "On-time pickup to/from airports" },
       ],
       extra: [
-        { label: "Corporate Cab", href: ROUTES.CORPORATE_CAB, image: "/images/fleet%20with%20driver/WhatsApp%20Image%202026-01-29%20at%2017.47.58.jpeg" },
-        { label: "Wedding Car Rental", href: ROUTES.WEDDING_CAR, image: "/images/tours/Coorg.jpg" },
+        { label: "Corporate Cab", href: ROUTES.CORPORATE_CAB },
+        { label: "Wedding Car Rental", href: ROUTES.WEDDING_CAR },
       ],
     }),
     []
@@ -106,7 +119,7 @@ export function Header() {
 
       {/* Main Header */}
       <header
-        className={`fixed left-0 right-0 z-50 border-b bg-[#F2A65A] backdrop-blur-md border-slate-200 shadow-sm transition-all duration-300 ${
+        className={`fixed left-0 right-0 z-50 border-b bg-white/95 backdrop-blur-md border-slate-200 shadow-sm transition-all duration-300 ${
           isScrolled ? "top-0" : "top-[42px]"
         }`}
       >
@@ -130,7 +143,7 @@ export function Header() {
                   href={link.href}
                   className={`px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname === link.href
-                      ? "text-blue-700 bg-blue-50"
+                      ? "text-[#e85c2d] bg-orange-50"
                       : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
@@ -154,7 +167,7 @@ export function Header() {
                   href={ROUTES.SERVICES}
                   className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname?.startsWith(ROUTES.SERVICES)
-                      ? "text-blue-700 bg-blue-50"
+                      ? "text-[#e85c2d] bg-orange-50"
                       : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                   aria-haspopup="menu"
@@ -172,7 +185,7 @@ export function Header() {
 
                 {openDesktopMenu === "services" && (
                   <div
-                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(720px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-xl"
+                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(640px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-xl"
                     role="menu"
                     aria-label="Services"
                     onMouseEnter={() => setOpenDesktopMenu("services")}
@@ -186,25 +199,12 @@ export function Header() {
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="rounded-xl bg-white p-3 ring-1 ring-slate-900/10 hover:shadow-md hover:ring-slate-900/20 transition-all overflow-hidden flex gap-3"
+                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors"
                               role="menuitem"
                               onClick={() => setOpenDesktopMenu(null)}
                             >
-                              {item.image && (
-                                <div className="relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden">
-                                  <Image
-                                    src={item.image}
-                                    alt={item.label}
-                                    fill
-                                    className="object-cover"
-                                    sizes="80px"
-                                  />
-                                </div>
-                              )}
-                              <div className="flex-1 min-w-0">
-                                <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                                <div className="mt-0.5 text-xs text-slate-600 line-clamp-2">{item.description}</div>
-                              </div>
+                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
+                              <div className="mt-0.5 text-xs text-slate-600">{item.description}</div>
                             </Link>
                           ))}
                         </div>
@@ -216,25 +216,12 @@ export function Header() {
                             <Link
                               key={item.href}
                               href={item.href}
-                              className="rounded-xl overflow-hidden hover:shadow-md transition-all group"
+                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors block"
                               role="menuitem"
                               onClick={() => setOpenDesktopMenu(null)}
                             >
-                              {item.image && (
-                                <div className="relative w-full h-16 rounded-lg overflow-hidden mb-2">
-                                  <Image
-                                    src={item.image}
-                                    alt={item.label}
-                                    fill
-                                    className="object-cover group-hover:scale-105 transition-transform"
-                                    sizes="140px"
-                                  />
-                                </div>
-                              )}
-                              <div className="px-2 pb-2">
-                                <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                                <div className="mt-0.5 text-xs text-slate-600">Discover more</div>
-                              </div>
+                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
+                              <div className="mt-0.5 text-xs text-slate-600">Discover more</div>
                             </Link>
                           ))}
                         </div>
@@ -244,17 +231,94 @@ export function Header() {
                 )}
               </div>
 
-              {/* Tour Packages Link */}
-              <Link
-                href={ROUTES.TOUR_PACKAGES}
-                className={`px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
-                  pathname?.startsWith(ROUTES.TOUR_PACKAGES)
-                    ? "text-blue-700 bg-blue-50"
-                    : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
-                }`}
+              {/* Tour Packages mega menu */}
+              <div
+                ref={tourMenuRef}
+                className="relative"
+                onMouseEnter={() => setOpenDesktopMenu("tourPackages")}
+                onMouseLeave={() => setOpenDesktopMenu(null)}
+                onFocusCapture={() => setOpenDesktopMenu("tourPackages")}
+                onBlurCapture={(e) => closeDesktopMenuOnBlur(e, tourMenuRef)}
+                onKeyDown={(e) => {
+                  if (e.key === "Escape") setOpenDesktopMenu(null);
+                }}
               >
-                Tour Packages
-              </Link>
+                <Link
+                  href={ROUTES.TOUR_PACKAGES}
+                  className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
+                    pathname?.startsWith(ROUTES.TOUR_PACKAGES)
+                      ? "text-[#e85c2d] bg-orange-50"
+                      : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
+                  }`}
+                  aria-haspopup="menu"
+                  aria-expanded={openDesktopMenu === "tourPackages"}
+                >
+                  Tour Packages
+                  <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path
+                      fillRule="evenodd"
+                      d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </Link>
+
+                {openDesktopMenu === "tourPackages" && (
+                  <div
+                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(640px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-xl"
+                    role="menu"
+                    aria-label="Tour Packages"
+                    onMouseEnter={() => setOpenDesktopMenu("tourPackages")}
+                    onMouseLeave={() => setOpenDesktopMenu(null)}
+                  >
+                    <div className="flex items-center justify-between gap-4 px-1 pb-3">
+                      <div className="text-sm font-semibold text-slate-900">Plan your tour from Mysore</div>
+                      <Link
+                        href={ROUTES.TOUR_PACKAGES}
+                        className="text-sm font-semibold text-[#e85c2d] hover:text-[#d94f22] transition-colors whitespace-nowrap"
+                        onClick={() => setOpenDesktopMenu(null)}
+                        role="menuitem"
+                      >
+                        View all
+                      </Link>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4">
+                      <div className="col-span-2 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-900/10">
+                        <div className="text-xs font-semibold tracking-wide text-slate-500">One-day trips</div>
+                        <div className="mt-2 grid grid-cols-2 gap-3">
+                          {tourMenu.oneDay.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors"
+                              role="menuitem"
+                              onClick={() => setOpenDesktopMenu(null)}
+                            >
+                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="col-span-1 rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
+                        <div className="text-xs font-semibold tracking-wide text-slate-500">Multi-day & custom</div>
+                        <div className="mt-2 grid gap-3">
+                          {tourMenu.multiDay.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors block"
+                              role="menuitem"
+                              onClick={() => setOpenDesktopMenu(null)}
+                            >
+                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
 
               {/* Destinations mega menu */}
               <div
@@ -272,7 +336,7 @@ export function Header() {
                   href={ROUTES.DESTINATIONS}
                   className={`inline-flex items-center gap-1 px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname?.startsWith(ROUTES.DESTINATIONS)
-                      ? "text-blue-700 bg-blue-50"
+                      ? "text-[#e85c2d] bg-orange-50"
                       : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                   aria-haspopup="menu"
@@ -290,7 +354,7 @@ export function Header() {
 
                 {openDesktopMenu === "destinations" && (
                   <div
-                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(700px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-lg"
+                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(480px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-lg"
                     role="menu"
                     aria-label="Destinations"
                     onMouseEnter={() => setOpenDesktopMenu("destinations")}
@@ -304,37 +368,24 @@ export function Header() {
                         </div>
                         <Link
                           href={ROUTES.DESTINATIONS}
-                          className="text-sm font-semibold text-blue-700 hover:text-blue-800 transition-colors whitespace-nowrap"
+                          className="text-sm font-semibold text-[#e85c2d] hover:text-[#d94f22] transition-colors whitespace-nowrap"
                           onClick={() => setOpenDesktopMenu(null)}
                           role="menuitem"
                         >
                           View all
                         </Link>
                       </div>
-                      <div className="mt-3 grid grid-cols-3 gap-3">
+                      <div className="mt-3 grid grid-cols-2 gap-2">
                         {destinationsMenu.all.map((item) => (
                           <Link
                             key={item.href}
                             href={item.href}
-                            className="rounded-xl bg-white overflow-hidden ring-1 ring-slate-900/10 hover:shadow-md hover:ring-slate-900/20 transition-all group"
+                            className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors"
                             role="menuitem"
                             onClick={() => setOpenDesktopMenu(null)}
                           >
-                            {item.image && (
-                              <div className="relative w-full h-28 overflow-hidden bg-slate-200">
-                                <Image
-                                  src={item.image}
-                                  alt={item.label}
-                                  fill
-                                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                                  sizes="(max-width: 768px) 100vw, 200px"
-                                />
-                              </div>
-                            )}
-                            <div className="p-3">
-                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                              <div className="mt-0.5 text-xs text-slate-600">Explore details & options</div>
-                            </div>
+                            <div className="text-sm font-semibold text-slate-900">{item.label}</div>
+                            <div className="mt-0.5 text-xs text-slate-600">Explore details & options</div>
                           </Link>
                         ))}
                       </div>
@@ -348,7 +399,7 @@ export function Header() {
                   href={contactNavLink.href}
                   className={`px-3 py-2 text-sm font-semibold transition-colors rounded-md ${
                     pathname === contactNavLink.href
-                      ? "text-blue-700 bg-blue-50"
+                      ? "text-[#e85c2d] bg-orange-50"
                       : "text-slate-700 hover:text-slate-900 hover:bg-slate-50"
                   }`}
                 >
@@ -392,7 +443,7 @@ export function Header() {
                     key={link.href}
                     href={link.href}
                     className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                      pathname?.startsWith(link.href) ? "bg-blue-50 text-blue-700" : "text-slate-700 hover:bg-slate-50"
+                      pathname?.startsWith(link.href) ? "bg-orange-50 text-[#e85c2d]" : "text-slate-700 hover:bg-slate-50"
                     }`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >

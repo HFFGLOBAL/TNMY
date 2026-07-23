@@ -15,7 +15,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={ROUTES.HOME}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-colors shadow-sm hover:shadow"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-3 rounded-lg font-bold transition-colors shadow-sm hover:shadow"
           >
             Go home
           </Link>
@@ -37,7 +37,7 @@ export default function NotFound() {
               { label: "Book Now", href: ROUTES.BOOK_TAXI },
               { label: "About Us", href: ROUTES.ABOUT },
             ].map((item) => (
-              <Link key={item.href} href={item.href} className="text-blue-600 hover:underline">
+              <Link key={item.href} href={item.href} className="text-orange-600 hover:underline">
                 {item.label}
               </Link>
             ))}
