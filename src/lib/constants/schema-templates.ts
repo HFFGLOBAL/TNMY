@@ -110,14 +110,6 @@ export const WEBSITE_SCHEMA = {
   "publisher": {
     "@id": `${BUSINESS_INFO.url}/#organization`
   },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": `${BUSINESS_INFO.url}/search?q={search_term_string}`
-    },
-    "query-input": "required name=search_term_string"
-  },
   "inLanguage": "en-IN"
 };
 

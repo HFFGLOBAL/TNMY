@@ -30,10 +30,7 @@ export const BUSINESS_INFO = {
   // Social Media
   social: {
     facebook: 'https://www.facebook.com/mmysoretravels',
-    instagram: 'https://www.instagram.com/mmysoretravels',
-    twitter: 'https://twitter.com/mmysoretravels',
-    linkedin: 'https://www.linkedin.com/company/mm-mysore-travels',
-    youtube: 'https://www.youtube.com/@mmysoretravels'
+    instagram: 'https://www.instagram.com/mmysoretravels'
   },
   
   // Business Info

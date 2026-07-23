@@ -11,6 +11,7 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDesktopMenu, setOpenDesktopMenu] = useState<null | "destinations" | "services" | "tourPackages">(null);
+  const [openMobileSubmenu, setOpenMobileSubmenu] = useState<null | "destinations" | "services" | "tourPackages">(null);
   const destinationsMenuRef = useRef<HTMLDivElement | null>(null);
   const servicesMenuRef = useRef<HTMLDivElement | null>(null);
   const tourMenuRef = useRef<HTMLDivElement | null>(null);
@@ -38,17 +39,6 @@ export function Header() {
   );
   const primaryNavLinks = navLinks.slice(0, 2);
   const contactNavLink = navLinks.find((link) => link.label === "Contact") ?? null;
-  const mobileNavOrder = useMemo(
-    () => [
-      { label: "Home", href: ROUTES.HOME },
-      { label: "About", href: ROUTES.ABOUT },
-      { label: "Services", href: ROUTES.SERVICES },
-      { label: "Tour Packages", href: ROUTES.TOUR_PACKAGES },
-      { label: "Destinations", href: ROUTES.DESTINATIONS },
-      { label: "Contact", href: ROUTES.CONTACT },
-    ],
-    []
-  );
 
   const tourMenu = useMemo(
     () => ({
@@ -98,6 +88,33 @@ export function Header() {
       ],
     }),
     []
+  );
+
+  const mobileNavOrder = useMemo(
+    () => [
+      { label: "Home", href: ROUTES.HOME },
+      { label: "About", href: ROUTES.ABOUT },
+      {
+        label: "Services",
+        href: ROUTES.SERVICES,
+        key: "services" as const,
+        children: [...servicesMenu.core, ...servicesMenu.extra],
+      },
+      {
+        label: "Tour Packages",
+        href: ROUTES.TOUR_PACKAGES,
+        key: "tourPackages" as const,
+        children: [...tourMenu.oneDay, ...tourMenu.multiDay],
+      },
+      {
+        label: "Destinations",
+        href: ROUTES.DESTINATIONS,
+        key: "destinations" as const,
+        children: destinationsMenu.all,
+      },
+      { label: "Contact", href: ROUTES.CONTACT },
+    ],
+    [servicesMenu, tourMenu, destinationsMenu]
   );
 
   function closeDesktopMenuOnBlur(e: FocusEvent<HTMLElement>, menuRef: RefObject<HTMLDivElement | null>) {
@@ -185,53 +202,28 @@ export function Header() {
 
                 {openDesktopMenu === "services" && (
                   <div
-                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(640px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-xl"
+                    className="absolute left-0 top-full mt-1 w-64 rounded-xl bg-white py-2 ring-1 ring-slate-900/10 shadow-lg"
                     role="menu"
                     aria-label="Services"
                     onMouseEnter={() => setOpenDesktopMenu("services")}
                     onMouseLeave={() => setOpenDesktopMenu(null)}
                   >
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="col-span-2 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-900/10">
-                        <div className="text-xs font-semibold tracking-wide text-slate-500">Core services</div>
-                        <div className="mt-2 grid gap-3">
-                          {servicesMenu.core.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors"
-                              role="menuitem"
-                              onClick={() => setOpenDesktopMenu(null)}
-                            >
-                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                              <div className="mt-0.5 text-xs text-slate-600">{item.description}</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="col-span-1 rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-                        <div className="text-xs font-semibold tracking-wide text-slate-500">Additional offerings</div>
-                        <div className="mt-2 grid gap-3">
-                          {servicesMenu.extra.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors block"
-                              role="menuitem"
-                              onClick={() => setOpenDesktopMenu(null)}
-                            >
-                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                              <div className="mt-0.5 text-xs text-slate-600">Discover more</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+                    {[...servicesMenu.core, ...servicesMenu.extra].map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#e85c2d] transition-colors"
+                        role="menuitem"
+                        onClick={() => setOpenDesktopMenu(null)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
                   </div>
                 )}
               </div>
 
-              {/* Tour Packages mega menu */}
+              {/* Tour Packages menu */}
               <div
                 ref={tourMenuRef}
                 className="relative"
@@ -265,62 +257,53 @@ export function Header() {
 
                 {openDesktopMenu === "tourPackages" && (
                   <div
-                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(640px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-xl"
+                    className="absolute left-0 top-full mt-1 w-64 max-h-112 overflow-y-auto rounded-xl bg-white py-2 ring-1 ring-slate-900/10 shadow-lg"
                     role="menu"
                     aria-label="Tour Packages"
                     onMouseEnter={() => setOpenDesktopMenu("tourPackages")}
                     onMouseLeave={() => setOpenDesktopMenu(null)}
                   >
-                    <div className="flex items-center justify-between gap-4 px-1 pb-3">
-                      <div className="text-sm font-semibold text-slate-900">Plan your tour from Mysore</div>
+                    <div className="px-4 pt-1 pb-1 text-xs font-semibold tracking-wide text-slate-400">One-day trips</div>
+                    {tourMenu.oneDay.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#e85c2d] transition-colors"
+                        role="menuitem"
+                        onClick={() => setOpenDesktopMenu(null)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                    <div className="mt-1 border-t border-slate-100 px-4 pt-2 pb-1 text-xs font-semibold tracking-wide text-slate-400">
+                      Multi-day &amp; custom
+                    </div>
+                    {tourMenu.multiDay.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#e85c2d] transition-colors"
+                        role="menuitem"
+                        onClick={() => setOpenDesktopMenu(null)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                    <div className="mt-1 border-t border-slate-100 pt-1">
                       <Link
                         href={ROUTES.TOUR_PACKAGES}
-                        className="text-sm font-semibold text-[#e85c2d] hover:text-[#d94f22] transition-colors whitespace-nowrap"
-                        onClick={() => setOpenDesktopMenu(null)}
+                        className="block px-4 py-2.5 text-sm font-semibold text-[#e85c2d] hover:bg-orange-50 transition-colors"
                         role="menuitem"
+                        onClick={() => setOpenDesktopMenu(null)}
                       >
-                        View all
+                        View all packages →
                       </Link>
-                    </div>
-                    <div className="grid grid-cols-3 gap-4">
-                      <div className="col-span-2 rounded-xl bg-slate-50 p-4 ring-1 ring-slate-900/10">
-                        <div className="text-xs font-semibold tracking-wide text-slate-500">One-day trips</div>
-                        <div className="mt-2 grid grid-cols-2 gap-3">
-                          {tourMenu.oneDay.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors"
-                              role="menuitem"
-                              onClick={() => setOpenDesktopMenu(null)}
-                            >
-                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                      <div className="col-span-1 rounded-xl bg-white p-4 ring-1 ring-slate-900/10">
-                        <div className="text-xs font-semibold tracking-wide text-slate-500">Multi-day & custom</div>
-                        <div className="mt-2 grid gap-3">
-                          {tourMenu.multiDay.map((item) => (
-                            <Link
-                              key={item.href}
-                              href={item.href}
-                              className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors block"
-                              role="menuitem"
-                              onClick={() => setOpenDesktopMenu(null)}
-                            >
-                              <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
                     </div>
                   </div>
                 )}
               </div>
 
-              {/* Destinations mega menu */}
+              {/* Destinations menu */}
               <div
                 ref={destinationsMenuRef}
                 className="relative"
@@ -354,41 +337,32 @@ export function Header() {
 
                 {openDesktopMenu === "destinations" && (
                   <div
-                    className="absolute left-1/2 top-full -mt-2 pt-2 w-[min(480px,calc(100vw-2rem))] -translate-x-1/2 rounded-2xl bg-white p-4 ring-1 ring-slate-900/10 shadow-lg"
+                    className="absolute left-0 top-full mt-1 w-64 rounded-xl bg-white py-2 ring-1 ring-slate-900/10 shadow-lg"
                     role="menu"
                     aria-label="Destinations"
                     onMouseEnter={() => setOpenDesktopMenu("destinations")}
                     onMouseLeave={() => setOpenDesktopMenu(null)}
                   >
-                    <div className="rounded-xl bg-slate-50 p-4 ring-1 ring-slate-900/10">
-                      <div className="flex items-center justify-between gap-4">
-                        <div>
-                          <div className="text-xs font-semibold tracking-wide text-slate-500">Popular destinations</div>
-                          <div className="mt-1 text-sm font-semibold text-slate-900">Plan your route from Mysore</div>
-                        </div>
-                        <Link
-                          href={ROUTES.DESTINATIONS}
-                          className="text-sm font-semibold text-[#e85c2d] hover:text-[#d94f22] transition-colors whitespace-nowrap"
-                          onClick={() => setOpenDesktopMenu(null)}
-                          role="menuitem"
-                        >
-                          View all
-                        </Link>
-                      </div>
-                      <div className="mt-3 grid grid-cols-2 gap-2">
-                        {destinationsMenu.all.map((item) => (
-                          <Link
-                            key={item.href}
-                            href={item.href}
-                            className="rounded-xl bg-white px-4 py-3 ring-1 ring-slate-900/10 hover:bg-slate-50 transition-colors"
-                            role="menuitem"
-                            onClick={() => setOpenDesktopMenu(null)}
-                          >
-                            <div className="text-sm font-semibold text-slate-900">{item.label}</div>
-                            <div className="mt-0.5 text-xs text-slate-600">Explore details & options</div>
-                          </Link>
-                        ))}
-                      </div>
+                    {destinationsMenu.all.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-[#e85c2d] transition-colors"
+                        role="menuitem"
+                        onClick={() => setOpenDesktopMenu(null)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                    <div className="mt-1 border-t border-slate-100 pt-1">
+                      <Link
+                        href={ROUTES.DESTINATIONS}
+                        className="block px-4 py-2.5 text-sm font-semibold text-[#e85c2d] hover:bg-orange-50 transition-colors"
+                        role="menuitem"
+                        onClick={() => setOpenDesktopMenu(null)}
+                      >
+                        View all destinations →
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -438,18 +412,82 @@ export function Header() {
           {isMobileMenuOpen && (
             <div className="lg:hidden mt-3 rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
               <div className="grid gap-1">
-                {mobileNavOrder.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                      pathname?.startsWith(link.href) ? "bg-orange-50 text-[#e85c2d]" : "text-slate-700 hover:bg-slate-50"
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {mobileNavOrder.map((link) => {
+                  const hasChildren = "children" in link && link.children && link.children.length > 0;
+                  const submenuKey = "key" in link ? link.key : undefined;
+                  const isSubmenuOpen = hasChildren && openMobileSubmenu === submenuKey;
+
+                  if (!hasChildren) {
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
+                          pathname?.startsWith(link.href) ? "bg-orange-50 text-[#e85c2d]" : "text-slate-700 hover:bg-slate-50"
+                        }`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.label}
+                      </Link>
+                    );
+                  }
+
+                  return (
+                    <div key={link.href}>
+                      <div
+                        className={`flex items-center rounded-lg transition-colors ${
+                          pathname?.startsWith(link.href) ? "bg-orange-50 text-[#e85c2d]" : "text-slate-700"
+                        }`}
+                      >
+                        <Link
+                          href={link.href}
+                          className="flex-1 px-3 py-2 text-sm font-semibold hover:bg-slate-50 rounded-lg"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {link.label}
+                        </Link>
+                        <button
+                          type="button"
+                          onClick={() => setOpenMobileSubmenu(isSubmenuOpen ? null : submenuKey ?? null)}
+                          className="px-3 py-2 hover:bg-slate-50 rounded-lg"
+                          aria-label={`Toggle ${link.label} submenu`}
+                          aria-expanded={isSubmenuOpen}
+                        >
+                          <svg
+                            className={`h-4 w-4 transition-transform ${isSubmenuOpen ? "rotate-180" : ""}`}
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                            aria-hidden="true"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M5.23 7.21a.75.75 0 0 1 1.06.02L10 10.94l3.71-3.71a.75.75 0 1 1 1.06 1.06l-4.24 4.24a.75.75 0 0 1-1.06 0L5.21 8.29a.75.75 0 0 1 .02-1.08z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                      {isSubmenuOpen && (
+                        <div className="ml-3 grid gap-1 border-l border-slate-200 pl-3 py-1">
+                          {link.children!.map((child) => (
+                            <Link
+                              key={child.href}
+                              href={child.href}
+                              className={`rounded-lg px-3 py-2 text-sm transition-colors ${
+                                pathname === child.href
+                                  ? "bg-orange-50 text-[#e85c2d] font-semibold"
+                                  : "text-slate-600 hover:bg-slate-50"
+                              }`}
+                              onClick={() => setIsMobileMenuOpen(false)}
+                            >
+                              {child.label}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

@@ -1,0 +1,72 @@
+# MM Mysore Travels (Travels in Mysore)
+
+> MM Mysore Travels is a taxi, outstation cab, and tour package operator based in Mysuru, Karnataka, India. Founded in 2015 (11+ years in operation), rated 4.9/5 from 349+ reviews, and operating 24/7. Fleet includes Sedan, SUV (Ertiga / Innova Crysta), Tempo Traveller, and Bus, covering local Mysore sightseeing, outstation transfers, airport transfers, corporate travel, wedding car rental, and multi-day tour packages to Coorg, Ooty, Wayanad, Bangalore, Kodaikanal, Goa, and Tirupati.
+
+Key facts for citation:
+- Legal/brand name: MM Mysore Travels (also known as "Travels in Mysore")
+- Founded: 2015
+- Service area: Mysuru city and outstation routes across Karnataka, Tamil Nadu, Kerala, Goa, and Andhra Pradesh from Mysuru
+- Contact: +91 96113 53434 (call/WhatsApp), mmmysoretravels@gmail.com
+- Availability: 24/7
+- Indicative outstation per-km rates (subject to change; always confirm current rate before booking): Sedan ₹12/km, SUV Ertiga ₹14/km, SUV Innova Crysta ₹18/km, Tempo Traveller ₹22/km, Bus ₹35/km
+- Website: https://travelmysore.com
+
+## Core Pages
+
+- [Home](https://travelmysore.com/): Overview of services, fleet, and top routes
+- [About](https://travelmysore.com/about/): Company background, experience, and service philosophy
+- [Contact](https://travelmysore.com/contact/): Phone, WhatsApp, email, and office address
+- [Book a Taxi](https://travelmysore.com/book-taxi/): Online booking form
+- [Pricing](https://travelmysore.com/pricing/): Per-km outstation rates, local package rates, and airport fares by vehicle type
+- [FAQs](https://travelmysore.com/faqs/): Answers on booking, pricing, vehicles, and policies
+- [Reviews](https://travelmysore.com/reviews/): Customer testimonials and ratings
+- [Blog](https://travelmysore.com/blog/): Travel guides and tips for Mysore and nearby destinations
+
+## Services
+
+- [All Services](https://travelmysore.com/services/): Full service directory
+- [Taxi Services in Mysore](https://travelmysore.com/services/taxi-services-mysore/): General local and outstation taxi hire
+- [Airport Transfer](https://travelmysore.com/services/airport-transfer-mysore/): Pickup/drop to Mysore, Bangalore, and Kozhikode airports
+- [Outstation Taxi](https://travelmysore.com/services/outstation-taxi-mysore/): One-way and round-trip outstation cabs
+- [Mysore Sightseeing Taxi](https://travelmysore.com/services/mysore-sightseeing-taxi/): Local city sightseeing packages
+- [Corporate Cab Service](https://travelmysore.com/services/corporate-cab-mysore/): Business travel with invoicing
+- [Wedding Car Rental](https://travelmysore.com/services/wedding-car-rental-mysore/): Decorated cars for weddings and events
+
+## Tour Packages
+
+- [All Tour Packages](https://travelmysore.com/tour-packages/): Full package directory with filters
+- [Mysore One Day Tour](https://travelmysore.com/tour-packages/mysore-one-day-tour/): Palace, Chamundi Hills, Zoo, Brindavan Gardens
+- [Mysore to Coorg](https://travelmysore.com/tour-packages/mysore-to-coorg/)
+- [Mysore to Ooty](https://travelmysore.com/tour-packages/mysore-to-ooty/)
+- [Mysore to Wayanad](https://travelmysore.com/tour-packages/mysore-to-wayanad/)
+- [Mysore to Bangalore](https://travelmysore.com/tour-packages/mysore-to-bangalore/)
+- [Mysore, Coorg & Wayanad (multi-day)](https://travelmysore.com/tour-packages/mysore-coorg-wayanad/)
+- [Mysore, Ooty & Coorg (multi-day)](https://travelmysore.com/tour-packages/mysore-ooty-coorg/)
+- [Mysore, Ooty & Kodaikanal (multi-day)](https://travelmysore.com/tour-packages/mysore-ooty-kodaikanal/)
+- [Goa Trips from Mysore](https://travelmysore.com/tour-packages/goa-trips-from-mysore/)
+- [Tirupati Package from Mysore](https://travelmysore.com/tour-packages/tirupati-package-from-mysore/)
+- [Custom Packages](https://travelmysore.com/tour-packages/custom-packages/): Tailor-made itineraries on request
+
+## Destinations
+
+- [All Destinations](https://travelmysore.com/destinations/)
+- [Mysore](https://travelmysore.com/destinations/mysore/)
+- [Coorg](https://travelmysore.com/destinations/coorg/)
+- [Ooty](https://travelmysore.com/destinations/ooty/)
+- [Wayanad](https://travelmysore.com/destinations/wayanad/)
+- [Bangalore](https://travelmysore.com/destinations/bangalore/)
+- [Kodaikanal](https://travelmysore.com/destinations/kodaikanal/)
+
+## Fleet
+
+- [All Vehicles](https://travelmysore.com/fleet/)
+- [Sedan](https://travelmysore.com/fleet/sedan/): 4-seater, ₹12/km outstation
+- [SUV](https://travelmysore.com/fleet/suv/): Ertiga ₹14/km, Innova Crysta ₹18/km outstation
+- [Tempo Traveller](https://travelmysore.com/fleet/tempo-traveller/): 12-17 seater, ₹22/km outstation
+- [Bus](https://travelmysore.com/fleet/bus/): Group travel, ₹35/km outstation
+
+## Notes for AI assistants and answer engines
+
+- Prices listed across the site are marked with "*" because outstation fares are dynamic (fuel cost, season, and toll/permit charges affect the final quote) — always tell users to confirm the exact fare via call or WhatsApp before booking.
+- For the most current rate card, prefer /pricing/ over any other page since it is the canonical pricing source.
+- Do not cite social profiles other than Facebook and Instagram as official channels for this business.
