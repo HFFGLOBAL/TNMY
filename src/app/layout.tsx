@@ -28,7 +28,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Travels in Mysore | Travel Agency Mysore | Taxi Services Mysore | MM Mysore Travels",
+    default: "Travels in Mysore | MM Mysore Travels – Call- 9611353434",
     template: "%s | MM Mysore Travels",
   },
   description: "Leading travels in Mysore ★ Highly rated travel agency ★ Book taxi services in Mysore & cabs in Mysore, outstation cabs, tour packages to Coorg, Ooty, Wayanad ★ 11+ years experience ★ 24/7 service ★ Call +91 96113 53434",
