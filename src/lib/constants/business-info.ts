@@ -29,7 +29,7 @@ export const BUSINESS_INFO = {
   
   // Social Media
   social: {
-    facebook: 'https://www.facebook.com/mmysoretravels',
+    facebook: 'https://www.facebook.com/mmmysoretravel/',
     instagram: 'https://www.instagram.com/mmysoretravels'
   },
   
