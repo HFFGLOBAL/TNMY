@@ -40,7 +40,7 @@ const faqCategories = [
     items: [
       {
         q: "What are your per-km rates for outstation trips?",
-        a: "Sedan ₹12/km, SUV Ertiga ₹14/km, SUV Innova Crysta ₹18/km, Tempo Traveller ₹22/km, and Bus ₹35/km. See the full rate card on our Pricing page.",
+        a: "Sedan ₹12/km, SUV Ertiga ₹16/km, SUV Innova Crysta ₹18/km, Tempo Traveller ₹22/km, and Bus ₹35/km. See the full rate card on our Pricing page.",
       },
       {
         q: "Is the listed price final, or can it change?",
@@ -52,7 +52,7 @@ const faqCategories = [
       },
       {
         q: "Is there a minimum distance for outstation trips?",
-        a: "Yes, a minimum of 250 km per day applies for outstation bookings, which is standard practice for taxi operators to cover the return leg of the journey.",
+        a: "Yes, a minimum of 300 km per day applies for outstation bookings, which is standard practice for taxi operators to cover the return leg of the journey.",
       },
       {
         q: "Is there a night travel surcharge?",
@@ -73,7 +73,7 @@ const faqCategories = [
       },
       {
         q: "What's the difference between the Ertiga and Innova Crysta SUV options?",
-        a: "Both seat 6-7 passengers. The Ertiga is priced at ₹14/km and suits most family or group trips, while the Innova Crysta at ₹18/km offers more legroom and a higher comfort level for longer outstation journeys.",
+        a: "Both seat 6-7 passengers. The Ertiga is priced at ₹16/km and suits most family or group trips, while the Innova Crysta at ₹18/km offers more legroom and a higher comfort level for longer outstation journeys.",
       },
       {
         q: "Are your drivers verified and professional?",

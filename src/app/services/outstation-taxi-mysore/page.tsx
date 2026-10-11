@@ -129,7 +129,7 @@ export default function OutstationTaxiMysorePage() {
               </div>
               <div className="text-right">
                 <p className="text-3xl font-bold text-orange-600">₹12/km</p>
-                <p className="text-sm text-slate-600 mt-1">Min 250 km/day</p>
+                <p className="text-sm text-slate-600 mt-1">Min 300 km/day</p>
               </div>
             </div>
           </div>
@@ -140,8 +140,8 @@ export default function OutstationTaxiMysorePage() {
                 <p className="text-sm text-slate-600 mt-1">Spacious for families and groups</p>
               </div>
               <div className="text-right">
-                <p className="text-3xl font-bold text-orange-600">₹14/km</p>
-                <p className="text-sm text-slate-600 mt-1">Min 250 km/day</p>
+                <p className="text-3xl font-bold text-orange-600">₹16/km</p>
+                <p className="text-sm text-slate-600 mt-1">Min 300 km/day</p>
               </div>
             </div>
           </div>
@@ -153,7 +153,7 @@ export default function OutstationTaxiMysorePage() {
               </div>
               <div className="text-right">
                 <p className="text-3xl font-bold text-orange-600">₹18/km</p>
-                <p className="text-sm text-slate-600 mt-1">Min 250 km/day</p>
+                <p className="text-sm text-slate-600 mt-1">Min 300 km/day</p>
               </div>
             </div>
           </div>
@@ -165,7 +165,7 @@ export default function OutstationTaxiMysorePage() {
               </div>
               <div className="text-right">
                 <p className="text-3xl font-bold text-orange-600">₹22/km</p>
-                <p className="text-sm text-slate-600 mt-1">Min 250 km/day</p>
+                <p className="text-sm text-slate-600 mt-1">Min 300 km/day</p>
               </div>
             </div>
           </div>

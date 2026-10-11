@@ -68,7 +68,7 @@ export default function Home() {
 
   const fleet = [
     { id: "sedan-dzire", name: "Dzire Sedan", href: ROUTES.FLEET_SEDAN, desc: "Comfortable 4 seater", image: "/images/vehicles/Dzire.png", price: "₹12/km" },
-    { id: "suv-ertiga", name: "Ertiga SUV", href: ROUTES.FLEET_SUV, desc: "Family trips and luggage", image: "/images/vehicles/Ertiga.png", price: "₹14/km" },
+    { id: "suv-ertiga", name: "Ertiga SUV", href: ROUTES.FLEET_SUV, desc: "Family trips and luggage", image: "/images/vehicles/Ertiga.png", price: "₹16/km" },
     { id: "suv-innova", name: "Innova Crysta", href: ROUTES.FLEET_SUV, desc: "7-seater premium comfort", image: "/images/vehicles/Innova.png", price: "₹18/km" },
     { id: "sedan-etios", name: "Etios Sedan", href: ROUTES.FLEET_SEDAN, desc: "Budget-friendly sedan", image: "/images/vehicles/Etios.png", price: "₹12/km" },
     { id: "tempo", name: "Tempo Traveller", href: ROUTES.FLEET_TEMPO, desc: "Group travel 13-17 seater", image: "/images/vehicles/Tempo-Traveller.png", price: "₹22/km" },

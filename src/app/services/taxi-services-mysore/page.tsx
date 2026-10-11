@@ -81,7 +81,7 @@ export default function TaxiServicesMysorePage() {
 
   const vehicleTypes = [
     { type: "Sedan (4 Seater)", models: "Dzire, Etios", rate: "₹12/km", localRate: "₹1,800/day" },
-    { type: "SUV - Ertiga (6-7 Seater)", models: "Ertiga", rate: "₹14/km", localRate: "₹2,800/day" },
+    { type: "SUV - Ertiga (6-7 Seater)", models: "Ertiga", rate: "₹16/km", localRate: "₹2,800/day" },
     { type: "SUV - Innova Crysta (6-7 Seater)", models: "Innova Crysta", rate: "₹18/km", localRate: "₹2,800/day" },
     { type: "Tempo Traveller", models: "12-17 Seater", rate: "₹22/km", localRate: "₹4,500/day" },
   ];

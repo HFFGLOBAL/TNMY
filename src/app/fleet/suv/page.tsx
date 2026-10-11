@@ -17,7 +17,7 @@ const suvProductSchema = createProductSchema({
   category: "Vehicle Rental Service",
   brand: "MM Mysore Travels",
   offers: {
-    price: "14",
+    price: "16",
     priceCurrency: "INR",
   },
   features: [
@@ -52,7 +52,7 @@ export default function FleetSuvPage() {
             <div className="text-sm text-white/90 mt-1">Climate Control</div>
           </div>
           <div className="rounded-xl bg-white/20 backdrop-blur-sm p-4 text-center">
-            <div className="text-2xl font-bold">₹14-18/km</div>
+            <div className="text-2xl font-bold">₹16-18/km</div>
             <div className="text-sm text-white/90 mt-1">Outstation Rate*</div>
           </div>
           <div className="rounded-xl bg-white/20 backdrop-blur-sm p-4 text-center">
@@ -60,7 +60,7 @@ export default function FleetSuvPage() {
             <div className="text-sm text-white/90 mt-1">Local Package</div>
           </div>
         </div>
-        <p className="mt-4 text-sm text-white/80">* Ertiga ₹14/km, Innova Crysta ₹18/km. Rates are indicative and may vary — final fare confirmed at booking.</p>
+        <p className="mt-4 text-sm text-white/80">* Ertiga ₹16/km, Innova Crysta ₹18/km. Rates are indicative and may vary — final fare confirmed at booking.</p>
       </div>
 
       <div className="mt-16">
@@ -88,7 +88,7 @@ export default function FleetSuvPage() {
             <div className="flex items-start justify-between gap-3">
               <h3 className="text-xl font-bold text-slate-900">Maruti Ertiga</h3>
               <div className="shrink-0 text-right">
-                <div className="text-lg font-bold text-orange-600">₹14/km</div>
+                <div className="text-lg font-bold text-orange-600">₹16/km</div>
               </div>
             </div>
             <p className="mt-2 text-slate-600">Versatile 7-seater with excellent fuel efficiency and comfortable seating. Spacious interiors with flexible seat configurations, good ground clearance for rough roads, and reliable petrol engine. Budget-friendly SUV option for family trips without compromising on comfort.</p>

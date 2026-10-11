@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
 const outstationRates = [
   { vehicle: "Sedan (4 Seater)", models: "Dzire, Etios", rate: "₹12/km" },
-  { vehicle: "SUV - Ertiga", models: "6-7 Seater", rate: "₹14/km" },
+  { vehicle: "SUV - Ertiga", models: "6-7 Seater", rate: "₹16/km" },
   { vehicle: "SUV - Innova Crysta", models: "6-7 Seater", rate: "₹18/km" },
   { vehicle: "Tempo Traveller (12-17 Seater)", models: "", rate: "₹22/km" },
   { vehicle: "Bus (30+ Seater)", models: "", rate: "₹35/km" },
@@ -87,7 +87,7 @@ export default function PricingPage() {
       {/* Outstation */}
       <div className="mt-10 rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
         <h2 className="text-2xl font-bold text-slate-900">Outstation taxi rates</h2>
-        <p className="mt-2 text-slate-600">Coorg, Ooty, Wayanad, Bangalore and more. Minimum 250 km/day applies.</p>
+        <p className="mt-2 text-slate-600">Coorg, Ooty, Wayanad, Bangalore and more. Minimum 300 km/day applies.</p>
         <div className="mt-5 overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead>
