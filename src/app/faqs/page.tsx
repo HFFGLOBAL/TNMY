@@ -86,7 +86,7 @@ const faqCategories = [
     items: [
       {
         q: "Do you offer local Mysore sightseeing packages?",
-        a: "Yes, half-day (4-5 hrs / 40 km) and full-day (8-9 hrs / 80 km) local packages are available covering Mysore Palace, Chamundi Hills, Brindavan Gardens, and other city attractions.",
+        a: "Yes, half-day (4 hrs / 40 km) and full-day (8 hrs / 80 km) local packages are available covering Mysore Palace, Chamundi Hills, Brindavan Gardens, and other city attractions.",
       },
       {
         q: "Can I customize a multi-day tour package?",

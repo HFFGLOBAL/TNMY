@@ -26,7 +26,7 @@ const sightseeingServiceSchema = createServiceSchema({
   serviceType: "Local Sightseeing Tour Service",
   areaServed: ["Mysore", "Karnataka", "India"],
   offers: {
-    price: "1200",
+    price: "1400",
     priceCurrency: "INR",
   },
 });
@@ -58,14 +58,14 @@ export default function MysoreSightseeingTaxiPage() {
     {
       type: "Sedan (4 Seater)",
       models: "Dzire, Etios",
-      halfDay: "₹1,200",
-      fullDay: "₹1,800",
+      halfDay: "₹1,400",
+      fullDay: "₹2,200",
       desc: "Perfect for couples and small families"
     },
     {
-      type: "SUV (6-7 Seater)",
-      models: "Innova, Ertiga",
-      halfDay: "₹1,600",
+      type: "SUV - Ertiga (6-7 Seater)",
+      models: "Ertiga",
+      halfDay: "₹2,000",
       fullDay: "₹2,800",
       desc: "Spacious for families and groups"
     },
@@ -164,7 +164,7 @@ export default function MysoreSightseeingTaxiPage() {
       {/* Package Options */}
       <div className="mt-12">
         <h2 className="text-3xl font-bold text-slate-900">Vehicle-Based Pricing</h2>
-        <p className="mt-2 text-slate-600">Choose between half-day (4-5 hours, 40 km) or full-day (8-9 hours, 80 km) tours</p>
+        <p className="mt-2 text-slate-600">Choose between half-day (4 hours, 40 km) or full-day (8 hours, 80 km) tours</p>
         <div className="mt-6 space-y-4">
           {vehiclePricing.map((vehicle, idx) => (
             <div key={idx} className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6 hover:ring-orange-400 hover:shadow-md transition-all">
@@ -178,12 +178,12 @@ export default function MysoreSightseeingTaxiPage() {
                   <div>
                     <p className="text-xs text-slate-500">Half-Day</p>
                     <p className="text-2xl font-bold text-orange-600">{vehicle.halfDay}</p>
-                    <p className="text-xs text-slate-600">4-5 hours</p>
+                    <p className="text-xs text-slate-600">4 hrs / 40 km</p>
                   </div>
                   <div>
                     <p className="text-xs text-slate-500">Full-Day</p>
                     <p className="text-2xl font-bold text-orange-600">{vehicle.fullDay}</p>
-                    <p className="text-xs text-slate-600">8-9 hours</p>
+                    <p className="text-xs text-slate-600">8 hrs / 80 km</p>
                   </div>
                 </div>
               </div>

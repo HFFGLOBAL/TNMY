@@ -13,7 +13,7 @@ const taxiServicesFaqSchema = createFAQSchema([
   },
   {
     question: "What are your taxi rates in Mysore?",
-    answer: "Outstation taxis start at ₹12/km for sedans. Local sightseeing packages start at ₹800 for half-day. Airport transfers from ₹2,800. Contact us for exact quotes.",
+    answer: "Outstation taxis start at ₹12/km for sedans. Local sightseeing packages start at ₹1,400 for half-day. Airport transfers from ₹2,800. Contact us for exact quotes.",
   },
   {
     question: "Are your cabs clean and well-maintained?",
@@ -65,7 +65,7 @@ export default function TaxiServicesMysorePage() {
       icon: "🏛️",
       desc: "Explore Mysore Palace, Chamundi Hills, Zoo, and other attractions.",
       features: ["Half-day & full-day packages", "Knowledgeable drivers", "Flexible itineraries", "All major attractions covered"],
-      price: "Starting from ₹800/half-day",
+      price: "Starting from ₹1,400/half-day",
       href: ROUTES.SIGHTSEEING_TAXI
     }
   ];
@@ -80,7 +80,7 @@ export default function TaxiServicesMysorePage() {
   ];
 
   const vehicleTypes = [
-    { type: "Sedan (4 Seater)", models: "Dzire, Etios", rate: "₹12/km", localRate: "₹1,800/day" },
+    { type: "Sedan (4 Seater)", models: "Dzire, Etios", rate: "₹12/km", localRate: "₹2,200/day" },
     { type: "SUV - Ertiga (6-7 Seater)", models: "Ertiga", rate: "₹16/km", localRate: "₹2,800/day" },
     { type: "SUV - Innova Crysta (6-7 Seater)", models: "Innova Crysta", rate: "₹18/km", localRate: "₹2,800/day" },
     { type: "Tempo Traveller", models: "12-17 Seater", rate: "₹22/km", localRate: "₹4,500/day" },
@@ -197,7 +197,7 @@ export default function TaxiServicesMysorePage() {
           </div>
           <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">What are your taxi rates in Mysore?</h3>
-            <p className="mt-2 text-slate-600">Outstation taxis start at ₹12/km for sedans. Local sightseeing packages start at ₹800 for half-day. Airport transfers from ₹2,800. Contact us for exact quotes.</p>
+            <p className="mt-2 text-slate-600">Outstation taxis start at ₹12/km for sedans. Local sightseeing packages start at ₹1,400 for half-day. Airport transfers from ₹2,800. Contact us for exact quotes.</p>
           </div>
           <div className="rounded-xl bg-white ring-1 ring-slate-900/10 p-6">
             <h3 className="font-semibold text-slate-900">Are your cabs clean and well-maintained?</h3>

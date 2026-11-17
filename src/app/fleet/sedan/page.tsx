@@ -56,7 +56,7 @@ export default function FleetSedanPage() {
             <div className="text-sm text-white/90 mt-1">Outstation Rate</div>
           </div>
           <div className="rounded-xl bg-white/20 backdrop-blur-sm p-4 text-center">
-            <div className="text-2xl font-bold">₹1,800</div>
+            <div className="text-2xl font-bold">₹2,200</div>
             <div className="text-sm text-white/90 mt-1">Local Package</div>
           </div>
         </div>

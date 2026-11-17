@@ -43,7 +43,7 @@ export default function ServicesPage() {
       title: "Local Sightseeing",
       desc: "Explore Mysore's palaces, temples, gardens at your own pace. Customizable itineraries available.",
       features: ["Full day packages", "Half day options", "Knowledgeable drivers", "All major attractions"],
-      price: "Starting from ₹1,800/day",
+      price: "Starting from ₹2,200/day",
       link: ROUTES.SIGHTSEEING_TAXI
     },
     {

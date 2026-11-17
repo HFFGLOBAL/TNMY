@@ -7,7 +7,7 @@ import { ROUTES } from "@/lib/constants/routes";
 export const metadata: Metadata = {
   title: "Taxi Pricing in Mysore | Transparent Rates for Outstation & Local Trips | Travels in Mysore",
   description:
-    "View transparent taxi pricing in Mysore for outstation trips to Coorg, Ooty, Wayanad, Bangalore. Sedan, SUV, Tempo Traveller rates. Local sightseeing packages 4/8/12 hours. Airport transfer pricing. No hidden charges. Get instant quote on WhatsApp. Starting ₹12/km for outstation, ₹1,800 for local packages.",
+    "View transparent taxi pricing in Mysore for outstation trips to Coorg, Ooty, Wayanad, Bangalore. Sedan, SUV, Tempo Traveller rates. Local sightseeing packages 4/8/12 hours. Airport transfer pricing. No hidden charges. Get instant quote on WhatsApp. Starting ₹12/km for outstation, ₹1,400 for local packages.",
   keywords: [
     "cabs in mysore",
     "taxi services in mysore",
@@ -36,8 +36,8 @@ const outstationRates = [
 ];
 
 const localPackages = [
-  { vehicle: "Sedan (4 Seater)", fullDay: "₹1,800", halfDay: "₹1,200" },
-  { vehicle: "SUV (6-7 Seater)", fullDay: "₹2,800", halfDay: "₹1,600" },
+  { vehicle: "Sedan (4 Seater)", fullDay: "₹2,200", halfDay: "₹1,400" },
+  { vehicle: "SUV - Ertiga (6-7 Seater)", fullDay: "₹2,800", halfDay: "₹2,000" },
   { vehicle: "Tempo Traveller", fullDay: "₹4,500", halfDay: "₹2,500" },
   { vehicle: "Bus (30+ Seater)", fullDay: "₹8,000", halfDay: "—" },
 ];
@@ -117,7 +117,7 @@ export default function PricingPage() {
       {/* Local sightseeing */}
       <div className="mt-8 rounded-2xl bg-white p-6 ring-1 ring-slate-900/10">
         <h2 className="text-2xl font-bold text-slate-900">Local sightseeing packages</h2>
-        <p className="mt-2 text-slate-600">Half-day (4-5 hrs / 40 km) and full-day (8-9 hrs / 80 km) Mysore city tours.</p>
+        <p className="mt-2 text-slate-600">Half-day (4 hrs / 40 km) and full-day (8 hrs / 80 km) Mysore city tours.</p>
         <div className="mt-5 overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead>

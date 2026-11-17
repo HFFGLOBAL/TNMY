@@ -29,7 +29,7 @@ export default function DestinationMysorePage() {
             <div className="text-sm text-white/90 mt-1">Flexible Packages</div>
           </div>
           <div className="rounded-xl bg-white/20 backdrop-blur-sm p-4 text-center">
-            <div className="text-2xl font-bold">₹1,800</div>
+            <div className="text-2xl font-bold">₹1,400</div>
             <div className="text-sm text-white/90 mt-1">Starting Price</div>
           </div>
           <div className="rounded-xl bg-white/20 backdrop-blur-sm p-4 text-center">
